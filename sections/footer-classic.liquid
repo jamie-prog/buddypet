@@ -67,14 +67,7 @@
         	<a href="{{ section.settings.newsletter_link }}" >{{ section.settings.newsletter_link_title }}</a>
         {% endif %}
       </div>
-      {%- comment -%}Trustpilot review collector widget{%- endcomment -%}
-      <div class="tp-widget-collector--wrapper">
-        <!-- TrustBox widget - Review Collector -->
-        <div class="trustpilot-widget" data-locale="en-GB" data-template-id="56278e9abfbbba0bdcd568bc" data-businessunit-id="6233cb04c1f6d2e6e47b6cc9" data-style-height="52px" data-style-width="100%"  data-border-color="#666057" data-text-color="#666057">
-          <a href="https://uk.trustpilot.com/review/buddypet.co" target="_blank" rel="noopener">Trustpilot</a>
-        </div>
-        <!-- End TrustBox widget -->
-      </div>
+      
 
       {% for block in section.blocks %}
         <div id="shopify-section-{{ block.id }}" class="footer__block block__{{ block.id }} block__{{ block.type | downcase | replace: '_', '-' }}
