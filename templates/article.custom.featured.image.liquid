@@ -1,0 +1,14 @@
+{% comment %}
+  To edit the contents of this file, look inside the `sections` folder for the file name that comes directly after `section`. Eg. {% section 'product__main' %} or {% section 'page__banner' %}
+{% endcomment %}
+<main id="template-{{ template | replace: '.', '-' | handle }}" class="shopify-section article-page 1234234" data-check-for-order="true">
+ {% section 'article__banner' %}
+  <section class="section__wrapper width-container">
+    <div class="container">
+      {% comment %}{% section 'article__sidebar' %}
+      {% section 'article_feature_image' %}{% endcomment %}
+      {% section 'article__main_content' %}
+    </div>
+    {% include 'relatedblogs' %}
+  </section>
+</main>

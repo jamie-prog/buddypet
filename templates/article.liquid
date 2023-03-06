@@ -1,0 +1,27 @@
+{% comment %}
+  To edit the contents of this file, look inside the `sections` folder for the file name that comes directly after `section`. Eg. {% section 'product__main' %} or {% section 'page__banner' %}
+{% endcomment %}
+{% if article.handle contains "head-of-animal-health" or article.handle contains "our-vision" %}
+<style>
+  .article-page .feature-image.blog-feature-image {
+  width:50%;}
+  .article-page .feature-image.blog-feature-image section {
+  height:720px;}
+  
+</style>
+{% endif %}
+<main id="template-{{ template | replace: '.', '-' | handle }}" class="shopify-section article-page" data-check-for-order="true">
+ {% section 'article__banner' %}
+  <section class="section__wrapper width-container">
+    <div class="container">
+      {% comment %}{% section 'article__sidebar' %}
+      {% section 'article_feature_image' %}{% endcomment %}
+      {% section 'article__main_content' %}
+      {% unless article.handle contains "head-of-animal-health" or article.handle contains "our-vision" or article.handle contains "hemp-nature-s-precious-gift" or article.handle contains "dr-ailsa-rutherford"%}
+      {% section 'article__products_featured' %}
+      {% endunless %}
+    </div>
+    
+    {% include 'relatedblogs' %}
+  </section>
+</main>

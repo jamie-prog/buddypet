@@ -1,0 +1,113 @@
+{% comment %}
+** Boxes Images **
+- Draggable section
+- Uses blocks
+{% endcomment %}
+
+{% if section.blocks.size > 0 %}
+<section class="section-boxes">
+  {% for block in section.blocks %}
+      <div class="boxes-item position-absolute"
+           {% if block.settings.position == "top_left" %}
+           	style="top: {{ block.settings.position_top_bottom }}%;left: {{ block.settings.position_left_right }}%;"
+           {% elsif block.settings.position == 'top_right' %}
+           	style="top: {{ block.settings.position_top_bottom }}%;right: {{ block.settings.position_left_right }}%;"
+           {% elsif block.settings.position == 'bottom_left' %}
+           	style="bottom: {{ block.settings.position_top_bottom }}%;left: {{ block.settings.position_left_right }}%;"
+           {% else %}
+           	style="bottom: {{ block.settings.position_top_bottom }}%;right: {{ block.settings.position_left_right }}%;"
+           {% endif %}
+           >
+          <img style="width: {{ block.settings.width }}rem;" src="{{ block.settings.boxes_image | img_url: 'master' }}" alt="" />
+      </div>
+    {% if position != "none" %}
+  	
+
+    {% endif %}
+  {% endfor %}
+</section>
+{% endif %}
+{% schema %}
+{
+  "name": "Boxes Images",
+  "blocks": [
+    {
+      "type": "image",
+      "name": "Boxes Images",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "boxes_image",
+          "label": "Image"
+        },
+        {
+          "type": "range",
+          "id": "width",
+          "label": "Width rem",
+          "min": 0,
+          "max": 100,
+          "step": 1,
+          "default": 10
+        },
+        {
+          "type": "header",
+          "content": "Position"
+        },
+        {
+          "type":      "select",
+          "id":        "position",
+          "label":     "Position",
+          "default":   "none",
+          "info":      "Choose Position",
+          "options": [
+            {
+              "value": "none",
+              "label": "None"
+            },
+            {
+              "value": "top_left",
+              "label": "Distance to Top, Left"
+            },
+            {
+              "value": "top_right",
+              "label": "Distance to Top, Right"
+            },
+            {
+              "value": "bottom_left",
+              "label": "Distance to Bottom, Left"
+            },
+            {
+              "value": "bottom_right",
+              "label": "Distance to Bottom, Right"
+            }
+          ]
+        },
+        {
+          "type": "range",
+          "id": "position_top_bottom",
+          "label": "Distance width Top, Bottom %",
+          "min": -100,
+          "max": 100,
+          "step": 2,
+          "default": 10
+        },
+        {
+          "type": "range",
+          "id": "position_left_right",
+          "label": "Distance with Left, Right %",
+          "min": -100,
+          "max": 100,
+          "step": 2,
+          "default": 10
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

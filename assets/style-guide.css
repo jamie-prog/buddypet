@@ -1,0 +1,608 @@
+@font-face {
+  font-family: 'Stevie Sans Book';
+  src: url('Stevie_Sans_W00_Book.eot');
+  src: url('Stevie_Sans_W00_Book.eot?#iefix') format('embedded-opentype'),
+    url('Stevie_Sans_W00_Book.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Stevie Sans';
+  src: url('Stevie_Sans_W00_Bold.eot');
+  src: url('Stevie_Sans_W00_Bold.eot?#iefix') format('embedded-opentype'),
+    url('Stevie_Sans_W00_Bold.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Stevie Sans';
+  src: url('Stevie_Sans_W00_Light.eot');
+  src: url('Stevie_Sans_W00_Light.eot?#iefix') format('embedded-opentype'),
+    url('Stevie_Sans_W00_Light.woff2') format('woff2');
+  font-weight: 300;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Stevie Sans';
+  src: url('Stevie_Sans_W00_Medium.eot');
+  src: url('Stevie_Sans_W00_Medium.eot?#iefix') format('embedded-opentype'),
+    url('Stevie_Sans_W00_Medium.woff2') format('woff2');
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Stevie Sans';
+  src: url('Stevie_Sans_W00_Thin.eot');
+  src: url('Stevie_Sans_W00_Thin.eot?#iefix') format('embedded-opentype'),
+    url('Stevie_Sans_W00_Thin.woff2') format('woff2');
+  font-weight: 100;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Stevie Sans';
+  src: url('Stevie_Sans_W00_Regular.eot');
+  src: url('Stevie_Sans_W00_Regular.eot?#iefix') format('embedded-opentype'),
+    url('Stevie_Sans_W00_Regular.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+}
+body{
+	font-family: 'Stevie Sans Book';
+}
+.page-styleguide .page-main > .page__container{
+    display:none
+}
+.default-page .container .column, 
+.default-page .container .columns {
+    margin: 0;
+    /* width: 100%; */
+    padding-top: 24px;
+  	padding-bottom: 30px;
+}
+body .section, 
+body section.section {
+    width: 100%;
+}
+.container{
+  max-width: 1424px;
+  margin:auto;
+  padding: 0 30px;
+}
+.shopify-section[id*='template'] {
+  max-width: 1920px;
+  margin: 0 auto;
+  overflow: visible;
+}
+button,.button, 
+button.action, 
+button.primary, 
+.action.primary, 
+button.action.primary {
+    -webkit-appearance: none;
+    -webkit-border-fit: border;
+    transition: all 0s;
+    text-decoration: none;
+    padding: 8px 30px;
+    text-align: center;
+    text-transform: capitalize;
+    font-size: 18px;
+    line-height: 24px;
+  	font-family:'stevie-sans';
+    font-weight: 600;
+    letter-spacing: 0px;
+    color: #fff;
+    background: #294D45;
+    border: 0;
+    border-radius: 100px;
+    transition: 0.3s;
+    height: 50px;
+    width: auto;
+    min-width: 260px;
+}
+.default-page button.hover, 
+button:hover, .button:hover,
+button:focus,.button:focus,
+button.action:hover,
+button.action:focus, 
+button.primary:hover, 
+button.primary:focus, 
+.action.primary:hover, 
+.action.primary:focus, 
+button.action.primary:hover, 
+button.action.primary:focus {
+    text-decoration: none;
+    outline: none;
+    background: #17312B;
+    color: #fff;
+  	box-shadow: none !Important;
+}
+input:focus,
+input:active,
+input:hover{
+  box-shadow: none !Important;
+}
+button.transparent,
+.action.primary.transparent, 
+button.action.primary.transparent,
+a.action.primary.transparent.button{
+    background: transparent;
+    color: #7EA396;
+    border: 2px solid #7EA396;
+}
+.default-page button.transparent.hover,
+a.action.primary.transparent.button.hover,
+button.transparent:hover,
+button.transparent:focus,
+.action.primary.transparent:hover, 
+.action.primary.transparent:focus, 
+button.action.primary.btn-default.transparent:hover, 
+button.action.primary.btn-default.transparent:focus,
+a.action.primary.transparent.button:hover,
+a.action.primary.transparent.button:focus{
+    background: #7EA396;
+    color: #fff;
+}
+body .h1.big-size, body .h1, body h1,.content h1 {
+    font-size: 90px;
+    line-height: 110px;
+    font-weight: 200;
+  	font-family:'stevie-sans';
+    letter-spacing: -0.2px;
+    color: #294D45;
+    margin-bottom: 20px;
+}
+body .h2.large-size, body .h2, body h2,.content h2 {
+   font-size: 70px;
+    line-height: 94px;
+    font-weight: 200;
+  	font-family:'stevie-sans';
+    letter-spacing: -0.2px;
+    color: #294D45;
+    margin-bottom: 16px;
+}
+body .h3.medium-size, body .h3, body h3,.content h3,h1.title {
+    font-size: 60px;
+    line-height: 75px;
+    font-weight: 200;
+  	font-family:'stevie-sans';
+    letter-spacing: -0.2px;
+    color: #294D45;
+    margin-bottom: 18px;
+}
+body .h4.title-page, body .h4, body h4,.content h4 {
+    font-size: 40px;
+    line-height: 47px;
+    font-weight: 300;
+  	font-family:'stevie-sans';
+    letter-spacing: -0.2px;
+    color: #294D45;
+    margin-bottom: 25px;
+}
+body .h5, body h5,.content h5 {
+    font-size: 30px;
+    line-height: 40px;
+    font-weight: 400;
+  	font-family:'stevie-sans';
+    letter-spacing: 0px;
+    color: #676158;
+    margin-bottom: 25px;
+}
+body h6, body .h6,.content h6 {
+    font-size: 25px;
+    line-height: 40px;
+    font-weight: 400;
+  	font-family:'stevie-sans';
+    letter-spacing: 0px;
+    color: #676158;
+    margin-bottom: 16px;
+}
+body , body p,.content p{
+  font-size: 20px;
+  line-height: 35px;
+  font-weight: 400;
+  font-family:'stevie-sans';
+  letter-spacing: 0px;
+  color: #676158;
+}
+body li {
+    color: #676158;
+}
+body .section-general.section-1 {
+    padding-bottom: 57px;
+}
+body .section-general {
+    padding-bottom: 65px;
+}
+body .section-general.section-3 {
+   padding-bottom: 84px;
+}
+body .section-general.section-4 {
+    padding-bottom: 73px;
+}
+body .section-general.section-6 {
+    padding-bottom: 48px;
+}
+body .section-general.section-7 {
+    padding-bottom: 105px;
+}
+body .section-general.section-8 {
+    padding-bottom: 120px;
+}
+body .section-general .col-row {
+    display: flex;
+}
+body .section-general .col-row .col-left {
+    width: 50%;
+    padding-right: 40px;
+}
+body .section-general .col-row .col-right {
+    width: 50%;
+    padding-left: 40px;
+}
+body .section-general .quote,blockquote {
+    padding-top: 43px;
+    padding-bottom: 50px;
+    max-width: 1054px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.quote .content p,blockquote .content p{
+    font-size: 25px;
+    line-height: 40px;
+    font-weight: 300;
+    letter-spacing: -0.2px;
+    color: #676158;
+    margin-bottom: 18px;
+}
+.quote .name,blockquote {
+    font-size: 18px;
+    line-height: 26px;
+    font-weight: 400;
+    color: #F18079;
+    letter-spacing: 0;
+}
+.quote .item-quote,blockquote .item-quote {
+    position: relative;
+    padding-left: 58px;
+    padding-right: 30px;
+}
+.quote .item-quote:before,blockquote .item-quote:before{
+    content:'';
+    display: inline-block;
+    width: 27px;
+    height: 59px;
+    position: absolute;
+    top: -6px;
+    left: 0;
+    background: url(icon-quote-01.svg) no-repeat;
+    background-size: 27px 59px;
+}
+.quote .item-quote:after,blockquote .item-quote:after {
+    content:'';
+    display: inline-block;
+    width: 27px;
+    height: 59px;
+    position: absolute;
+    bottom: -18px;
+    right: 0;
+    background: url(icon-quote-02.svg) no-repeat;
+    background-size: 27px 59px;
+}
+body .section-general.section-8 p {
+    font-size: 16px;
+    line-height: 30px;
+    font-weight: 400;
+    letter-spacing: -0.2px;
+    color: #676158;
+}
+body .section-general.section-9 h4 {
+    margin-bottom: 30px;
+}
+body p.title-small {
+    font-size: 11px;
+    line-height: 15px;
+    font-weight: 400;
+    letter-spacing: 0.5px;
+    color: #676158;
+}
+body .content p.title-small:not(:last-child) {
+    margin-bottom: 21px;
+}
+body .section-general .col-md-6 {
+    display: flex;
+    padding-left: 0;
+    padding-right: 0;
+}
+body .section-general .col-left {
+    padding-right: 58px;
+}
+body .section-general button {
+    margin-bottom: 35px;
+}
+body .content ul {
+    margin-left: 60px;
+    margin-top: 24px;
+}
+.default-page .content li+li {
+    margin-top: 14px;
+}
+@media (max-width: 1400px){
+  body , body p,.content p{
+    font-size: 18px;
+    line-height: 26px;
+  }
+  body .h1.big-size, body .h1, body h1,.content h1 {
+    font-size: 75px;
+    line-height: 84px;
+  }
+  body .h2.large-size, body .h2, body h2,.content h2 {
+     font-size: 60px;
+      line-height: 72px;
+  }
+  body .h3.medium-size, body .h3, body h3,.content h3,h1.title {
+      font-size: 45px;
+      line-height: 55px;
+  }
+  body .h4.title-page, body .h4, body h4,.content h4 {
+      font-size: 35px;
+      line-height: 42px;
+  }
+  body .h5, body h5,.content h5 {
+      font-size: 28px;
+      line-height: 35px;
+  }
+  body h6, body .h6,.content h6 {
+      font-size: 23px;
+      line-height: 40px;
+  }
+  .quote .content p, blockquote .content p{
+    font-size: 23px;
+      line-height: 40px;
+  }
+  body .section-general.section-1, 
+  body .section-general, 
+  body .section-general.section-3, 
+  body .section-general.section-4, 
+  body .section-general.section-7, 
+  body .section-general.section-8 {
+      padding-bottom: 70px;
+  }
+  body .section-general.section-5, 
+  body .section-general.section-6 {
+    padding-bottom: 30px;
+  }
+  body .section-general.section-9 {
+      padding-bottom: 0;
+  }
+}
+@media (max-width: 1024px){
+  button, .button,
+  button.action, 
+  button.primary, 
+  .action.primary, 
+  button.action.primary {
+  	font-size: 16px;
+    line-height: 21px;
+    min-width: 220px;
+  }
+  body .section-general button {
+      margin-bottom: 30px;
+  }
+  body , body p,.content p{
+    font-size: 16px;
+    line-height: 26px;
+  }
+  body .h1.big-size, body .h1, body h1,.content h1 {
+    font-size: 55px;
+    line-height: 65px;
+  }
+  body .h2.large-size, body .h2, body h2,.content h2 {
+     font-size: 45px;
+      line-height: 55px;
+  }
+  body .h3.medium-size, body .h3, body h3,.content h3,h1.title {
+      font-size: 35px;
+      line-height: 42px;
+  }
+  body .h4.title-page, body .h4, body h4,.content h4 {
+      font-size: 28px;
+      line-height: 35px;
+  }
+  body .h5, body h5,.content h5 {
+      font-size: 25px;
+      line-height: 32px;
+  }
+  body h6, body .h6,.content h6 {
+      font-size: 21px;
+      line-height: 27px;
+  }
+  body .section-general.section-8 p {
+      font-size: 14px;
+      line-height: 26px;
+  }
+   .quote .content p, blockquote .content p{
+    font-size: 21px;
+      line-height: 27px;
+  }
+  .quote .name, blockquote {
+      font-size: 16px;
+      line-height: 28px;
+  }
+  body .section-general.section-1, 
+  body .section-general, 
+  body .section-general.section-3, 
+  body .section-general.section-4, 
+  body .section-general.section-7, 
+  body .section-general.section-8 {
+      padding-bottom: 50px;
+  }
+  body .section-general.section-5, 
+  body .section-general.section-6 {
+    padding-bottom: 10px;
+  }
+  body .section-general .col-row .col-left {
+      padding-right: 15px;
+  }
+  body .section-general .col-row .col-right {
+      padding-left: 15px;
+  }
+  body .section-general .col-left {
+      padding-right: 30px;
+  }
+  body .content ul {
+      margin-left: 28px;
+      margin-top: 19px;
+  }
+  body .section, body section.section {
+    padding-top: 0;
+  }
+}
+@media (max-width: 767px){
+  .container{
+    padding: 0 15px;
+  }
+   body , body p,.content p{
+    font-size: 14px;
+    line-height: 22px;
+  }
+  body .h1.big-size, body .h1, body h1,.content h1 {
+    font-size: 40px;
+    line-height: 53px;
+    margin-bottom: 15px;
+  }
+  body .h2.large-size, body .h2, body h2,.content h2 {
+     font-size: 30px;
+      line-height: 40px;
+      margin-bottom: 16px;
+  }
+  body .h3.medium-size, body .h3, body h3,.content h3,h1.title {
+      font-size: 25px;
+      line-height: 33px;
+      margin-bottom: 12px;
+  }
+  body .h4.title-page, body .h4, body h4,.content h4 {
+      font-size: 22px;
+      line-height: 32px;
+      margin-bottom: 10px;
+  }
+  body .h5, body h5,.content h5 {
+      font-size: 18px;
+      line-height: 24px;
+      margin-bottom: 15px;
+  }
+  body h6, body .h6,.content h6 {
+      font-size: 16px;
+      line-height: 21px;
+      margin-bottom: 12px;
+  }
+  body .section-general.section-8 p {
+      font-size: 12px;
+      line-height: 20px;
+  }
+  .quote .content p, blockquote .content p{
+      font-size: 16px;
+      line-height: 28px;
+      margin-bottom: 10px;
+  }
+  .quote .content:not(:last-child), blockquote .content:not(:last-child) {
+    margin-bottom: 12px;
+  }
+  .quote .name, blockquote {
+      font-size: 14px;
+      line-height: 26px;
+  }
+  body .section-general.section-1, 
+  body .section-general {
+      padding-bottom: 28px;
+  }
+  body .section-general.section-3 {
+      padding-bottom: 33px;
+  }
+  body .section-general.section-5 {
+    padding-bottom: 45px;
+  }
+  body .section-general.section-6 {
+     padding-bottom: 48px;
+  }
+  body .section-general .col-row {
+      flex-direction: column;
+  }
+  body .section-general .col-row .col-left {
+      width: 100%;
+      padding-right: 0;
+      padding-bottom: 20px;
+  }
+  body .section-general .col-row .col-right {
+      width: 100%;
+      padding-left: 0;
+  }
+  .quote .item-quote,blockquote .item-quote {
+      padding: 0 12px;
+  }
+  .quote .item-quote:before, blockquote .item-quote:before {
+      top: -43px;
+      left: 10px;
+      width: 21px;
+      height: 46px;
+      background-size: 21px 46px;
+  }
+  .quote .item-quote:after, blockquote .item-quote:after {
+      bottom: -67px;
+      right: auto;
+      left: 14px;
+      width: 21px;
+      height: 46px;
+      background-size: 21px 46px;
+  }
+  body .section-general .col-md-6 {
+      flex-direction: column;
+  }
+  body .section-general .col-left {
+      padding-right: 0;
+  }
+  .default-page .content li+li {
+      margin-top: 10px;
+  }
+  button,.button, 
+  button.action, 
+  button.primary, 
+  .action.primary, 
+  button.action.primary {
+  	height: 41px;
+  }
+  body .section-general button {
+      margin-bottom: 18px;
+  }
+  .default-page .container .column, 
+  .default-page .container .columns {
+      padding-top: 13px;
+  }
+  body .section-general.section-2 {
+      padding-bottom: 35px;
+  }
+  body .section-general.section-4 {
+      padding-bottom: 40px;
+  }
+  blockquote, body .section-general .quote {
+      padding-top: 38px;
+  }
+  body .section-general.section-7 {
+      padding-bottom: 46px;
+  }
+  body .section-general.section-8 {
+      padding-bottom: 75px;
+  }
+  body main .section, body main section.section {
+    padding-bottom: 80px;
+  }
+}
+@media (max-width: 499px) {
+  button, 
+  button.action, 
+  button.primary, 
+  .action.primary, 
+  button.action.primary {
+    min-width: auto;
+    width: 100%;
+  }
+}

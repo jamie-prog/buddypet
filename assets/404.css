@@ -1,0 +1,111 @@
+.search .search-form,
+.error-404 .search-form {
+    padding-right: 61px;
+    position: relative;
+}
+.search .search-form .search__fields input[type=text]{
+  height:45px;
+}
+.search .search-form button,
+.error-404 .search-form button {
+  position: absolute;
+  background: none;
+  right: 5px;
+  bottom: 0;
+  min-width: 20px;
+  padding: 0;
+  width: 35px;
+  height: 35px;
+}
+.search .search-form .search__fields input[type=text],
+.error-404 .search-form .search__fields input[type=text]{
+  border: 0;
+  border-bottom: 1px solid #0e3733;
+  background: transparent;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+
+.search .control.has-icons-left .icon,
+.error-404 .control.has-icons-left .icon{
+   left: auto;
+  right: -41px;
+  top: 31px;
+  width: 30px;
+  height: 30px;
+  color: #0e3733;
+  padding: 0;
+}
+@media(max-width:1400px){
+  .error-404 .title{
+    font-size:75px;
+    line-height:84px;
+  }
+  .error-404 .content p{
+    font-size: 18px;
+    line-height: 26px;
+  }
+}
+@media(max-width:1024px){
+  .error-404 .title{
+    font-size: 55px;
+    line-height: 65px;
+  }
+  .error-404 .content p{
+    font-size: 16px;
+    line-height: 26px;
+  }
+}
+@media(max-width:767px){
+  .error-404 .title{
+    font-size: 40px;
+    line-height: 53px;
+    margin-bottom: 15px;
+  }
+  .error-404 .content p{
+    font-size: 14px;
+    line-height: 22px;
+  }
+}
+@media(max-width:480px){
+  .search .search-form,
+.error-404 .search-form {
+    padding-right: 30px;
+  }
+  
+
+.search .control.has-icons-left .icon,
+.error-404 .control.has-icons-left .icon{
+    left: auto;
+    right: -22px;
+    top: 20px;
+    width: 20px;
+    height: 20px;
+    color: #0e3733;
+    padding: 0;
+  }
+  .search .search__fields .control.has-icons-left .icon{
+  top:31px;
+}
+.search .search-form button,
+.error-404 .search-form button {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    min-width: 20px;
+    padding: 0;
+    width: 25px;
+    height: 25px;
+  }
+.search .search-form .search__fields input[type=text],
+.error-404 .search-form .search__fields input[type=text]{
+    font-size: 14px !important;
+  }
+}
+@media(max-width:374px){
+  .error-404 .title{
+    font-size: 38px;
+    line-height: 45px;
+  }
+}

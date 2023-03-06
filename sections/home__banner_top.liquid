@@ -1,0 +1,88 @@
+<div class="container {{ section.settings.css_class }}" data-section-type="home-top-banner">
+  <div class="content">
+    <div class="content-top">
+      <h1 class="banner-title">{{- section.settings.title | strip_html -}}</h1>
+      <div class="description">{{ section.settings.description | strip_html }}</div>
+      <a href="{{- section.settings.btn_link -}}" class="button btn">{{- section.settings.btn_text -}}</a>
+    </div>
+    <div class="banner-content__bottom">
+      <span class="">
+        <img src="{{section.settings.bottom_content_icon | image_url: width: '55'}}" loading="lazy" alt="" width="55" height="{{ 55 | divided_by: section.settings.bottom_content_icon.aspect_ratio | floor}}">
+      </span>
+      <span class="bottom-content__text">
+        {{section.settings.bottom_content_text}}
+      </span>
+    </div>
+  </div>
+  <div class="content-image">
+    <div class="image">
+      <img src="{{- section.settings.image -}}" alt="">
+    </div>
+  </div>
+</div>
+
+
+{% schema %}
+  {
+    "name": "Banner Top",
+    "class": "banner-top",
+    "settings": [
+      {
+        "type": "url",
+        "id": "image",
+        "label": "Image"
+      },
+      {
+        "type": "richtext",
+        "id": "title",
+        "label": "Title"
+      },
+      {
+        "type": "richtext",
+        "id": "description",
+        "label": "Description"
+      },
+      {
+        "type": "text",
+        "id": "btn_text",
+        "label": "Button Text"
+      },
+      {
+        "type": "url",
+        "id": "btn_link",
+        "label": "Button Link"
+      },
+      {
+        "type": "header",
+        "content": "Banner Content Bottom"
+      },
+      {
+        "type": "image_picker",
+        "id": "bottom_content_icon",
+        "label": "Bottom Content Icon"
+      },
+      {
+        "type": "text",
+        "id": "bottom_content_text",
+        "label": "Bottom Content Text"
+      },
+      {
+        "type": "text",
+        "id": "css_class",
+        "label": "CSS Class"
+      }
+    ],
+    "presets": [
+      {
+        "name": "Banner Top",
+        "category": "Home"
+      }
+    ]
+  }
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

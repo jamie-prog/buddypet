@@ -1,0 +1,102 @@
+<section class="help-form">
+  <div class="help contact-form">
+    {% if section.settings.section-heading != blank %}
+    	<h2 class="contact-title">{{ section.settings.section-heading }}</h2>
+    {% endif %}
+    {% form 'contact', id: 'form-contact-help' %}
+      <div class="grid">
+        <div class="grid-item media-up-one--half">
+          <label class="label--hidden require" for="ContactFormName">{{ 'contact.form.name' | t }}</label>
+          <input type="text" id="ContactFormName" name="contact[name]" required />
+        </div>
+        <div class="grid-item media-up-one--half">
+          <label class="label--hidden require" for="ContactFormEmail">{{ 'contact.form.email' | t }}</label>
+          <input type="text" id="ContactFormEmail" name="contact[email]" required />
+        </div>
+        <div class="grid-item media-up-one--half">
+          <label class="label--hidden require" for="ContactFormPhone">{{ 'contact.form.phone' | t }}</label>
+          <input type="tel" id="ContactFormPhone" name="contact[phone]" required />
+        </div>
+        <div class="grid-item media-up-one--half">
+          <label class="label--hidden require" for="ContactFormMessage">{{ 'contact.form.enquiry' | t }}</label>
+          <input type="text" id="ContactFormMessage" name="contact[body]" required />
+        </div>
+      </div>
+    <div class="action">
+      <input type="submit" class="btn" value="{{ 'contact.form.send' | t }}">
+    </div>
+     {{ form.errors | default_errors }}
+      {% if form.posted_successfully? %}
+          <p class="note form-success">
+            {{ 'contact.form.post_success' | t }}
+          </p>
+      {% endif %}
+    {% endform %}
+  </div>
+</section>
+<script type="text/javascript">
+  $(function($){
+    $("#form-contact-help").validate(
+      {
+        rules: 
+        {
+          'contact[name]': 
+          {
+            required: true
+          },
+          'contact[email]': 
+          {
+            required: true,
+            email: true
+          },
+          'contact[phone]': 
+          {
+            required: true
+          },
+          'contact[body]': 
+          {
+            maxlength: 1024
+          }
+        },
+        messages: 
+        {
+          'contact[name]': 
+          {
+            required: "Please enter your name"
+          },
+          'contact[email]': 
+          {
+            required: "Please enter your email address. This is required to contact you later."
+          },
+          'contact[body]': 
+          {
+            maxlength: "Please limit the message to {0} letters!"
+          }
+        }
+      });	
+  });
+</script>
+{% schema %}
+  {
+    "name": "Help Contact-form",
+    "settings": [
+	{
+	"id": "section-heading",
+    "type": "text",
+    "label": "Heading 1"
+	}
+	],
+	"presets": [
+    {
+    "name": "Welcome section Test",
+    "category": "ADVANCED LAYOUT"
+    }
+    ]
+  }
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

@@ -1,0 +1,30 @@
+<div data-section-type="product-reviews" data-section-id="{{section.id}}" class="{{section.settings.custom_class}}">
+    <div class="product_section product_section_reviews js-product_section container custom-review"
+            style="color: {{ product.metafields.accentuate.color_star }}">
+        <div class="content-title-custom">
+        <h3 style="color: #{{colour[1]}}" lass="title-custom-review">customer reviews</h3>
+        <div class="number-rating"><span class="shopify-product-reviews-badge" data-id="{{ product.id }}"></span></div>
+        </div>
+    <!--       <div id="shopify-product-reviews" data-id="{{ product.id }}">{{ product.metafields.spr.reviews }}</div> -->
+        {% render 'judgeme_widgets', widget_type: 'judgeme_review_widget', jm_style: '', concierge_install: false, product: product %}
+    </div>
+</div>
+
+{% schema %}
+{
+    "name":"Product Reviews", 
+    "templates":["product"], 
+    "settings":[
+        {
+            "type":"textarea", 
+            "id":"custom_class", 
+            "label":"Custom Class"
+        }
+    ],
+    "presets":[
+        {
+            "name":"Product Reviews"
+        }
+    ]
+}
+{% endschema %}

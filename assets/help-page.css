@@ -1,0 +1,462 @@
+.help-page-banner .banner__wrapper.is-medium .image-element__wrap {
+    height: auto;
+}
+.btn-primary:not(:disabled):not(.disabled):active:focus, .btn-primary:not(:disabled):not(.disabled).active:focus, .show > .btn-primary.dropdown-toggle:focus {
+    box-shadow: none !important;
+    outline: none;
+    box-shadow: none;
+    border-color: transparent;
+    background: none;
+    color: #0f3833;
+}
+.help-page {
+    position: relative;
+    overflow: hidden;
+}
+.help-page section.section__wrapper.section {
+    position: relative;
+    z-index: 2;
+}
+.help-page:before {
+  content: '';
+  position: absolute;
+  top: 1475px;
+  right: -48px;
+  width: 241px;
+  height: 190px;
+  display: block;
+  background: url(help-page-icon.png) no-repeat center;
+  background-size: contain;
+  }
+
+.help-page:after {
+    content: '';
+    position: absolute;
+    top: 906px;
+    left: -60px;
+    width: 216px;
+    height: 212px;
+    display: block;
+    background: url(help-left-pink.png) no-repeat center;
+    background-size: contain;
+}
+
+.section-faq ul li {margin-bottom: 40px;}
+.section-faq ul li h4{
+      border-bottom: 1px solid #0f3833;
+      padding-bottom: 38px;
+      margin-bottom: 0;
+      cursor: pointer;
+}
+.section-faq ul li h4:after {
+    position: absolute;
+    content: '';
+    display: block;
+    width: 20px;
+    height: 20px;
+    background: url(plus.svg) no-repeat center;
+    background-size:cover;
+    right: -27px;
+    top: 15px;
+    cursor: pointer;
+}
+
+.section-faq ul li.active h4:after{
+      background: #0f3833;
+      height: 2px;
+      top: 25px;
+}
+.section-faq h4, .contact-form label {
+    font-size: 14px;
+    line-height: 19px;
+    text-transform: uppercase;
+    font-family: 'TTNorms-Bold';
+    color: #0f3833;
+    display: block;
+    position: relative;
+}
+label.error {
+    color: #ff0000;
+    text-transform: inherit;
+}
+.section-faq .content {
+    font-family: 'TTNorms-Medium';
+}
+.contact-form input {
+    background: transparent;
+    border: 0;
+    border-bottom: 1px solid #0f3833;
+    display: inline-block;
+    vertical-align: top;
+    width: 100%;
+    height: 22px;
+      font-family: 'TTNorms-Regular';
+    font-size: 16px;
+    border-radius: 0;
+}
+.contact-form input.btn:focus, .product_section_reviews .spr-form input.spr-button:focus, .contact-form input.btn:hover, .product_section_reviews .spr-form input.spr-button:hover {
+    outline: none;
+    box-shadow: none;
+      border-color: transparent;
+}
+.contact-form input.btn, .product_section_reviews .spr-form input.spr-button {
+    border-radius: 0;
+    padding: 0;
+    font-size: 24px;
+    line-height: 32px;
+    color: #0f3833;
+    font-family: 'TTNorms-Medium';
+    display: inline-block;
+    width: auto;
+    height: auto;
+    margin-top: 50px;
+}
+.contact-form label.require {
+    display: inline-block;
+    position: relative;
+    vertical-align: top;
+   margin-bottom: 0px;
+}
+
+.contact-form label.require:after {
+    position: absolute;
+    content: '*';
+    top: -2px;
+}
+.shopify-section .contact-form h2 {
+    margin-bottom: 31px;
+}
+p.note.form-success {
+    margin-top: 25px;
+}
+.contact-form .grid-item {
+    margin-bottom: 28px;
+}
+.help-chat .content-top,.help-chat .content-bottom {
+    font-family: 'TTNorms-Medium';
+    margin-bottom: 26px;
+}
+.help-chat h3{
+   font-family: 'TTNorms-Bold';
+   color: #0f3833;
+   margin-bottom: 23px;
+}
+.help-chat {
+    padding-top: 86px;
+    padding-left: 12px;
+    padding-bottom: 223px;
+}
+
+.shopify-section .section-faq h2 {
+    margin-bottom: 35px;
+    max-width: 510px;
+    width: 100%;
+}
+
+main#template-page-help .row {
+    margin-bottom: 0;
+}
+.section-faq ul li.active .content {
+    height: auto;
+    visibility: visible;
+    opacity: 1;
+    padding-top: 30px;
+    padding-bottom: 0;
+}
+.section-faq ul li .content {
+    height: 0;
+    visibility: hidden;
+    opacity: 0;
+    transition-duration: 0.3s;
+}
+.help-page .container {
+    max-width: 1595px;
+}
+#shopify-section-help_page__banner section.section {
+    width: 100%;
+}
+
+.help-page #shopify-section-help_page__banner .container {
+    width: 100%;
+    padding: 0;
+    max-width: 100%;
+}
+div#shopify-section-help_page__banner {
+    padding-top: 26px;
+    padding-bottom: 147px;
+}
+.section-faq ul {
+    padding-left: 8px;
+    padding-right: 39px;
+    padding-bottom: 97px;
+}
+
+.help.contact-form {
+    padding-left: 4px;
+}
+
+.help.contact-form .contact-form {
+    padding-left: 6px;
+}
+
+div#shopify-section-page__main-help-shipping .section-faq h2 {
+    margin-bottom: 28px;
+}
+
+.help-chat .content-bottom p {
+    margin-bottom: 31px;
+}
+@media (min-width: 1701px){
+  div#shopify-section-page__main-help-shipping .section-faq h2 {
+    line-height: 94px;
+  }
+  .help-chat .content-top,.help-chat .content-bottom {
+    font-size: 34px;
+    line-height: 44px;
+    padding-right: 51px;
+  }
+  .section-faq .content {
+    font-size: 34px;
+    line-height: 44px;
+  }
+  label.error{
+        margin-top: -10px;
+  }
+  
+}
+@media (max-width: 1700px){
+  .contact-form input.btn, .product_section_reviews .spr-form input.spr-button{
+        font-size: 30px;
+    line-height: 30px;
+  }
+}
+@media (max-width: 1600px){
+  .contact-form input.btn, .product_section_reviews .spr-form input.spr-button{
+        font-size: 24px;
+    line-height: 24px;
+  }
+}
+
+@media (max-width: 1200px){
+  .contact-form input.btn, .product_section_reviews .spr-form input.spr-button{
+        font-size: 20px;
+    line-height: 20px;
+  }
+    div#shopify-section-help_page__banner {
+    padding-bottom: 50px;
+}
+}
+@media (max-width: 1023px) and (min-width: 768px){
+.section-faq ul li h4{
+  padding-bottom:28px;
+}
+.section-faq ul li {
+    margin-bottom: 25px;
+}
+
+.contact-form input.btn {
+    margin-top: 30px;
+}
+
+.help-chat {
+    padding-top: 60px;
+}
+
+.help-page:before {
+    top: 80%;
+}
+  .section-faq ul li h4:after {
+    width: 16px;
+    height: 16px;
+}
+}
+@media (max-width: 1400px) and (min-width: 1024px){
+.help-page:after {
+    width: 116px;
+    height: 112px;
+    left: -30px;
+    top: 52%;
+}
+}
+@media (max-width: 1023px) and (min-width: 768px){
+.help-page:after {
+      width: 116px;
+    height: 112px;
+    left: -30px;
+    top: 46%;
+}
+}
+@media (min-width: 768px){
+  .help-page .mobile-banner{
+  display:none;
+  }
+  .section-faq ul li.active h4:after{
+      background: #0f3833;
+      height: 2px;
+      top: 25px;
+}
+}
+@media (max-width: 767px){
+  body.help-page main .section, body main section.section{
+    padding-bottom:0;
+  }
+  .section-faq ul li h4{
+  padding-bottom:15px;
+}
+  .help-page:after {
+    width: 137px;
+    height: 134px;
+    top: 1588px;
+    left: -32px;
+}
+  .shopify-section section.help-form .contact-form h2.contact-title{
+        padding-left: 0;
+  }
+.help-page section.section__wrapper.section:before {
+    content: '';
+    position: absolute;
+    top: 251px;
+    left: -192px;
+    width: 307px;
+    height: 405px;
+    display: block;
+    background: url(help-left-gray.png) no-repeat center;
+    background-size: contain;
+}
+
+.help-page:before {
+    width: 137px;
+    height: 146px;
+    top: 1093px;
+    right: -17px;
+    background: url(help-right-green-mb.png) no-repeat center;
+    background-size: contain;
+}
+  .help-page .desktop-banner{
+  display:none;
+  }
+  .help-page .mobile-banner .container {
+    max-width: 100%;
+    padding: 0 20px;
+}
+  .section-faq ul li h4 {
+    font-size: 14px;
+    line-height: 17px;
+    margin-right: 9px;
+}
+
+.help-page .container {
+    max-width: 523px;
+}
+.mobile-banner {
+    margin-bottom: 78px;
+}
+
+.section-faq ul {
+    padding-left: 0;
+    padding-right: 6px;
+    padding-bottom: 30px;
+}
+
+.section-faq ul li h4:after {
+    width: 12px;
+    height: 12px;
+    right: -15px;
+    top: 19px;
+}
+
+.section-faq {
+    padding-left: 7.5%;
+}
+
+.shopify-section .section-faq h2, div#shopify-section-page__main-help-shipping .section-faq h2 {
+    margin-bottom: 41px;
+}
+
+.section-faq ul li {
+    margin-bottom: 22px;
+}
+.section-faq ul li.active .content {
+    padding-top: 19px;
+    padding-bottom: 11px;
+}
+section.help-form {
+    padding-left: 6.6%;
+    margin-top: -4px;
+}
+
+.shopify-section .contact-form h2 {
+    margin-bottom: 40px;
+}
+
+.help.contact-form .contact-form {
+    padding-left: 0;
+}
+
+.contact-form input {
+    height: 37px;
+}
+
+.contact-form .grid-item {
+    margin-bottom: 38.5px;
+}
+
+.contact-form input.btn, .product_section_reviews .spr-form input.spr-button {
+    font-size: 18px !important;
+    line-height: 18px;
+    margin-top: 5px;
+}
+
+.help-chat {
+    padding-left: 7.5%;
+    padding-top: 69px;
+    padding-bottom: 56px;
+}
+
+.help-chat h3 {
+    font-size: 18px;
+    line-height: 28px;
+    margin-bottom: 0;
+}
+
+.help-chat .content-top, .help-chat .content-bottom {
+    margin-bottom: 10px;
+}
+
+.help-chat .content-bottom p {
+    margin-bottom: 14px;
+}
+  .help.contact-form .action {
+    text-align: center;
+}
+}
+@media (max-width: 480px){
+  .section.section__wrapper {
+      width: 100%;
+  }
+
+   .help-page .col-md-6 {
+      padding: 0;
+  }
+
+  .section-faq {
+      padding-left: 0;
+  }
+
+  .help.contact-form {
+      padding-left: 0;
+  }
+
+  section.help-form {
+      padding-left: 0;
+  }
+
+  .help-chat {
+      padding-left: 0;
+  }
+  .help-page section.section__wrapper.section:before {
+    width: 200px;
+    height: 300px;
+    left: -92px;
+}
+}

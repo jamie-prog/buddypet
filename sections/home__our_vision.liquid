@@ -1,0 +1,120 @@
+{% comment %}
+** Image with text - dynamic **
+- Draggable section
+- Uses blocks
+{% endcomment %}
+
+{% assign id = section.id %}
+{% comment %} Layout {% endcomment %}
+{% assign background_color = section.settings.background_color %}
+
+{% comment %} HTML markup {% endcomment %}
+<section class="section "
+         {% if background_color != blank %}
+         style="background-color: {{ background_color }};"
+         {% endif %}
+         >
+  <div class="container">
+    <div class="row">
+      <div class="col-12 section-content">
+      	<div class="section-inner">
+          {% if section.settings.title != blank %}
+          	<h2>{{ section.settings.title }}</h2>
+          {% endif %}
+          <div class="our-vision-boxes" data-aos="zoom-in-left" data-aos-delay="300" data-aos-duration="1000">
+            {% if section.settings.icon_top != blank %}
+              {% render 'image-element',
+                            image: section.settings.icon_top,
+                            additional_classes: 'image-with-text__image image-top desktop'
+              %}
+            {% endif %}
+            {% if section.settings.icon_top != blank %}
+              {% render 'image-element',
+                            image: section.settings.icon_top_mobile,
+                            additional_classes: 'image-with-text__image image-top mobile'
+              %}
+            {% endif %}
+          </div>
+          <div class="col-12 section-description">
+            <div class="row">
+              <div class="col-12 col-md-6 desktop">
+              {% if section.settings.content_left != blank %}
+                <div class="image-with-text__text content">
+                  {{ section.settings.content_left }}
+                </div>
+              {% endif %}
+              </div>
+              <div class="col-12 col-md-6 desktop">
+                {% if section.settings.content_right != blank %}
+                <div class="image-with-text__text content">
+                  {{ section.settings.content_right }}
+                </div>
+                {% endif %}
+              </div>
+              <div class="col-12 col-md-6 mobile">
+                {% if section.settings.content_mobile != blank %}
+                <div class="image-with-text__text content">
+                  {{ section.settings.content_mobile }}
+                </div>
+                {% endif %}
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Hemp Our Vision",
+  "class": "image-with-text image-with-text-1 home-our-vision",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Section Content"
+    },
+    {
+      "type": "image_picker",
+      "id": "icon_top",
+      "label": "Icon Top"
+    },
+	{
+      "type": "image_picker",
+      "id": "icon_top_mobile",
+      "label": "Icon Top Mobile"
+    },
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Heading"
+    },
+    {
+      "type": "richtext",
+      "id": "content_left",
+      "label": "Text Left"
+    },
+    {
+      "type": "richtext",
+      "id": "content_right",
+      "label": "Text Right"
+    },
+    {
+      "type": "richtext",
+      "id": "content_mobile",
+      "label": "Text Mobile"
+    },
+    {
+      "type": "color",
+      "id": "background_color",
+      "label": "Background Color"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Hemp Our Vision"
+    }
+  ]
+}
+{% endschema %}

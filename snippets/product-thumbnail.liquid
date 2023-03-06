@@ -1,0 +1,77 @@
+{% if related_products == true %}
+  {% assign hover_enabled = block.settings.show_related_products_title_on_hover %}
+{% else %}
+  {% assign hover_enabled = settings.thumbnail_hover_enabled %}
+{% endif %}
+
+{% if type == 'block' %}
+  {% assign object = block %}
+{% else %}
+  {% assign object = section %}
+{% endif %}
+
+{% assign secondaryImage = product.media[1] %}
+
+{% assign collection_handles = product.collections | map: 'handle' %}
+{% if product.featured_media.preview_image.alt contains 'youtube' or image.alt contains 'vimeo' %}
+  {% assign alt_text = product.title %}
+{% else %}
+  {% assign alt_text = product.featured_media.preview_image.alt %}
+{% endif %}
+
+{% if type == 'block' %}
+  {% assign image_crop = block.settings.image_crop %}
+{% else %}
+  {% assign image_crop = section.settings.image_crop %}
+{% endif %}
+
+{% if section.settings.align_height == true %}
+{% style %}
+  .product-{{ product.id }} .image__container img,
+  .product-{{ product.id }} .product-thumbnail__video .plyr {
+    max-width: 100%;
+    width: {{ height }}px;
+    margin: 0 auto;
+  }
+
+  .shopify-model-viewer-ui model-viewer {
+    --progress-bar-height: 2px;
+    --progress-bar-color: {{ settings.regular_color }};
+  }
+{% endstyle %}
+{% endif %}
+
+<div class="column  thumbnail  product__thumbnail  product__grid-item  has-padding-bottom">
+  <div class="product-wrap">
+
+      <div class="product-image__wrapper">
+        <div class="image__container product__imageContainer one--thirds">
+          <a href="{{ product.url | within: collection }}">
+
+            {% comment %} Primary image {% endcomment %}
+            {% render 'image-element',
+                    image: product.featured_media.preview_image,
+                    alt: alt_text,
+                    object_fit: align_height,
+                    max_height: height
+            %}
+          </a>
+        </div>
+
+        <div class="product-info two--thirds">
+          <div class="quick-shop__info">
+            <div class="info text-align-center">
+              <p class="product-title h1"><a class="product-link" href="{{ product.url | within: collection }}">{{ product.title }}</a></p>
+              <p class="product-description">{{ product.description }}</p>
+            </div>
+          </div>
+          <div class="shop-now">
+          	<div class="info text-align-center">
+              <a class="shop-link" href="{{ product.url | within: collection }}">{{ 'Shop now' }}</a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+</div>

@@ -1,0 +1,48 @@
+<div id="theme-ajax-cart" class="theme-ajax-cart shopify-section {% if context == 'mobile-header' %}jsAjaxCart{% endif %} is-{{ settings.cart_action | replace: '_', '-' }} theme-ajax-cart--header-{{ settings.header_layout }}" data-ajax-cart-{{ settings.cart_action }}>
+  <section class="ajax-cart ajax-cart--{{ settings.cart_action | replace: '_', '-' }}">
+    {% comment %} Inner ajax cart content can be found in templates/cart.ajax.liquid {% endcomment %}
+
+    {% if settings.cart_action == 'mini_cart' %}
+      <div class="card has-shadow">
+        <div class="ajax-cart__close-icon" data-ajax-cart-close>
+<!--          <!-- {% render 'icon', name: 'x' %} -->
+          <svg xmlns="http://www.w3.org/2000/svg" width="17.414" height="17.414" viewBox="0 0 17.414 17.414">
+            <g id="X" transform="translate(-4746.793 177.207)">
+              <line id="Line_22" data-name="Line 22" x2="16" y2="16" transform="translate(4747.5 -176.5)" fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="1"/>
+              <line id="Line_23" data-name="Line 23" x1="16" y2="16" transform="translate(4747.5 -176.5)" fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="1"/>
+            </g>
+          </svg>
+        </div>
+        <div id="ajax-cart__content" data-ajax-cart-content></div>
+      </div>
+    {% elsif settings.cart_action == 'drawer' %}
+      <div class="ajax-cart__close-icon" data-ajax-cart-close>
+<!--       <!--    {% render 'icon', name: 'x' %} -->
+          <svg xmlns="http://www.w3.org/2000/svg" width="17.414" height="17.414" viewBox="0 0 17.414 17.414">
+            <g id="X" transform="translate(-4746.793 177.207)">
+              <line id="Line_22" data-name="Line 22" x2="16" y2="16" transform="translate(4747.5 -176.5)" fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="1"/>
+              <line id="Line_23" data-name="Line 23" x1="16" y2="16" transform="translate(4747.5 -176.5)" fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="1"/>
+            </g>
+          </svg>
+      </div>
+      <div id="ajax-cart__content" data-ajax-cart-content></div>
+    {% endif %}
+  </section>
+
+  {% comment %}JavaScript{% endcomment %}
+  <script
+    type="application/json"
+    data-section-id="theme-ajax-cart"
+    data-section-data
+  >
+    {
+      "cart_action": {{ settings.cart_action | json }},
+      "display_tos_checkbox": {{ settings.display_tos_checkbox | json }}
+    }
+  </script>
+  <script src="{{ 'z__jsAjaxCart.js' | asset_url }}"></script>
+</div>
+
+{% if settings.cart_action == 'drawer' %}
+  <div class="ajax-cart__overlay" data-ajax-cart-close></div>
+{% endif %}

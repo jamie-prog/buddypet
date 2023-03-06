@@ -1,0 +1,177 @@
+{% if section.blocks.size > 0 %}
+{% assign collection_1 = section.settings.collection_1 %}
+{% assign collection_2 = section.settings.collection_2 %}
+{% assign collection_3 = section.settings.collection_3 %}
+{% assign range_1 = 0 %}
+{% assign range_2 = 0 %}
+{% assign range_3 = 0 %}
+<div class="container {{ section.settings.css_class }}" data-section-type="home-our-products">
+  <div class="section-header top-collection">
+    <h3 class="section-header__title">{{- section.settings.title -}}</h3>
+    {%- comment -%}
+    {%- if section.blocks.size > 0 -%}
+    <ul class="navigation carousel--selector">
+      {%- assign exist_active_item = false -%}
+      {%- for block in section.blocks -%}
+        {%- assign is_active = false -%}
+        {%- assign collection = block.settings.collection -%}
+        {%- if collection.products.size > 0 -%}
+          {%- if exist_active_item == false -%}
+            {%- assign is_active = true -%}
+            {%- assign exist_active_item = true -%}
+          {%- endif -%}
+          <li><a href="javascript:void(0)" class="collection-filter {% if is_active == true %} is-active{% endif %}" data-target-carousel="{{collection.handle}}">{{collection.title}}</a></li>
+        {%- endif -%}
+      {%- endfor -%}
+        <li><a class="link" href="{{- section.settings.shop_all_link -}}">Shop All</a></li>
+    </ul>
+    {%- endif -%}
+    {%- endcomment -%}
+  </div>
+  
+  {%- if section.settings.collection != blank and section.settings.collection.products.size > 0 -%}  
+    <div class="list-container product-items">
+      {%- assign collection = section.settings.collection -%}
+      <div class="featured-products__carousel owl-carousel owl-theme is-active" data-carousel="{{collection.handle}}">
+        {%- for product in collection.products -%}
+          {% render 'product-thumbnail-home',
+            product: product,
+            align_height: false,
+            height: 0,
+            related_products: false,
+            index: range_1
+          %}
+        {%- endfor -%}
+      </div>
+    </div>
+  {%- endif -%}
+  {%- comment -%}
+  <div class="list-container product-items">
+    {%- if section.blocks.size > 0 -%}
+      {%- assign exist_active_carousel = false -%}
+      {% for block in section.blocks %}
+        {%- assign is_active_carousel = false -%}
+        {%- assign collection = block.settings.collection -%}
+        {%- if collection.products.size > 0 -%}
+          {%- unless exist_active_carousel -%}
+            {%- assign is_active_carousel = true -%}
+            {%- assign exist_active_carousel = true -%}
+          {%- endunless -%}
+          <div class="featured-products__carousel owl-carousel owl-theme {% if is_active_carousel %} is-active{% endif %}" data-carousel="{{collection.handle}}">
+            {%- for product in collection.products -%}
+              {% render 'product-thumbnail-home',
+                product: product,
+                align_height: false,
+                height: 0,
+                related_products: false,
+                index: range_1
+              %}
+            {%- endfor -%}
+          </div>
+        {%- endif -%}
+      {% endfor %}
+    {%- endif -%}
+  </div>
+  {%- endcomment -%}
+  <div class="chat-with-us">
+    <p class="description">{{ section.settings.chat_description }}</p>
+    <div class="contact-addresses--wrapper">
+      {%- if section.settings.phone -%}
+        <a href="tel:{{section.settings.phone}}" class="contact-item">{% render 'icon-phone' %}Call Us</a>
+      {%- endif -%}
+      {%- if section.settings.email -%}
+        <a href="mailto:{{section.settings.email}}" class="contact-item">{% render 'icon-email' %}Email Us</a>
+      {%- endif -%}
+      <a href="{{ section.settings.chat_link_url }}" class="contact-item">{% render 'icon-chat' %}{{ section.settings.chat_link_text }}</a>
+    </div>
+  </div>
+</div>
+{% endif %}
+
+
+{% schema %}
+  {
+    "name": "Our Product",
+    "class": "our-product",
+    "settings": [
+      {
+        "type": "text",
+        "id": "title",
+        "label": "Title"
+      },
+      {
+        "type":"collection",
+        "id":"collection", 
+        "label":"Collection"
+      },
+      {
+        "type": "url",
+        "id": "shop_all_link",
+        "label": "Shop All Link"
+      },
+      {
+        "type": "header",
+        "content": "Chat with us"
+      },
+      {
+        "type": "text",
+        "id": "chat_description",
+        "label": "Description"
+      },
+      {
+        "type": "text",
+        "id": "chat_link_text",
+        "label": "Text"
+      },
+      {
+        "type": "url",
+        "id": "chat_link_url",
+        "label": "Link URL"
+      },
+      {
+        "type": "text",
+        "id": "email",
+        "label": "Email"
+      },
+      {
+        "type": "text",
+        "id": "phone",
+        "label": "Phone"
+      },
+      {
+        "type": "header",
+        "content": "Advanced"
+      },
+      {
+        "type": "text",
+        "id": "css_class",
+        "label": "CSS Class"
+      }
+    ],
+    "blocks": [
+      {
+        "type":"Collection", 
+        "name":"Collection",
+        "settings":[
+          {
+            "type": "collection",
+            "id": "collection",
+            "label": "Collection"
+          }
+        ]
+      }
+    ],
+    "presets": [
+      {
+        "name": "Our Product",
+        "category": "Home"
+      }
+    ]
+  }
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

@@ -1,0 +1,63 @@
+{% if section.settings.featured_article != blank %}
+{% assign article = articles[section.settings.featured_article] %}
+<div class="article-item">
+  <div class="article-image">
+    <a href="{{ article.url }}" title="{{ article.title | escape }}" style="background-image: url({{ article.image | img_url: '800x' }})">
+      {% render 'image-element',
+        image: article.image,
+        alt: article.image.alt,
+        stretch_width: '800x'
+      %}
+    </a>
+  </div>
+  <div class="article-content">
+    {% comment %}<h2><span>{{ article.title | split: ' ' | first }}</span> {{ article.title | split: ' ' | last }}</h2>{% endcomment %}
+    <h2>
+      <a href="{{ article.url }}" title="{{ article.title | escape }}">
+      	
+        {% if section.settings.custom_title_1 != blank or section.settings.custom_title_2 != blank %}
+                <span>{{- section.settings.custom_title_1 -}}</span>
+                {{- section.settings.custom_title_2 -}}
+              {% else %}
+                <span>{{- article.title -}}</span>
+              {% endif %}
+        
+        
+      </a>
+    </h2>
+    
+    {% if article.excerpt != blank %}
+    <div class="article-excerpt">{{ article.excerpt }}</div>
+    {% endif %}
+    <a class="read-more" href="{{ article.url }}" title="{{ article.title | escape }}">{{ 'blogs.general.continue_reading_html' | t }}</a>
+  </div>
+</div>
+{% endif %}
+{% schema %}
+  {
+    "name": "Post Of Collection",
+    "settings": [
+        {
+          "type": "article",
+          "id": "featured_article",
+          "label": "Featured article"
+    	},
+		{
+            "type": "text",   
+            "id": "custom_title_1",
+            "label": "Custom Title Line 1"
+          },
+          {
+            "type": "text",   
+            "id": "custom_title_2",
+            "label": "Custom Title Line 2"
+          }
+	]
+  }
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

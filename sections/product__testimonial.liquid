@@ -1,0 +1,71 @@
+<div data-section-type="product__testimonial" data-section-id="{{section.id}}" class="container">
+  <div class="testimonial--wrapper">
+    {%- if section.settings.author_image != blank -%}
+    <div class="testimonial-image--wrapper">
+      <img src="{{section.settings.author_image | image_url }}" class="testimonial-author--image" alt="{{section.settings.author_image.alt}}" width="{{section.settings.author_image.width}}" height="{{section.settings.author_image.height}}" loading="lazy">
+    </div>
+    {%- endif -%}
+    <div class="testimonial-contents">
+      <div class="testimonial-content">
+        <span class="quote-start">“</span>
+        {{section.settings.testimonial_content | strip_html}}
+        <span class="testimonial-author">{{section.settings.testimonial_author}}</span>
+        <span class="quote-end">”</span>
+      </div>
+      {%- if section.settings.read_more_link -%}
+      <a href="{{section.settings.read_more_link}}" class="testimonial-readmore">Read more about {{product.title}} ></a>
+      {%- endif -%}
+    </div>
+  </div>
+</div>
+{%- if section.settings.content_background -%}
+  {% style %}
+    [data-section-id="{{section.id}}"] .testimonial--wrapper:before{
+      content: '';
+      background-image: url("{{section.settings.content_background | image_url }}");
+      width: {{section.settings.content_background.width}}px; 
+      height: {{section.settings.content_background.height}}px;
+      position: absolute;
+      display: inline-block;
+      background-position: top left; 
+    }
+  {% endstyle %}
+{%- endif -%}
+{% schema %}
+{
+  "name":"Product Testimonial", 
+  "templates":["product"], 
+  "settings":[
+    {
+      "type": "image_picker",
+      "id": "author_image",
+      "label": "Author Image"
+    },
+    {
+      "type":"image_picker", 
+      "id":"content_background", 
+      "label":"Content background"
+    },
+    {
+      "type":"richtext", 
+      "id":"testimonial_content", 
+      "label":"Testimonial Content"
+    },
+    {
+      "type":"text", 
+      "id":"testimonial_author", 
+      "label":"Testimonial Author"
+    },
+    {
+      "type":"url", 
+      "id":"read_more_link", 
+      "label":"Read more link"
+    }
+  ],
+  "presets":[
+    {
+      "name":"Product Testimonial"
+    }
+  ]
+}
+{% endschema %}

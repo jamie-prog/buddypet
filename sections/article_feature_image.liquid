@@ -1,0 +1,26 @@
+{% if section.settings.image %}
+	<section class="feature-image" style="background-image:url('{{ section.settings.image | img_url : 'master'}}')"> 
+       	 <img class="transition--fade-in lazyautosizes lazyloaded" src="{{ section.settings.image_placeholder | img_url : 'master'}}" />
+	</section>
+{% endif %}
+
+{% schema %}
+
+{
+  "name": "Blog Feature Image",
+  "class": "feature-image blog-feature-image overlaid-header-option",
+  "settings": [
+	{
+      "type": "image_picker",
+      "id": "image",
+      "label": "Image Feature"
+    },
+	{
+      "type": "image_picker",
+      "id": "image_placeholder",
+      "label": "Image Placeholder"
+    } 
+  ]
+}
+
+{% endschema %}

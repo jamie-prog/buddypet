@@ -1,0 +1,2073 @@
+{
+  "current": {
+    "header_layout": "classic",
+    "logo_mobile": "shopify:\/\/shop_images\/BuddyPet_Logo.png",
+    "show_search_icon_mobile": false,
+    "icon_style": "text",
+    "mobile_menu_link_color": "#294d45",
+    "mobile_menu_link_hover_color": "#294f95",
+    "button_primary_bg_color": "#294d45",
+    "button_primary_border_color": "#0a0a0a",
+    "button_primary_bg_color--highlight": "#17312b",
+    "button_primary_border_radius": 35,
+    "button_secondary_border_color": "#294d45",
+    "button_secondary_text_color": "#7ea396",
+    "button_secondary_bg_color--highlight": "#7ea396",
+    "button_secondary_border_color--highlight": "#7ea396",
+    "button_secondary_border_radius": 35,
+    "button_link_text_color": "#f18079",
+    "button_link_text_color--highlight": "#0f3833",
+    "button_link_underline_style": "solid",
+    "button_link_underline_thickness": 0,
+    "button_cart_bg_color": "#294d45",
+    "button_cart_bg_color--highlight": "#17312b",
+    "button_cart_border_radius": 35,
+    "icon": "icon_solid",
+    "heading_divider_style": "short",
+    "shop_bg_color": "#fff0e1",
+    "regular_color": "#676158",
+    "link_color": "#f18079",
+    "link_hover_color": "#294d45",
+    "heading_color": "#294d45",
+    "divider_color": "#294d45",
+    "header_background": "#ffffff",
+    "regular_font_size": 20,
+    "heading__font": "open_sans_n7",
+    "heading_size": 90,
+    "heading_letter_spacing": 0,
+    "heading_font_style": "none",
+    "search_display_style": "overlay",
+    "thumbnail_hover_enabled": true,
+    "enable_shopify_review_comments": true,
+    "enable_shopify_collection_badges": false,
+    "display_product_quantity": true,
+    "enable_quickshop": true,
+    "cart_action": "drawer",
+    "show_lock_icon": false,
+    "cart_icon": "bag",
+    "display_savings": false,
+    "display_ajax_quantity_box": true,
+    "cart_message": "<p>Tax included. Shipping and discounts <\/p><p>codes calculated at checkout<\/p>",
+    "currency_format": "money_format",
+    "twitter_link": "",
+    "facebook_link": "https:\/\/www.facebook.com\/buddypetaus",
+    "medium_link": "https:\/\/buddypet.medium.com\/",
+    "youtube_link": "https:\/\/www.youtube.com\/channel\/UCiSBn-Mdeebqo5SpWDa8Mmw",
+    "pinterest_link": "",
+    "instagram_link": "https:\/\/www.instagram.com\/buddypetbynature\/",
+    "linkedin_link": "https:\/\/www.linkedin.com\/company\/buddypet\/",
+    "email_link": "",
+    "og_image_fallback": "shopify:\/\/shop_images\/BuddyPet_Logo.png",
+    "favicon": "shopify:\/\/shop_images\/home-icon-1.png",
+    "checkout_logo_image": "shopify:\/\/shop_images\/logo-pet_5645cdbc-32c5-4abb-9b5b-56347f4cb48c.png",
+    "checkout_logo_position": "center",
+    "checkout_logo_size": "small",
+    "checkout_body_background_color": "#fff0df",
+    "checkout_sidebar_background_color": "#fff0df",
+    "checkout_accent_color": "#0f3833",
+    "checkout_button_color": "#0f3833",
+    "sections": {
+      "announcement-bar": {
+        "type": "announcement-bar",
+        "settings": {
+          "display_announcement": false,
+          "icon_label": "tag",
+          "text": "<p>Draw attention to promos + sales!<\/p>",
+          "alignment": "center",
+          "size": "regular",
+          "button_label": "",
+          "link": "",
+          "button_style": "button--primary",
+          "background": "#000000",
+          "text_color": "#ffffff",
+          "width": "wide",
+          "homepage_only": false,
+          "enable_sticky": false,
+          "show_close_icon": false,
+          "css_class": "",
+          "custom_css": ""
+        }
+      },
+      "header__top-bar": {
+        "type": "header__top-bar",
+        "blocks": {
+          "header__top-bar-0": {
+            "type": "text",
+            "settings": {
+              "text": ""
+            }
+          },
+          "header__top-bar-1": {
+            "type": "social_media",
+            "settings": {
+            }
+          },
+          "915054e1-6227-4690-9321-fc9fab651c31": {
+            "type": "menu",
+            "settings": {
+              "menu": "",
+              "menu_alignment": "center"
+            }
+          }
+        },
+        "block_order": [
+          "header__top-bar-0",
+          "header__top-bar-1",
+          "915054e1-6227-4690-9321-fc9fab651c31"
+        ],
+        "settings": {
+          "show_top_bar": false,
+          "font": "open_sans_n4",
+          "font_style": "none",
+          "font_size": 14,
+          "letter_spacing": 0,
+          "show_locale_selector": true,
+          "show_currency_selector": true,
+          "background": "rgba(0,0,0,0)",
+          "link_color": "rgba(0,0,0,0)",
+          "link_hover_color": "rgba(0,0,0,0)",
+          "text_color": "rgba(0,0,0,0)",
+          "width": "standard",
+          "css_class": "",
+          "custom_css": ""
+        }
+      },
+      "header-classic": {
+        "type": "header-classic",
+        "blocks": {
+          "d1e7399f-13e6-44d7-bd44-488272c96c8a": {
+            "type": "menu-image",
+            "settings": {
+              "title": "Menu Image",
+              "index": 1,
+              "image": "shopify:\/\/shop_images\/BuddyPet_Design1-Mockup_af67f0b9-3386-40aa-99d1-92737b5fc2f2.png",
+              "text": "Shop All",
+              "url": "shopify:\/\/collections\/our-products"
+            }
+          }
+        },
+        "block_order": [
+          "d1e7399f-13e6-44d7-bd44-488272c96c8a"
+        ],
+        "settings": {
+          "logo": "shopify:\/\/shop_images\/BuddyPet_Logo_2x_5493bb71-1ad4-439b-8e85-31142b3e44fc.png",
+          "logo_width": 290,
+          "main_linklist": "new-home-main-menu",
+          "rightmenu_linklist": "right-menu",
+          "mobilebottom_linklist": "mobile-menu-bottom",
+          "icon_style": "icons",
+          "enable_overlay": false,
+          "show_text_shadow": false,
+          "overlay_link_color": "rgba(0,0,0,0)",
+          "overlay_link_hover_color": "rgba(0,0,0,0)",
+          "overlay_background": "rgba(0,0,0,0)",
+          "overlay_background_opacity": 0,
+          "overlay_logo_width": 80,
+          "enable_sticky": true,
+          "sticky_background_opacity": 100,
+          "scroll_logo_width": 290,
+          "width": "standard",
+          "vertical_alignment": "center",
+          "css_class": "",
+          "custom_css": ""
+        }
+      },
+      "mega-menu-1": {
+        "type": "mega-menu-1",
+        "blocks": {
+          "mega-menu-1-0": {
+            "type": "menu",
+            "settings": {
+              "menu_1": "",
+              "menu_1_link": ""
+            }
+          },
+          "mega-menu-1-1": {
+            "type": "featured_promo",
+            "settings": {
+              "richtext": "<p>Add description and links to your promotion<\/p>",
+              "bgr_color": "#eeeeee",
+              "text_color": "#000000",
+              "promo_link": "",
+              "button_label": "Shop now",
+              "button_style": "button--primary"
+            }
+          },
+          "mega-menu-1-2": {
+            "type": "mixed",
+            "settings": {
+              "richtext_top": "Your headline",
+              "image_link_top": "",
+              "image_caption_top": "",
+              "menu_1": "",
+              "menu_1_link": "",
+              "menu_2": "",
+              "menu_2_link": "",
+              "menu_3": "",
+              "menu_3_link": "",
+              "menu_4": "",
+              "menu_4_link": "",
+              "image_link_bottom": "",
+              "richtext_bottom": ""
+            }
+          },
+          "mega-menu-1-3": {
+            "type": "empty_column",
+            "settings": {
+            }
+          },
+          "mega-menu-1-4": {
+            "type": "image",
+            "settings": {
+              "image_link": "",
+              "image_caption": "<p>Image caption appears here<\/p>"
+            }
+          },
+          "mega-menu-1-5": {
+            "type": "featured_product",
+            "settings": {
+              "featured_product": "",
+              "richtext_bottom": ""
+            }
+          }
+        },
+        "block_order": [
+          "mega-menu-1-0",
+          "mega-menu-1-1",
+          "mega-menu-1-2",
+          "mega-menu-1-3",
+          "mega-menu-1-4",
+          "mega-menu-1-5"
+        ],
+        "settings": {
+          "parent_link": "catalog",
+          "enable_mega_menu_border": false,
+          "mega_menu_background_color": "#f6f6f6",
+          "mega_menu_text_color": "#404040",
+          "show_mega_bottom_bar": true,
+          "mega_bottom_bar_icon": "",
+          "mega_bottom_bar_text": "Add your deal, information or promotional text",
+          "mega_bottom_bar_link": "",
+          "size": "regular",
+          "bottom_banner_bg": "#f18079",
+          "bottom_banner_text": "#efefef",
+          "css_class": "",
+          "custom_css": ""
+        }
+      },
+      "footer__icon-bar": {
+        "type": "footer__icon-bar",
+        "blocks": {
+          "footer__icon-bar-0": {
+            "type": "text",
+            "settings": {
+              "icon": "leaf",
+              "text": "100% Organic",
+              "link": ""
+            }
+          },
+          "footer__icon-bar-1": {
+            "type": "text",
+            "settings": {
+              "icon": "bunny",
+              "text": "Cruelty free",
+              "link": ""
+            }
+          },
+          "footer__icon-bar-2": {
+            "type": "text",
+            "settings": {
+              "icon": "chat",
+              "text": "24\/7 support",
+              "link": ""
+            }
+          },
+          "footer__icon-bar-3": {
+            "type": "text",
+            "settings": {
+              "icon": "truck",
+              "text": "Free shipping",
+              "link": ""
+            }
+          }
+        },
+        "block_order": [
+          "footer__icon-bar-0",
+          "footer__icon-bar-1",
+          "footer__icon-bar-2",
+          "footer__icon-bar-3"
+        ],
+        "settings": {
+          "show_icon_bar": false,
+          "alignment": "center",
+          "icon_position": "row",
+          "size": "medium",
+          "background": "#8b8b8b",
+          "link_color": "#ffffff",
+          "link_hover_color": "#000000",
+          "text_color": "#ffffff",
+          "width": "standard",
+          "css_class": "",
+          "custom_css": ""
+        }
+      },
+      "footer-classic": {
+        "type": "footer-classic",
+        "blocks": {
+          "footer-classic-0": {
+            "type": "logo",
+            "disabled": true,
+            "settings": {
+              "logo": "shopify:\/\/shop_images\/BUDDY-PET_LOGO_MASTER_RGB_BEIGE.png",
+              "size": "large",
+              "text": "",
+              "social_icons_footer": false
+            }
+          },
+          "footer-classic-1": {
+            "type": "link_list",
+            "settings": {
+              "menu": "new-home-footer-menu",
+              "social_icons_footer": true
+            }
+          }
+        },
+        "block_order": [
+          "footer-classic-0",
+          "footer-classic-1"
+        ],
+        "settings": {
+          "newsletter_title": "Join the BuddyPet Crew!",
+          "newsletter_subtitle": "",
+          "newsletter_link_title": "",
+          "copyright_text": "<p><a href=\"tel:1300 402 420\" title=\"tel:1300 402 420\">1300 402 420<\/a><\/p><p><a href=\"https:\/\/www.google.com\/maps\/place\/504%2F365+Little+Collins+St,+Melbourne+VIC+3000,+Australia\/@-37.8157416,144.9606087,17z\/data=!3m1!4b1!4m5!3m4!1s0x6ad642b4ebc380fb:0xe8ef09579ec7e713!8m2!3d-37.8157416!4d144.9627974?hl=en\" target=\"_blank\" title=\"https:\/\/www.google.com\/maps\/place\/504%2F365+Little+Collins+St,+Melbourne+VIC+3000,+Australia\/@-37.8157416,144.9606087,17z\/data=!3m1!4b1!4m5!3m4!1s0x6ad642b4ebc380fb:0xe8ef09579ec7e713!8m2!3d-37.8157416!4d144.9627974?hl=en\">Suite 504, 365 Little Collins Street, Melbourne, 3000, VIC<\/a><\/p><p>© 2022 Buddy Pet® | <a href=\"\/policies\/privacy-policy\" target=\"_blank\" title=\"Privacy Policy\">Cookie Policy<\/a> | <a href=\"\/policies\/privacy-policy\" target=\"_blank\" title=\"Privacy Policy\">Privacy & Terms<\/a><\/p>",
+          "footer_paypal": "",
+          "display_designed_by": true,
+          "display_shopify": true,
+          "display_payment_methods": false,
+          "show_locale_selector": true,
+          "show_currency_selector": true,
+          "css_class": "",
+          "custom_css": ""
+        }
+      },
+      "blog__banner": {
+        "type": "blog__banner",
+        "settings": {
+          "show_banner": false,
+          "image": "shopify:\/\/shop_images\/bannerblog.png",
+          "mobile_image": "shopify:\/\/shop_images\/help-page-banner-mobile_5000x_396f36c9-7831-4922-861d-72d73ca64d64.png",
+          "image_darken": false,
+          "subtitle": "Subheading",
+          "width": "wide",
+          "banner_height": "medium",
+          "padding_top": 0,
+          "padding_bottom": 0,
+          "css_class": "",
+          "custom_css": ""
+        }
+      },
+      "blog__sidebar": {
+        "type": "blog__sidebar",
+        "blocks": {
+          "blog__sidebar-0": {
+            "type": "featured_promo",
+            "settings": {
+              "promo_background": "#eeeeee",
+              "promo_text": "#000000",
+              "richtext": "<p>Use this area for promotional information.<\/p>",
+              "promo_link": "",
+              "button_label": "Shop now",
+              "button_style": "button--primary"
+            }
+          },
+          "blog__sidebar-1": {
+            "type": "menu",
+            "settings": {
+              "menu": ""
+            }
+          },
+          "blog__sidebar-2": {
+            "type": "text",
+            "settings": {
+              "title": "Heading",
+              "text": "<p>Text area can be used for details about blog authors or general information.<\/p>"
+            }
+          }
+        },
+        "block_order": [
+          "blog__sidebar-0",
+          "blog__sidebar-1",
+          "blog__sidebar-2"
+        ],
+        "settings": {
+          "show_sidebar": false,
+          "sidebar_position": "left",
+          "css_class": "",
+          "custom_css": ""
+        }
+      },
+      "blog__main": {
+        "type": "blog__main",
+        "settings": {
+          "blog_tags": false,
+          "blog_posts_per_row": 3,
+          "blog_posts_per_page": 9,
+          "pagination_type": "load_more",
+          "blog_author": false,
+          "blog_date": false,
+          "read_time": false,
+          "blog_comment_count": false,
+          "blog_show_tags": false,
+          "blog_show_excerpt": true,
+          "show_border": true,
+          "button_label": "Read more",
+          "button_label_vet": "Watch",
+          "button_type": "button--primary",
+          "width": "wide",
+          "padding_top": 40,
+          "padding_bottom": 40,
+          "animation": "none",
+          "css_class": "image-podcast",
+          "custom_css": ".image-podcast{\nobject-fit: contain;\nheight: fit-content;\nborder-radius:0px;\n}"
+        }
+      },
+      "page__main-help": {
+        "type": "page__main-help",
+        "blocks": {
+          "eb7c7132-dbba-4a34-93a9-ce61c4e174ed": {
+            "type": "faq",
+            "settings": {
+              "title_tab": "Do Your Products Contain THC & CBD?",
+              "content_tab": "Yes they do, but only within the legally allowed limit (0.005% THC and 0.0075% CBD). \n\nThey also contain a lot of other lesser-known non-psychoactive cannabinoids, which is why using them results in such incredible outcomes for both people and animals – read some of our testimonials <a href=\"https:\/\/buddypet.co\/collections\/shop\/products\/marley\">here<\/a>."
+            }
+          },
+          "191f94e2-2b00-422c-bd23-ad7db9c474a4": {
+            "type": "faq",
+            "settings": {
+              "title_tab": "Which Animals are hemp products Good For?",
+              "content_tab": "Hemp does great things for pets like dogs, cats, birds, guinea pigs and rabbits. It’s also great for farm animals such as hens, chickens, cattle, horses, pigs, goats, sheep, donkeys and ponies! \n\nAs far as we’re aware, no animals have an adverse reaction to Hemp Foods, and our testimonials section is full of beautiful stories from animal owners whose loved ones we've helped. Read them here."
+            }
+          },
+          "26c5639f-b315-4f3b-9d3f-1f44af060f50": {
+            "type": "faq",
+            "settings": {
+              "title_tab": "Will hemp make my pet high?",
+              "content_tab": "Absolutely not. The naturally occurring chemical in hemp which causes people and animals to get “high” is called THC. Our Hemp Seed Oil For Pets contains less than 0.005% THC, meaning that even if your pet drank gallons of it, they would remain sober as a judge! Learn more about the difference between hemp which gets you high and hemp which makes you healthy."
+            }
+          },
+          "6420a192-f4b4-45d1-bf39-4ea6a20f84ee": {
+            "type": "faq",
+            "settings": {
+              "title_tab": "I’m not sure whether I should purchase Marley or Lola",
+              "content_tab": "First up, try taking our quiz to determine which product is best for your furry friend based on what they are struggling with and what type of fluff-ball they are! \n\nAt a glance:\nMarley Hemp Seed Oil for Optimal Health can be taken both bia ingestion and topically applied and is suited as a long-term everyday supplement to combat most common health problems in domestic pets.\n\nLola Hemp Seed & Flax Oil for Immunity should only be taken via ingestion and is recommended as a short-term health boost supplement for pets that are really struggling with their health. Once your bottle is finished, time to swap over to our other bud, Marley!"
+            }
+          },
+          "8dded55f-c6a5-4811-96d8-35b96feba010": {
+            "type": "faq",
+            "settings": {
+              "title_tab": "Can my pet take this while on other medication?",
+              "content_tab": "All of our hemp products are classes as 'hemp foods' meaning that they have nutritional value rather than medicinal value. \n\nWith that said, if your pet has complicated health problems & prescriptions, this is a question for your vet - but feel free to contact us first by filling the form to your left to see if there is any additional information we can provide before you go to your vet, to make sure you have all the info you need."
+            }
+          }
+        },
+        "block_order": [
+          "eb7c7132-dbba-4a34-93a9-ce61c4e174ed",
+          "191f94e2-2b00-422c-bd23-ad7db9c474a4",
+          "26c5639f-b315-4f3b-9d3f-1f44af060f50",
+          "6420a192-f4b4-45d1-bf39-4ea6a20f84ee",
+          "8dded55f-c6a5-4811-96d8-35b96feba010"
+        ],
+        "settings": {
+          "title": "FAQs"
+        }
+      },
+      "help_page__banner": {
+        "type": "help_page__banner",
+        "settings": {
+          "show_banner": true,
+          "image": "shopify:\/\/shop_images\/help-page-banner_8bca26b2-3cf9-4e51-ac6a-ce6381c15988.png",
+          "image_darken": false,
+          "subtitle": "Subheading",
+          "width": "wide",
+          "banner_height": "medium",
+          "padding_top": 0,
+          "padding_bottom": 0,
+          "css_class": "",
+          "custom_css": ""
+        }
+      },
+      "page-contact__main": {
+        "type": "page-contact__main",
+        "blocks": {
+          "page-contact__main-0": {
+            "type": "textfield",
+            "settings": {
+              "label": "Name",
+              "required": true
+            }
+          },
+          "page-contact__main-1": {
+            "type": "email",
+            "settings": {
+              "label": "Email"
+            }
+          },
+          "page-contact__main-2": {
+            "type": "textarea",
+            "settings": {
+              "label": "Message",
+              "required": true
+            }
+          }
+        },
+        "block_order": [
+          "page-contact__main-0",
+          "page-contact__main-1",
+          "page-contact__main-2"
+        ],
+        "settings": {
+          "title": "Get in touch today",
+          "content_text": "<p>Got a question not answered in <a href=\"\/pages\/faqs\" target=\"_blank\" title=\"FAQs\">FAQs<\/a>? For further assistance, please call us on <a href=\"tel:1300402420\" target=\"_blank\">1300 402 420<\/a>. Thank you!<\/p>",
+          "social_enable": false,
+          "text_alignment": "center",
+          "background": "rgba(0,0,0,0)",
+          "text_color": "#000000",
+          "form_position": "right",
+          "width": "standard",
+          "padding_top": 40,
+          "padding_bottom": 40,
+          "css_class": "",
+          "custom_css": ""
+        }
+      },
+      "page__main-help-shipping": {
+        "type": "page__main-help-shipping",
+        "blocks": {
+          "e3a5620a-9941-46e5-b916-7ad05323a42e": {
+            "type": "faq",
+            "settings": {
+              "title_tab": "How much does your shipping cost?",
+              "content_tab": "$10 standard shipping to all Australia. <br>\n$15 express to all Australia. <br>\n$20 express to all NZ.<br>\n$25 standard to all other international."
+            }
+          },
+          "e9458a6a-2c8b-47df-8715-b63be5441f0d": {
+            "type": "faq",
+            "settings": {
+              "title_tab": "Fulfilment Centre Despatch Times",
+              "content_tab": "Orders received by 12pm will go out same day. <br>\nOrders received after 4pm will go out next day."
+            }
+          },
+          "9a0a2e55-4424-4d49-ba87-b6d4e6b5331c": {
+            "type": "faq",
+            "settings": {
+              "title_tab": "tracking your order",
+              "content_tab": "All orders will need to be ensured it's filled with the correct details. Tracking information will be sent to you after your order is placed. Please allow up to 48hrs until any information regarding your order's tracking is updated. To track your order, go to <a href=\"https:\/\/auspost.com.au\/mypost\/track\/#\/search\">Australia Post's website<\/a> and enter your tracking number."
+            }
+          },
+          "c59df4e7-b532-4ccb-b3f1-5b073d0c5042": {
+            "type": "faq",
+            "settings": {
+              "title_tab": "COVID & Expected delivery times",
+              "content_tab": "Due to COVID, orders are experiencing delays that are outside of our control. But as a guide, you can expect for most cities in Australia to receive your package within 3 - 4 business days. If your package is being delivered to regional areas, it may take a couple of days extra."
+            }
+          },
+          "82c449b3-9e08-4a9a-9798-2c331f2487f7": {
+            "type": "faq",
+            "settings": {
+              "title_tab": "our postal service",
+              "content_tab": "Australia post ensures all of our packages are being delivered safely to you and your furry buddy. If you're ever having any issues with your tracking link in your shipping email, please enter the tracking number straight to Australia Post's website for an accurate status of your order."
+            }
+          },
+          "d468faf0-24b7-4a7a-857f-1941d7ba0196": {
+            "type": "faq",
+            "settings": {
+              "title_tab": "refunds & returns",
+              "content_tab": "We will only approve refunds if your product has arrived damaged or caused adverse reactions. Returns may be accepted after a refund has been accepted. Please see our <a href=\"https:\/\/buddypet.co\/policies\/refund-policy?ose=false\">refunds policy<\/a>  for more info."
+            }
+          }
+        },
+        "block_order": [
+          "e3a5620a-9941-46e5-b916-7ad05323a42e",
+          "e9458a6a-2c8b-47df-8715-b63be5441f0d",
+          "9a0a2e55-4424-4d49-ba87-b6d4e6b5331c",
+          "c59df4e7-b532-4ccb-b3f1-5b073d0c5042",
+          "82c449b3-9e08-4a9a-9798-2c331f2487f7",
+          "d468faf0-24b7-4a7a-857f-1941d7ba0196"
+        ],
+        "settings": {
+          "title": "Shipping & Returns"
+        }
+      },
+      "page__main": {
+        "type": "page__main",
+        "settings": {
+          "width": "wide",
+          "padding_top": 40,
+          "padding_bottom": 40,
+          "css_class": "",
+          "custom_css": ""
+        }
+      },
+      "wholesale_contact": {
+        "type": "wholesale_contact",
+        "settings": {
+          "section-heading": "Contact",
+          "label-name": "BUSINESS NAME",
+          "label-address": "ADDRESS",
+          "label-abn": "ABN"
+        }
+      },
+      "page__main-help-chat": {
+        "type": "page__main-help-chat",
+        "settings": {
+          "content_top": "<p>We sell direct to businesses in a number of countries. Please click here for wholesale enquiries.<\/p>",
+          "title": "Want to chat?",
+          "content_bottom": "<p>We like to make ourselves available for customer questions - because sometimes\nyou just need to talk to a human!<\/p>\n\n<p>Phone: 1300 402 420<\/p>"
+        }
+      },
+      "page_help-contact": {
+        "type": "page_help-contact",
+        "settings": {
+          "section-heading": "<a name=\"chapter4\"><\/a> Contact"
+        }
+      },
+      "help_page__banner_mobile": {
+        "type": "help_page__banner_mobile",
+        "settings": {
+          "show_banner": true,
+          "image": "shopify:\/\/shop_images\/help-page-banner-mobile.png",
+          "image_darken": false,
+          "subtitle": "Subheading",
+          "width": "wide",
+          "banner_height": "medium",
+          "padding_top": 0,
+          "padding_bottom": 0,
+          "css_class": "",
+          "custom_css": ""
+        }
+      },
+      "page__banner": {
+        "type": "page__banner",
+        "settings": {
+          "image": "shopify:\/\/shop_images\/help-page-banner-mobile.png",
+          "image_darken": false,
+          "width": "wide",
+          "banner_height": "medium",
+          "padding_top": 0,
+          "padding_bottom": 0,
+          "css_class": "",
+          "custom_css": ""
+        }
+      },
+      "collection__banner": {
+        "type": "collection__banner",
+        "settings": {
+          "show_banner": true,
+          "image": "shopify:\/\/shop_images\/shop-page-banner_40c0a0f0-9105-4d71-8810-c756c916cfdb.png",
+          "mobile_image": "shopify:\/\/shop_images\/shop-page-banner-mb.png",
+          "width": "wide",
+          "banner_height": "medium",
+          "padding_top": 0,
+          "padding_bottom": 0,
+          "css_class": "",
+          "custom_css": ""
+        }
+      },
+      "collection__main": {
+        "type": "collection__main",
+        "blocks": {
+          "d5e4d23f-b96b-4486-a5f5-1d5e4d66d1ff": {
+            "type": "link_list",
+            "settings": {
+              "menu": "collection-navigation"
+            }
+          }
+        },
+        "block_order": [
+          "d5e4d23f-b96b-4486-a5f5-1d5e4d66d1ff"
+        ],
+        "settings": {
+          "show_chat": true,
+          "positon_chat": 13,
+          "content_chat": "<p>Not sure which product is perfect for your pal?<\/p>",
+          "button_chat_text": "Chat with Us",
+          "button_chat_link": "shopify:\/\/pages\/contact",
+          "align_height": true,
+          "collection_height": 540,
+          "products_per_row": 3,
+          "mobile_products_per_row": "1",
+          "pagination_limit": 14,
+          "pagination_type": "basic_pagination",
+          "width": "standard",
+          "padding_top": 40,
+          "padding_bottom": 40,
+          "css_class": "",
+          "custom_css": ""
+        }
+      },
+      "wholesale__banner": {
+        "type": "wholesale__banner",
+        "settings": {
+          "show_banner": true,
+          "image": "shopify:\/\/shop_images\/banner_e01ec518-ccc8-41dd-8ec5-e894f173c351.png",
+          "image_darken": false,
+          "subtitle": "",
+          "width": "standard",
+          "banner_height": "large",
+          "padding_top": 0,
+          "padding_bottom": 0,
+          "css_class": "",
+          "custom_css": ""
+        }
+      },
+      "collection__boxes": {
+        "type": "collection__boxes",
+        "settings": {
+        }
+      },
+      "list-collections__main": {
+        "type": "list-collections__main",
+        "settings": {
+          "collections_per_row": 3,
+          "pagination_limit": 48,
+          "pagination_type": "basic_pagination",
+          "align_height": false,
+          "collection_height": 400,
+          "button_style": "button--secondary",
+          "overlay_background": "#939393",
+          "overlay_background_opacity": 70,
+          "overlay_text": "#ffffff",
+          "collection_title_below_image": false,
+          "width": "standard",
+          "padding_top": 40,
+          "padding_bottom": 40,
+          "css_class": "",
+          "custom_css": ""
+        }
+      },
+      "stockists_banner": {
+        "type": "stockists_banner",
+        "settings": {
+          "show_banner": false,
+          "image_darken": false,
+          "subtitle": "",
+          "width": "wide",
+          "banner_height": "medium",
+          "padding_top": 0,
+          "padding_bottom": 0,
+          "css_class": "",
+          "custom_css": ""
+        }
+      },
+      "collection__boxes_topleft": {
+        "type": "collection__boxes_topleft",
+        "settings": {
+          "boxes_top": "shopify:\/\/shop_images\/collection-boxes-1.png",
+          "boxes_center": "shopify:\/\/shop_images\/collection-boxes-2.png",
+          "boxes_bottom": "shopify:\/\/shop_images\/collection-boxes-3.png"
+        }
+      },
+      "collection__boxes_topright": {
+        "type": "collection__boxes_topright",
+        "settings": {
+          "boxes_top": "shopify:\/\/shop_images\/collection-boxes-4.png",
+          "boxes_center": "shopify:\/\/shop_images\/collection-boxes-5.png",
+          "boxes_bottom": "shopify:\/\/shop_images\/collection-boxes-6.png",
+          "boxes_chair": "shopify:\/\/shop_images\/collection-boxes-7.png"
+        }
+      },
+      "collection__boxes_bottomleft": {
+        "type": "collection__boxes_bottomleft",
+        "settings": {
+          "boxes_top": "shopify:\/\/shop_images\/collection-boxes-7.png",
+          "boxes_center": "shopify:\/\/shop_images\/collection-boxes-10.png"
+        }
+      },
+      "collection__boxes_bottomright": {
+        "type": "collection__boxes_bottomright",
+        "settings": {
+          "boxes_top": "shopify:\/\/shop_images\/collection-boxes-8.png",
+          "boxes_center": "shopify:\/\/shop_images\/collection-boxes-9.png",
+          "boxes_bottom": "shopify:\/\/shop_images\/collection-boxes-11.png"
+        }
+      },
+      "product__sidebar": {
+        "type": "product__sidebar",
+        "blocks": {
+          "product__sidebar-0": {
+            "type": "featured_promo",
+            "settings": {
+              "promo_background": "#eeeeee",
+              "promo_text": "#0b0303",
+              "richtext": "<p>Use this area for promotional information.<\/p>",
+              "promo_link": "",
+              "button_label": "Shop now",
+              "button_style": "button--primary"
+            }
+          },
+          "product__sidebar-1": {
+            "type": "menu",
+            "settings": {
+              "menu": ""
+            }
+          },
+          "product__sidebar-2": {
+            "type": "text",
+            "settings": {
+              "title": "Heading",
+              "text": "<p>Text area can be used for details about blog authors or general information.<\/p>"
+            }
+          }
+        },
+        "block_order": [
+          "product__sidebar-0",
+          "product__sidebar-1",
+          "product__sidebar-2"
+        ],
+        "settings": {
+          "show_sidebar": false,
+          "css_class": "",
+          "custom_css": ""
+        }
+      },
+      "product__main": {
+        "type": "product__main",
+        "settings": {
+          "product_breadcrumb": false,
+          "display_thumbnails": true,
+          "gallery_arrows": true,
+          "enable_zoom": true,
+          "enable_product_lightbox": true,
+          "slideshow_speed": 0,
+          "slideshow_transition": "slide",
+          "thumbnail_position": "bottom-thumbnails",
+          "enable_thumbnail_slider": true,
+          "display_vendor": false,
+          "display_sku": false,
+          "enable_shopify_product_badges": false,
+          "display_savings": true,
+          "display_collections": false,
+          "display_type": false,
+          "display_tags": false,
+          "product_description_position": "top",
+          "show_payment_button": true,
+          "product_images_position": "left",
+          "set_product_height": false,
+          "product_height": 500,
+          "video_looping": false,
+          "width": "standard",
+          "padding_top": 20,
+          "padding_bottom": 20,
+          "animation": "none",
+          "css_class": "",
+          "custom_css": ""
+        }
+      },
+      "product__recommendations": {
+        "type": "product__recommendations",
+        "settings": {
+          "show_product_recommendations": true,
+          "product_recommendations_style": "slider",
+          "product_recommendations_heading": "You might also like",
+          "products_per": 4,
+          "recommended_products_limit": 4,
+          "align_height": false,
+          "collection_height": 200
+        }
+      },
+      "product__banner": {
+        "type": "product__banner",
+        "settings": {
+          "show_banner": true,
+          "image": "shopify:\/\/shop_images\/product-banner-desktop.png",
+          "mobile_image": "shopify:\/\/shop_images\/product-banner-mobile.png",
+          "width": "wide",
+          "banner_height": "medium",
+          "padding_top": 0,
+          "padding_bottom": 0,
+          "css_class": "",
+          "custom_css": ""
+        }
+      },
+      "page_main_stockists": {
+        "type": "page_main_stockists",
+        "settings": {
+          "width": "standard",
+          "padding_top": 40,
+          "padding_bottom": 40,
+          "css_class": "",
+          "custom_css": ""
+        }
+      },
+      "article__banner": {
+        "type": "article__banner",
+        "settings": {
+          "show_banner": false,
+          "image": "shopify:\/\/shop_images\/product-banner-desktop.png",
+          "imagemobile": "shopify:\/\/shop_images\/product-banner-mobile.png",
+          "image_darken": false,
+          "width": "wide",
+          "banner_height": "medium",
+          "padding_top": 0,
+          "padding_bottom": 0,
+          "css_class": "",
+          "custom_css": ""
+        }
+      },
+      "article__sidebar": {
+        "type": "article__sidebar",
+        "blocks": {
+          "article__sidebar-0": {
+            "type": "featured_promo",
+            "settings": {
+              "promo_background": "#EEEEEE",
+              "promo_text": "#000000",
+              "richtext": "<p>Use this area for promotional information.<\/p>",
+              "button_label": "Shop now",
+              "button_style": "button--primary"
+            }
+          },
+          "article__sidebar-1": {
+            "type": "menu",
+            "settings": {
+              "menu": ""
+            }
+          },
+          "article__sidebar-2": {
+            "type": "text",
+            "settings": {
+              "title": "Heading",
+              "text": "<p>Text area can be used for details about blog authors or general information.<\/p>"
+            }
+          }
+        },
+        "block_order": [
+          "article__sidebar-0",
+          "article__sidebar-1",
+          "article__sidebar-2"
+        ],
+        "settings": {
+          "show_sidebar": false,
+          "sidebar_position": "left",
+          "css_class": "",
+          "custom_css": ""
+        }
+      },
+      "article_feature_image": {
+        "type": "article_feature_image",
+        "settings": {
+          "image": "shopify:\/\/shop_images\/blog-post-1_3500x_aad8ebcc-516c-41e5-9e3e-0b1db1639582.jpg",
+          "image_placeholder": "shopify:\/\/shop_images\/feature1.png"
+        }
+      },
+      "wholesale_banner_mobie": {
+        "type": "wholesale_banner_mobie",
+        "settings": {
+          "show_banner": true,
+          "image": "shopify:\/\/shop_images\/help-page-banner-mobile_5000x_396f36c9-7831-4922-861d-72d73ca64d64.png",
+          "image_darken": false,
+          "subtitle": "",
+          "width": "standard",
+          "banner_height": "large",
+          "padding_top": 0,
+          "padding_bottom": 0,
+          "css_class": "",
+          "custom_css": ""
+        }
+      },
+      "blog_banner_mobile": {
+        "type": "blog_banner_mobile",
+        "settings": {
+          "show_banner": false,
+          "image_darken": false,
+          "subtitle": "Subheading",
+          "width": "wide",
+          "banner_height": "medium",
+          "padding_top": 0,
+          "padding_bottom": 0,
+          "css_class": "",
+          "custom_css": ""
+        }
+      },
+      "page__main_customer": {
+        "type": "page__main_customer",
+        "settings": {
+          "width": "standard",
+          "padding_top": 40,
+          "padding_bottom": 40,
+          "css_class": "",
+          "custom_css": ""
+        }
+      },
+      "collection_blog": {
+        "type": "collection_blog",
+        "settings": {
+          "featured_article": "test-new-home-design\/hemp-nature-s-precious-gift",
+          "custom_title_1": "hemp",
+          "custom_title_2": "nature’s precious gift"
+        }
+      },
+      "collection_hemp-help": {
+        "type": "collection_hemp-help",
+        "blocks": {
+          "7ee47676-3c32-4abd-ac3b-1bd1c71dd0fe": {
+            "type": "link_list",
+            "settings": {
+              "title": "Anxiety & Mood",
+              "link": "#"
+            }
+          },
+          "58ff78af-90a9-4a15-ba23-9607e03283dc": {
+            "type": "link_list",
+            "settings": {
+              "title": "Dysplasia",
+              "link": "#"
+            }
+          },
+          "90c69333-e922-44f0-8441-ad5e6678fb1d": {
+            "type": "link_list",
+            "settings": {
+              "title": "Arthritis",
+              "link": "#"
+            }
+          },
+          "b80e5915-4362-49d9-91f4-936bff126eca": {
+            "type": "link_list",
+            "settings": {
+              "title": "Eczema, Rash, Allergies",
+              "link": "#"
+            }
+          },
+          "2db584fc-e69c-4c1f-a423-703839a537c2": {
+            "type": "link_list",
+            "settings": {
+              "title": "Hyperactivity",
+              "link": "#"
+            }
+          },
+          "3c9b4f39-a798-41e7-a034-692693cfed04": {
+            "type": "link_list",
+            "settings": {
+              "title": "Urinary issues",
+              "link": "#"
+            }
+          },
+          "1be007cb-41ee-417c-bc25-897e4a9dd009": {
+            "type": "link_list",
+            "settings": {
+              "title": "Joint Health",
+              "link": "#"
+            }
+          },
+          "0964d214-a34c-4096-960f-94295baf8c7a": {
+            "type": "link_list",
+            "settings": {
+              "title": "Heart Health",
+              "link": "#"
+            }
+          },
+          "bfe68a5f-a9f6-40bc-986f-2a2004096bb2": {
+            "type": "link_list",
+            "settings": {
+              "title": "Brain Health",
+              "link": "#"
+            }
+          },
+          "cd56564b-a969-42f7-a6a2-42bf40406080": {
+            "type": "link_list",
+            "settings": {
+              "title": "Fur texture",
+              "link": "#"
+            }
+          }
+        },
+        "block_order": [
+          "7ee47676-3c32-4abd-ac3b-1bd1c71dd0fe",
+          "58ff78af-90a9-4a15-ba23-9607e03283dc",
+          "90c69333-e922-44f0-8441-ad5e6678fb1d",
+          "b80e5915-4362-49d9-91f4-936bff126eca",
+          "2db584fc-e69c-4c1f-a423-703839a537c2",
+          "3c9b4f39-a798-41e7-a034-692693cfed04",
+          "1be007cb-41ee-417c-bc25-897e4a9dd009",
+          "0964d214-a34c-4096-960f-94295baf8c7a",
+          "bfe68a5f-a9f6-40bc-986f-2a2004096bb2",
+          "cd56564b-a969-42f7-a6a2-42bf40406080"
+        ],
+        "settings": {
+          "image": "shopify:\/\/shop_images\/Hemp_Logo.png",
+          "icon": "https:\/\/cdn.shopify.com\/s\/files\/1\/0508\/7294\/2769\/files\/home-icon-1.png?v=1614295627",
+          "title": "What can hemp help with?"
+        }
+      },
+      "article__products_featured": {
+        "type": "article__products_featured",
+        "blocks": {
+          "154535f8-e5f0-44bf-a875-54735a9b16d7": {
+            "type": "product",
+            "settings": {
+              "products-featured": "maisie"
+            }
+          },
+          "78b3589a-cf46-4387-bda2-87d4443df441": {
+            "type": "product",
+            "settings": {
+              "products-featured": "marley"
+            }
+          },
+          "8d87b796-59d7-4739-9199-ec682b2ba683": {
+            "type": "product",
+            "settings": {
+              "products-featured": "milly"
+            }
+          }
+        },
+        "block_order": [
+          "154535f8-e5f0-44bf-a875-54735a9b16d7",
+          "78b3589a-cf46-4387-bda2-87d4443df441",
+          "8d87b796-59d7-4739-9199-ec682b2ba683"
+        ],
+        "settings": {
+          "product-section-title": "try these products"
+        }
+      },
+      "article__main_content": {
+        "type": "article__main_content",
+        "settings": {
+          "image_placeholder": "shopify:\/\/shop_images\/blog-detail.png",
+          "show_breadcrumb": false,
+          "blog_author": true,
+          "blog_date": true,
+          "read_time": false,
+          "blog_comment_count": false,
+          "show_tags": false,
+          "show_featured_image": true,
+          "width": "standard",
+          "padding_top": 40,
+          "padding_bottom": 40
+        }
+      },
+      "product-sections__main": {
+        "type": "product-sections__main",
+        "blocks": {
+          "product-sections__main-0": {
+            "type": "product_info",
+            "settings": {
+              "display_vendor": false,
+              "display_sku": false,
+              "enable_shopify_product_badges": false,
+              "display_savings": true,
+              "display_collections": false,
+              "display_type": false,
+              "display_tags": false,
+              "display_social_buttons": true,
+              "product_description_position": "top",
+              "show_payment_button": true,
+              "width": "half",
+              "padding_top": 0,
+              "padding_bottom": 0,
+              "padding_left": 0,
+              "padding_right": 0,
+              "animation": "none"
+            }
+          },
+          "product-sections__main-1": {
+            "type": "product_gallery",
+            "settings": {
+              "display_thumbnails": true,
+              "gallery_arrows": true,
+              "enable_zoom": true,
+              "enable_product_lightbox": true,
+              "slideshow_speed": 0,
+              "slideshow_transition": "slide",
+              "thumbnail_position": "bottom-thumbnails",
+              "enable_thumbnail_slider": true,
+              "set_product_height": false,
+              "product_height": 500,
+              "video_looping": false,
+              "width": "half",
+              "padding_top": 0,
+              "padding_bottom": 0,
+              "padding_left": 0,
+              "padding_right": 0,
+              "animation": "none"
+            }
+          },
+          "product-sections__main-2": {
+            "type": "recommended_products",
+            "settings": {
+              "width": "wide",
+              "padding_top": 20,
+              "padding_bottom": 20,
+              "animation": "none"
+            }
+          }
+        },
+        "block_order": [
+          "product-sections__main-0",
+          "product-sections__main-1",
+          "product-sections__main-2"
+        ],
+        "settings": {
+          "product_breadcrumb": false,
+          "padding_top": 20,
+          "padding_bottom": 0,
+          "css_class": "",
+          "custom_css": ""
+        }
+      },
+      "1635839677eb43d264": {
+        "type": "home__our_products",
+        "blocks": {
+          "c4ef1977-def7-4faa-bf11-5041edba0f8a": {
+            "type": "Collection",
+            "settings": {
+              "collection": "all"
+            }
+          }
+        },
+        "block_order": [
+          "c4ef1977-def7-4faa-bf11-5041edba0f8a"
+        ],
+        "settings": {
+          "title": "our products",
+          "collection": "all",
+          "shop_all_link": "shopify:\/\/collections\/our-products",
+          "chat_description": "Not sure which product is perfect for your pal?",
+          "chat_link_text": "Chat with us",
+          "chat_link_url": "shopify:\/\/pages\/contact",
+          "email": "",
+          "phone": "",
+          "css_class": ""
+        }
+      },
+      "1635839683609748f8": {
+        "type": "home__banner_top",
+        "settings": {
+          "image": "https:\/\/cdn.shopify.com\/s\/files\/1\/0508\/7294\/2769\/files\/BuddyPet_Design1-Mockup.svg?v=1637119788",
+          "title": "<p>nature’s <br\/>powerful <br\/>healer for your pet<\/p>",
+          "description": "<p>Nutrient rich daily supplements to support optimal health.<\/p>",
+          "btn_text": "Learn More",
+          "btn_link": "shopify:\/\/blogs\/learn\/hemp-for-pets",
+          "bottom_content_icon": "shopify:\/\/shop_images\/Group_423.png",
+          "bottom_content_text": "Australian grown and manufactured, organic, ethically sourced and sustainable",
+          "css_class": ""
+        }
+      },
+      "16358396870ce89f97": {
+        "type": "home__featured-articles",
+        "blocks": {
+          "1644b817-5d75-4081-9888-4015551d3133": {
+            "type": "article",
+            "settings": {
+              "use_custom_content": true,
+              "image_width": 400,
+              "image_position": "right",
+              "content_bg_image": "shopify:\/\/shop_images\/featured_article_background_1_f02c3cc0-9789-40f9-a62b-f3ead2da1754.png",
+              "article": "test-new-home-design\/dr-ailsa-rutherford",
+              "title": "dr ailsa rutherford",
+              "subtitle": "head of animal health",
+              "content": "Dr Ailsa Rutherford is a senior practicing veterinarian, and as our Head of Animal Health she oversees the development of all BUDDYPET products to ensure the optimal efficacy and safety of each one.",
+              "title_color": "#294d45",
+              "subtitle_color": "#7ea396",
+              "content_color": "#676158",
+              "btn_color": "#7ea396"
+            }
+          },
+          "316aa12d-3e23-444c-b820-8ae60f033d5f": {
+            "type": "article",
+            "settings": {
+              "use_custom_content": true,
+              "image": "shopify:\/\/shop_images\/ryan-walton-AbNO2iejoXA-unsplash.png",
+              "image_width": 450,
+              "image_position": "left",
+              "content_bg_image": "shopify:\/\/shop_images\/featured_article_background_2_15293df7-b0c9-4687-9290-48e6f11dac68.png",
+              "article": "test-new-home-design\/our-vision",
+              "title": "about us",
+              "subtitle": "",
+              "content": "Our animal companions trust us to empower their healthiest, most natural selves in every moment of our precious time together. Our pets brighten our lives, and at BUDDYPET we want to do the same for them.",
+              "title_color": "#f18079",
+              "subtitle_color": "",
+              "content_color": "#676158",
+              "btn_color": "#f18079"
+            }
+          }
+        },
+        "block_order": [
+          "1644b817-5d75-4081-9888-4015551d3133",
+          "316aa12d-3e23-444c-b820-8ae60f033d5f"
+        ],
+        "settings": {
+          "css_class": ""
+        }
+      },
+      "163583969743959bd8": {
+        "type": "home__hemp-help",
+        "blocks": {
+          "6644c4fc-bb59-42b1-8a89-8679b8dfa7bc": {
+            "type": "link_list",
+            "settings": {
+              "title": "Anxiety & Mood",
+              "link": "#"
+            }
+          },
+          "523c3d9a-f84a-466d-b55c-b1e77035592a": {
+            "type": "link_list",
+            "settings": {
+              "title": "Dysplasia",
+              "link": "#"
+            }
+          },
+          "6c060015-32a8-4e5c-b704-233af1665e0c": {
+            "type": "link_list",
+            "settings": {
+              "title": "Arthritis",
+              "link": "#"
+            }
+          },
+          "0e20519e-3e7f-424d-a0b6-507300afaf88": {
+            "type": "link_list",
+            "settings": {
+              "title": "Itchy Skin & Allergies",
+              "link": "#"
+            }
+          },
+          "e00334be-8d90-4d6c-9777-6aeb5af17fbc": {
+            "type": "link_list",
+            "settings": {
+              "title": "Hyperactivity",
+              "link": "#"
+            }
+          },
+          "d9e2c869-1f65-4df6-8bf4-c0f3bc4be226": {
+            "type": "link_list",
+            "settings": {
+              "title": "Gut Health",
+              "link": "#"
+            }
+          },
+          "33c78400-2996-4e70-b3de-c7af1f7f2e0d": {
+            "type": "link_list",
+            "settings": {
+              "title": "Joint Health",
+              "link": "#"
+            }
+          },
+          "cb70d3a2-78a8-4a12-a178-68aabf742667": {
+            "type": "link_list",
+            "settings": {
+              "title": "Heart Health",
+              "link": "#"
+            }
+          },
+          "dbaf824f-4973-4a29-88d1-5500b062353e": {
+            "type": "link_list",
+            "settings": {
+              "title": "Brain Health",
+              "link": "#"
+            }
+          },
+          "92108b98-53b0-421f-96bd-8f634474b1f9": {
+            "type": "link_list",
+            "settings": {
+              "title": "Fur texture",
+              "link": "#"
+            }
+          }
+        },
+        "block_order": [
+          "6644c4fc-bb59-42b1-8a89-8679b8dfa7bc",
+          "523c3d9a-f84a-466d-b55c-b1e77035592a",
+          "6c060015-32a8-4e5c-b704-233af1665e0c",
+          "0e20519e-3e7f-424d-a0b6-507300afaf88",
+          "e00334be-8d90-4d6c-9777-6aeb5af17fbc",
+          "d9e2c869-1f65-4df6-8bf4-c0f3bc4be226",
+          "33c78400-2996-4e70-b3de-c7af1f7f2e0d",
+          "cb70d3a2-78a8-4a12-a178-68aabf742667",
+          "dbaf824f-4973-4a29-88d1-5500b062353e",
+          "92108b98-53b0-421f-96bd-8f634474b1f9"
+        ],
+        "settings": {
+          "section_background": "shopify:\/\/shop_images\/hemp-help-background_a65d62eb-2b84-477d-a669-24cd50d7c681.png",
+          "title": "What can hemp help with?",
+          "image": "shopify:\/\/shop_images\/Hemp_Logo.png",
+          "link": "shopify:\/\/collections\/our-products",
+          "css_class": ""
+        }
+      },
+      "16358397054ab0f872": {
+        "type": "home__featured-blog",
+        "settings": {
+          "blog": "learn",
+          "title": "learn more about natural pet care",
+          "link": "shopify:\/\/blogs\/learn",
+          "css_class": ""
+        }
+      },
+      "cart__banner": {
+        "type": "cart__banner",
+        "settings": {
+          "show_banner": false,
+          "image_darken": false,
+          "subtitle": "Subheading",
+          "width": "wide",
+          "banner_height": "medium",
+          "padding_top": 0,
+          "padding_bottom": 0,
+          "css_class": "",
+          "custom_css": ""
+        }
+      },
+      "cart_buddy": {
+        "type": "cart_buddy",
+        "settings": {
+          "display_product_quantity_cart": true,
+          "display_savings": false,
+          "continue_shopping_url": "",
+          "display_create_an_account": true,
+          "cart_message": "<p>Free Shipping on all orders over $150<\/p>",
+          "create_account_title": "Join the BuddyPet Crew!",
+          "create_account_description": "<p>Create an account today to access promotional offers, collect reward points and checkout faster next time!<\/p>",
+          "width": "standard",
+          "padding_top": 40,
+          "padding_bottom": 40,
+          "css_class": "",
+          "custom_css": ""
+        }
+      },
+      "login-form": {
+        "type": "login-form",
+        "settings": {
+          "richtext": "",
+          "image_position": "right",
+          "width": "standard",
+          "padding_top": 40,
+          "padding_bottom": 40,
+          "css_class": "",
+          "custom_css": "",
+          "button_text": "Wholesale Login",
+          "button_url": "#"
+        }
+      },
+      "search__banner": {
+        "type": "search__banner",
+        "settings": {
+          "show_banner": false,
+          "image_darken": false,
+          "width": "wide",
+          "banner_height": "medium",
+          "padding_top": 0,
+          "padding_bottom": 0,
+          "css_class": "",
+          "custom_css": ""
+        }
+      },
+      "search__sidebar": {
+        "type": "search__sidebar",
+        "blocks": {
+          "search__sidebar-0": {
+            "type": "featured_promo",
+            "settings": {
+              "promo_background": "#EEEEEE",
+              "promo_text": "#000000",
+              "richtext": "<p>Use this area for promotional information.<\/p>",
+              "promo_link": "",
+              "button_label": "Shop now",
+              "button_style": "button--primary"
+            }
+          },
+          "search__sidebar-1": {
+            "type": "menu",
+            "settings": {
+              "menu": ""
+            }
+          },
+          "search__sidebar-2": {
+            "type": "text",
+            "settings": {
+              "title": "Heading",
+              "text": "<p>Text area can be used for details about blog authors or general information.<\/p>"
+            }
+          }
+        },
+        "block_order": [
+          "search__sidebar-0",
+          "search__sidebar-1",
+          "search__sidebar-2"
+        ],
+        "settings": {
+          "show_sidebar": false,
+          "css_class": "",
+          "custom_css": ""
+        }
+      },
+      "search__main": {
+        "type": "search__main",
+        "settings": {
+          "search_breadcrumb": true,
+          "text": "<p>Find what you seek.<\/p>",
+          "products_per_row": 3,
+          "mobile_products_per_row": "2",
+          "pagination_limit": 50,
+          "pagination_type": "basic_pagination",
+          "align_height": false,
+          "collection_height": 200,
+          "blog_author": false,
+          "blog_date": true,
+          "width": "standard",
+          "padding_top": 40,
+          "padding_bottom": 40,
+          "css_class": "",
+          "custom_css": ""
+        }
+      },
+      "404__banner": {
+        "type": "404__banner",
+        "settings": {
+          "show_banner": false,
+          "image_darken": false,
+          "width": "wide",
+          "banner_height": "medium",
+          "padding_top": 0,
+          "padding_bottom": 0,
+          "css_class": "",
+          "custom_css": ""
+        }
+      },
+      "404__main": {
+        "type": "404__main",
+        "settings": {
+          "not_found_text": "<p>We're sorry, but the page you requested could not be found.<\/p><p>Try searching or <a href=\"\/collections\" title=\"All collections\">continue shopping<\/a>.<\/p>",
+          "display_search_field": true,
+          "width": "standard",
+          "padding_top": 40,
+          "padding_bottom": 40,
+          "css_class": "",
+          "custom_css": ""
+        }
+      },
+      "header-centered__top-bar": {
+        "type": "header-centered__top-bar",
+        "settings": {
+          "show_social_icons": true,
+          "text": "<p>Add a phone number or other information.<\/p>",
+          "show_locale_selector": true,
+          "show_currency_selector": true,
+          "font": "open_sans_n4",
+          "font_style": "none",
+          "font_size": 14,
+          "letter_spacing": 0,
+          "top_bar_background": "rgba(0,0,0,0)",
+          "top_bar_link": "rgba(0,0,0,0)",
+          "top_bar_link_hover": "rgba(0,0,0,0)",
+          "top_bar_text": "rgba(0,0,0,0)",
+          "display_search": true,
+          "icon_style": "icons",
+          "cart_button_background": "#000000",
+          "cart_button_text": "#ffffff",
+          "css_class": "",
+          "custom_css": ""
+        }
+      },
+      "header-centered": {
+        "type": "header-centered",
+        "settings": {
+          "logo_width": 200,
+          "logo_position": "between",
+          "main_linklist": "main-menu",
+          "menu_spacing": "default",
+          "dropdown_click": false,
+          "enable_overlay": false,
+          "show_text_shadow": false,
+          "overlay_background": "rgba(0,0,0,0)",
+          "overlay_background_opacity": 0,
+          "overlay_link_color": "rgba(0,0,0,0)",
+          "overlay_link_hover_color": "rgba(0,0,0,0)",
+          "overlay_logo_width": 80,
+          "enable_sticky": false,
+          "display_search": true,
+          "sticky_background_opacity": 50,
+          "scroll_logo_width": 200,
+          "width": "standard",
+          "css_class": "",
+          "custom_css": ""
+        }
+      },
+      "page-faq__banner": {
+        "type": "page-faq__banner",
+        "settings": {
+          "show_banner": false,
+          "image_darken": false,
+          "subtitle": "Subheading",
+          "width": "wide",
+          "banner_height": "medium",
+          "padding_top": 0,
+          "padding_bottom": 0,
+          "css_class": "",
+          "custom_css": ""
+        }
+      },
+      "page-faq__main": {
+        "type": "page-faq__main",
+        "settings": {
+          "width": "standard",
+          "padding_top": 40,
+          "padding_bottom": 40,
+          "css_class": "",
+          "custom_css": ""
+        }
+      },
+      "page-faq__column1": {
+        "type": "page-faq__column1",
+        "blocks": {
+          "page-faq__column1-0": {
+            "type": "heading",
+            "settings": {
+              "title": "Hemp Facts"
+            }
+          },
+          "page-faq__column1-1": {
+            "type": "content",
+            "settings": {
+              "title": "Do your hemp products contain any psychoactives?",
+              "answer": "<p>No, our products do not contain any psychoactives.<\/p>"
+            }
+          },
+          "page-faq__column1-2": {
+            "type": "content",
+            "settings": {
+              "title": "Is hemp gluten free?",
+              "answer": "<p>Yes, it is.<\/p>"
+            }
+          },
+          "page-faq__column1-3": {
+            "type": "content",
+            "settings": {
+              "title": "Nutrient profile of hemp seed oil",
+              "answer": "<p>Hemp seed oil possesses excellent nutritional value. It is very rich in essential fatty acids (EFAs) and other polyunsaturated fatty acids (PUFAs). It has almost as much protein as soybean and is also rich in Vitamin E and minerals such as phosphorus, potassium, sodium, magnesium, sulphur, calcium, iron and zinc.<\/p><p>Hempseed oil contains all of the essential amino acids and also contains surprisinly high levels of the arginine amino acid, a metabolic precursos for the production of nitric oxide (NO), a molecule now recognised as a pivotal signaling messenger in the cardiovascular system that participates in the control of haemostasis, fibrinolysis, platelet and leukocyte interactions with the arterial wall, regulation of vascular tone, proliferation of vascular muscle cells, and jomeostasis of blood pressure.<\/p><p>Dietary hemp seed is also particularly rich in the omega-3 alpha-linolenic acid (ALA) in a perfect ratio to omega-6 linoleic acid (LA). The LA:ALA ratio normally exists in hemp seed at between 2:1 and 3:1 level. This proportion has been proposed to be ideal for a healthy diet.<\/p>"
+            }
+          },
+          "page-faq__column1-4": {
+            "type": "heading",
+            "settings": {
+              "title": "Ingredients & Sourcing"
+            }
+          },
+          "page-faq__column1-5": {
+            "type": "content",
+            "settings": {
+              "title": "Our Hemp Farmers",
+              "answer": "<p>From seed to shelf, all BUDDYPET products are made with 100% Australian organic hemp, grown in the pristine landscapes of Tasmanian hinterland. In the near future, we will have crops in the ground in South Australia and New South Wales. Before you know it, most states will see our beautiful green plants growing all year round!<\/p>"
+            }
+          },
+          "page-faq__column1-6": {
+            "type": "content",
+            "settings": {
+              "title": "The Lifecycle of Hemp",
+              "answer": "<p>Hemp is a broadleaf plant with a long taproot, and, under ideal conditions, it grows very rapidly. Hemp loves well-aerated soil and is tough enough to withstand most pests and insects. Great news for all of us who don’t want anything to do with herbicides and pesticides.<\/p><p>Hemp returns loads of nutrients back to the soil in the form of unused parts. The stem, leaves, roots, and tops all help fertilise next season’s crop. The deep taproot helps loosen soil and protect against erosion.<\/p><p>Beyond hemp’s value as a rotation crop, it has the remarkable ability to remove heavy metals, chemical contaminants and even radioactive elements from soil. It is almost as if this plant has been put here to heal the earth. After being planted in contaminated ground, not only does it “clean” the soil, but it can then safely be used for non-food purposes such as fibre and biofuel. Check out our blog and Dr. Ailsa's podcasts to learn about the health benefits of hemp.<\/p>"
+            }
+          },
+          "page-faq__column1-7": {
+            "type": "content",
+            "disabled": true,
+            "settings": {
+              "title": "What is your question?",
+              "answer": "<p>Provide the answer to the question here.<\/p>"
+            }
+          },
+          "c72554b2-ad48-48c8-921d-b460ffea023a": {
+            "type": "heading",
+            "settings": {
+              "title": "Shipping & Delivery"
+            }
+          },
+          "87d147c6-8a15-41a3-b9ee-ebf679c9f546": {
+            "type": "content",
+            "settings": {
+              "title": "I can't find my tracking number.",
+              "answer": "<p>Your tracking number can be found in your confirmation email from us. If for some reason you cannot find that email, please message or email us with your order number and we'll be able to re-supply your tracking number.<\/p>"
+            }
+          },
+          "0facec7a-d4c0-49d2-a2b3-1cd816c83bd4": {
+            "type": "content",
+            "settings": {
+              "title": "I still haven't received shipping confirmation of my pre-order and it's past the send date.",
+              "answer": "<p>Sometimes pre-orders take 2-3 days for fulfilment to process. Please wait a couple of days after the estimated shipping date, then if you still haven't had any shipping communications, reach out to us and we'll check out what's going on. <\/p>"
+            }
+          },
+          "b9c5152b-d5d0-4e73-b5a7-e5cc5f470f5d": {
+            "type": "content",
+            "settings": {
+              "title": "I haven't received a shipping notification and it’s been 5+ days since I purchased",
+              "answer": "<p>Please, check your spam folder. If it's not there & nowhere else in your inbox, send us a message and we'll see what's going on.<\/p>"
+            }
+          },
+          "e2c4cd27-bcec-4b4b-a5d0-0e84b4b2862e": {
+            "type": "content",
+            "settings": {
+              "title": "I want to change my delivery address.",
+              "answer": "<p>If you have made your order in the last 24hrs there is a chance we can change your delivery address before it is in the AUS Post system. <\/p><p>Please let us know as soon as possible if you wish to change delivery address, making sure your message or email includes:<\/p><p>- Full name<\/p><p>- Order number<\/p><p>- Full new delivery address<\/p><p>If your order was made more than 24hrs ago, we cannot guarantee that we will be able to change your delivery address, but you can contact AUS Post who will be able to change your delivery address if it has not yet been sent out with their couriers.<\/p>"
+            }
+          },
+          "5f303ab5-9276-442a-8266-0b7f3bc161f6": {
+            "type": "content",
+            "settings": {
+              "title": "Wholesale Orders",
+              "answer": "<p>As a wholesaler, you can manage your account by logging into your account. You can access the wholesale order form there as well and see your previous orders. <\/p>"
+            }
+          },
+          "268421bc-bd55-484e-b6a2-e6fb2d9b059a": {
+            "type": "heading",
+            "settings": {
+              "title": "Payment Methods"
+            }
+          },
+          "394286a1-0261-4bd6-a138-cd218dc5d2ee": {
+            "type": "content",
+            "settings": {
+              "title": "What payment methods do you accept?",
+              "answer": "<p>We offer the usual credit & debit card payments as well as PayPal, Zip, Bitpay & Sezzle.<\/p><p>We also accept digital asset payments such as Bitcoin, Etherum & USDT.<\/p><p>If you are having issues processing your transaction online, we are also able to process credit card payments over the phone. <\/p><p>You can call us on 1300 402 420, or email at hey@buddypet.co to request a call-back whenever suits.<\/p>"
+            }
+          },
+          "9e028454-d5d2-4c8e-b75e-395c2a09ba19": {
+            "type": "heading",
+            "settings": {
+              "title": "Refunds & Money Back Gurantee"
+            }
+          },
+          "3a738017-3fbb-40cf-bbbc-173b8fb48c5d": {
+            "type": "content",
+            "settings": {
+              "title": "What is your refunds policy?",
+              "answer": "<p>We do not accept returns unless your product was wrongly received and has not been opened or used and is still in its original packaging. <\/p><p>If you are unsatisfied with your product after the first month, we will provide a full refund. <\/p><p>Money Back Guarantee<\/p><p>We’re confident that you will see and feel the difference in health and wellness of your pet after using our products for one month. But if you don’t, we will refund your money up to 40 calendar days after purchase.<\/p><p>To initiate your refund, just get in touch via our website chat or by emailing hey@buddypet.co<\/p><p>Refunds will typically take up to 3 days to be processed and visible in your bank account.<\/p>"
+            }
+          },
+          "f79e3a76-be22-4154-abd6-d415210cfef7": {
+            "type": "heading",
+            "settings": {
+              "title": "Loyalty Rewards Programme"
+            }
+          },
+          "e160da38-fa3d-4804-8382-9710001676eb": {
+            "type": "content",
+            "settings": {
+              "title": "How to sign up?",
+              "answer": "<p>Sign up to BUDDYPET loyalty programme by joining BUDDYPET crew <a href=\"https:\/\/buddypet.co\/account\/register?view=buddypetcrew\" title=\"https:\/\/buddypet.co\/account\/register?view=buddypetcrew\">here<\/a>.<\/p>"
+            }
+          },
+          "a01d5c37-557f-4c75-acc1-22b3f9bb157c": {
+            "type": "content",
+            "settings": {
+              "title": "How to redeem rewards?",
+              "answer": "<p>Redeeming rewards only works once you have enough points, if you're not sure, your total points are listed in your account profile. You'll receive an email once you have enough points to redeem a reward. Redeeming can be done via the email or through your account under 'Get Rewards'.<\/p>"
+            }
+          },
+          "d034df52-c4c8-406a-b88f-153622fe3a0a": {
+            "type": "heading",
+            "settings": {
+              "title": "Promotions & Discount Codes"
+            }
+          },
+          "a1c99aa3-0e85-4fd6-98eb-4adb8a611949": {
+            "type": "content",
+            "settings": {
+              "title": "Promotion code is not working",
+              "answer": "<p>If your promo code isn't working, please make sure you're only using one code at a time as there's only a limit of one per order. <\/p><p>If you have added your code and it is not working, make sure its expiration date has not passed.<\/p><p>Discount codes can sometimes be affected by the browser or device you're using, as a last resort, you can try using another browser\/device to add the code to your order.<\/p>"
+            }
+          },
+          "29c81c32-2770-4000-918e-3605ed001c88": {
+            "type": "content",
+            "settings": {
+              "title": "Review, Birthday & Other Personalised Codes",
+              "answer": "<p>Sometimes personalised discount codes glitch out - if yours isn't working check if  you are already using another code - including automatic discounts during a promo or sale, and make sure your code hasn't expired. We will always tell you how long your code is valid for in the email it’s been sent in. <\/p><p>If it's definitely neither of those things, either hit the chat button on our website or email us at hey@lbuddypet.co and include the code in your message so that we can check what's going on as fast as possible.<\/p>"
+            }
+          },
+          "61b19de7-9824-4a20-92b5-15862b773315": {
+            "type": "content",
+            "settings": {
+              "title": "Discount is not working",
+              "answer": "<p>Let us know before you pay, please.<\/p><p>If your code is not correctly applying a discount, please take a screenshot and message us about it before your process payment. We will always be able to ensure you get that discount if you let us know before you click 'pay'.<\/p>"
+            }
+          }
+        },
+        "block_order": [
+          "page-faq__column1-0",
+          "page-faq__column1-1",
+          "page-faq__column1-2",
+          "page-faq__column1-3",
+          "page-faq__column1-4",
+          "page-faq__column1-5",
+          "page-faq__column1-6",
+          "page-faq__column1-7",
+          "c72554b2-ad48-48c8-921d-b460ffea023a",
+          "87d147c6-8a15-41a3-b9ee-ebf679c9f546",
+          "0facec7a-d4c0-49d2-a2b3-1cd816c83bd4",
+          "b9c5152b-d5d0-4e73-b5a7-e5cc5f470f5d",
+          "e2c4cd27-bcec-4b4b-a5d0-0e84b4b2862e",
+          "5f303ab5-9276-442a-8266-0b7f3bc161f6",
+          "268421bc-bd55-484e-b6a2-e6fb2d9b059a",
+          "394286a1-0261-4bd6-a138-cd218dc5d2ee",
+          "9e028454-d5d2-4c8e-b75e-395c2a09ba19",
+          "3a738017-3fbb-40cf-bbbc-173b8fb48c5d",
+          "f79e3a76-be22-4154-abd6-d415210cfef7",
+          "e160da38-fa3d-4804-8382-9710001676eb",
+          "a01d5c37-557f-4c75-acc1-22b3f9bb157c",
+          "d034df52-c4c8-406a-b88f-153622fe3a0a",
+          "a1c99aa3-0e85-4fd6-98eb-4adb8a611949",
+          "29c81c32-2770-4000-918e-3605ed001c88",
+          "61b19de7-9824-4a20-92b5-15862b773315"
+        ],
+        "settings": {
+          "padding_top": 0,
+          "padding_bottom": 0,
+          "css_class": "",
+          "custom_css": ""
+        }
+      },
+      "page-faq__column2": {
+        "type": "page-faq__column2",
+        "settings": {
+          "padding_top": 0,
+          "padding_bottom": 0,
+          "css_class": "",
+          "custom_css": ""
+        }
+      },
+      "page-contact__banner": {
+        "type": "page-contact__banner",
+        "settings": {
+          "show_banner": false,
+          "image_darken": false,
+          "subtitle": "Subheading",
+          "width": "wide",
+          "banner_height": "medium",
+          "padding_top": 0,
+          "padding_bottom": 0,
+          "css_class": "",
+          "custom_css": ""
+        }
+      },
+      "page-contact__sections": {
+        "type": "page-contact__sections",
+        "blocks": {
+          "01e1ee0a-5393-4639-90e1-dbf919c97d4a": {
+            "type": "map",
+            "disabled": true,
+            "settings": {
+              "map_address": "",
+              "map_height": 400,
+              "zoom_level": 16,
+              "api_key": "",
+              "show_pin": true,
+              "map_style": "default",
+              "width": "wide",
+              "padding_top": 0,
+              "padding_bottom": 0,
+              "padding_left": 0,
+              "padding_right": 0,
+              "animation": "none"
+            }
+          }
+        },
+        "block_order": [
+          "01e1ee0a-5393-4639-90e1-dbf919c97d4a"
+        ],
+        "settings": {
+        }
+      },
+      "1655323397c9b39455": {
+        "type": "index__logo-list",
+        "blocks": {
+          "1655323397c9b39455-0": {
+            "type": "logo_image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/Group_417.png",
+              "content": "100% Australian Grown \n& Manufactured",
+              "link": ""
+            }
+          },
+          "1655323397c9b39455-1": {
+            "type": "logo_image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/7977468_natural_resources_sustainability_ecology_growth_icon_f95ee3c8-9b2f-426d-afdc-fb5766882cf2.png",
+              "content": "100% Natural Organic & GMO Free",
+              "link": ""
+            }
+          },
+          "1655323397c9b39455-2": {
+            "type": "logo_image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/Air_quality_control.png",
+              "content": "Quality Assured, Safe & Sustainable",
+              "link": ""
+            }
+          },
+          "1655323397c9b39455-3": {
+            "type": "logo_image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/Economic_sustainability.png",
+              "content": "Money Back <br>Guarantee",
+              "link": ""
+            }
+          }
+        },
+        "block_order": [
+          "1655323397c9b39455-0",
+          "1655323397c9b39455-1",
+          "1655323397c9b39455-2",
+          "1655323397c9b39455-3"
+        ],
+        "settings": {
+          "logos_per_row": 4,
+          "logo_size": "medium",
+          "background": "rgba(0,0,0,0)",
+          "gradient": "rgba(0,0,0,0)",
+          "gradient_rotation": 0,
+          "width": "standard",
+          "padding_top": 20,
+          "padding_bottom": 0,
+          "padding_left": 0,
+          "padding_right": 0,
+          "animation": "none",
+          "css_class": "",
+          "custom_css": ""
+        }
+      },
+      "165575743449b541b8": {
+        "type": "home__rich-text",
+        "settings": {
+          "header_icon_asset_name": "icon-pet",
+          "header_subtitle": "In the last 3 years, we helped over",
+          "title": "15,000 Australian Fur Babies",
+          "content": "Access promotional offers and check out faster next time you shop",
+          "link": "\/account\/login",
+          "label": "Create an Account"
+        }
+      },
+      "165593504277f9a8ef": {
+        "type": "home__reviews-testimonial",
+        "blocks": {
+          "1b6150dc-b1fe-400c-9f93-4722663a70df": {
+            "type": "review",
+            "settings": {
+              "publish_date": "07\/06\/2022",
+              "title": "Excellent product!",
+              "content": "Excellent product! My little man is jumping out of his skin, and he is 14.",
+              "author": "Doug ONeill"
+            }
+          },
+          "eed6a1d9-f710-4443-b518-15561955cbad": {
+            "type": "review",
+            "settings": {
+              "publish_date": "02\/06\/2022",
+              "title": "Coco has been...",
+              "content": "Coco has been on the oil for a week now and I am impressed with the improvement in her anxiety and also far less itching.",
+              "author": "Kelli Lawson"
+            }
+          },
+          "52cd0e6d-9e0a-4dc1-b146-d105a72bed6f": {
+            "type": "review",
+            "settings": {
+              "publish_date": "08\/02\/2022",
+              "title": "Great product!",
+              "content": "Great product! It is so good to see him back to his old self running and so happy.",
+              "author": "Michael Holland"
+            }
+          },
+          "6c49dd50-a421-41e8-a1d1-9b23f3b9c555": {
+            "type": "review",
+            "settings": {
+              "publish_date": "17\/01\/2021",
+              "title": "Mishka is a lot happier...",
+              "content": "Mishka is a lot happier these days, the pain in her hip seems to have reduced quite a lot, she is calmer, and her coat is lovely.",
+              "author": "Lesley Skellly"
+            }
+          },
+          "691dbe39-db39-416c-a38d-9cd9bf117b2f": {
+            "type": "review",
+            "settings": {
+              "publish_date": "31\/12\/2020",
+              "title": "Real recommendation!",
+              "content": "Real recommendation! Seniors, Anxious pets and Special needs\/disabled pets will benefit!!",
+              "author": "Cassie Hallam"
+            }
+          }
+        },
+        "block_order": [
+          "1b6150dc-b1fe-400c-9f93-4722663a70df",
+          "eed6a1d9-f710-4443-b518-15561955cbad",
+          "52cd0e6d-9e0a-4dc1-b146-d105a72bed6f",
+          "6c49dd50-a421-41e8-a1d1-9b23f3b9c555",
+          "691dbe39-db39-416c-a38d-9cd9bf117b2f"
+        ],
+        "settings": {
+          "show_badge": true,
+          "badge": "shopify:\/\/shop_images\/Group_487.png",
+          "stars_icon": "shopify:\/\/shop_images\/Group_488.png",
+          "total_review_text": "50 Reviews"
+        }
+      },
+      "blog_main_podcast": {
+        "type": "blog_main_podcast",
+        "settings": {
+          "blog_tags": false,
+          "blog_posts_per_row": 3,
+          "blog_posts_per_page": 12,
+          "pagination_type": "load_more",
+          "blog_author": false,
+          "blog_date": true,
+          "read_time": false,
+          "blog_comment_count": false,
+          "blog_show_tags": false,
+          "blog_show_excerpt": true,
+          "show_border": true,
+          "button_label": "Read more",
+          "button_label_vet": "Watch",
+          "button_type": "button--primary",
+          "width": "wide",
+          "padding_top": 40,
+          "padding_bottom": 40,
+          "animation": "none",
+          "css_class": ".image_podcast",
+          "custom_css": "img{\nobject-fit: contain;\nheight: fit-content;\nborder-radius:0px;\n}"
+        }
+      }
+    },
+    "content_for_index": [
+      "1635839683609748f8",
+      "1635839677eb43d264",
+      "165593504277f9a8ef",
+      "165575743449b541b8",
+      "16358396870ce89f97",
+      "1655323397c9b39455",
+      "163583969743959bd8",
+      "16358397054ab0f872"
+    ],
+    "blocks": {
+      "6143736321357441667": {
+        "type": "shopify:\/\/apps\/tidio-live-chat-chatbots\/blocks\/app-embed\/1002274d-fb18-4939-98f6-5f05a8deeadc",
+        "disabled": true,
+        "settings": {
+        }
+      },
+      "855628211100114053": {
+        "type": "shopify:\/\/apps\/klaviyo-email-marketing-sms\/blocks\/klaviyo-onsite-embed\/2632fe16-c075-4321-a88b-50b567f42507",
+        "disabled": false,
+        "settings": {
+        }
+      },
+      "14429071373314833104": {
+        "type": "shopify:\/\/apps\/candy-rack-all-in-one-upsell\/blocks\/head\/cb9c657f-334f-4905-80c2-f69cca01460c",
+        "disabled": false,
+        "settings": {
+        }
+      },
+      "10436698916776057164": {
+        "type": "shopify:\/\/apps\/appstle-subscriptions-loyalty\/blocks\/appstle-subscription-helper\/fe257d39-6f88-4f35-ab08-bd437e3aa94e",
+        "disabled": true,
+        "settings": {
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,108 @@
+{% if related_products == true %}
+  {% assign hover_enabled = block.settings.show_related_products_title_on_hover %}
+{% else %}
+  {% assign hover_enabled = settings.thumbnail_hover_enabled %}
+{% endif %}
+
+{% if type == 'block' %}
+  {% assign object = block %}
+{% else %}
+  {% assign object = section %}
+{% endif %}
+
+{% assign secondaryImage = product.media[1] %}
+
+{% assign collection_handles = product.collections | map: 'handle' %}
+{% if product.featured_media.preview_image.alt contains 'youtube' or image.alt contains 'vimeo' %}
+  {% assign alt_text = product.title %}
+{% else %}
+  {% assign alt_text = product.featured_media.preview_image.alt %}
+{% endif %}
+
+{% if type == 'block' %}
+  {% assign image_crop = block.settings.image_crop %}
+{% else %}
+  {% assign image_crop = section.settings.image_crop %}
+{% endif %}
+
+{% if section.settings.align_height == true %}
+{% style %}
+  .product-{{ product.id }} .image__container img,
+  .product-{{ product.id }} .product-thumbnail__video .plyr {
+    max-width: 100%;
+    width: {{ height }}px;
+    margin: 0 auto;
+  }
+
+  .shopify-model-viewer-ui model-viewer {
+    --progress-bar-height: 2px;
+    --progress-bar-color: {{ settings.regular_color }};
+  }
+{% endstyle %}
+{% endif %}
+{% for tag in product.tags %}
+  {% if tag contains 'title_color' %}
+    {% assign colour = tag | split: ':' %}
+  {% endif %}
+  {% if tag contains 'image_size' %}
+    {% assign sizes = tag | split: ':' %}
+    {% assign sizes_image = sizes[1] | split: 'x' %}
+    {% assign widthImage = sizes_image[0] %}
+    {% assign heightImage = sizes_image[1] %}
+  {% endif %}
+{% endfor %}
+
+<div index="{{ index }}" class="product-card--home item-product product__grid-item {% render 'column-width', value: section.settings.products_per_row %} columns show-border-{{ section.settings.show_border }} medium-down--one-half small-down--one-whole has-margin-bottom {% if section.settings.products_per_row == 1 %}is-horizontal{% endif %}" {% if section.settings.pagination_type != 'basic_pagination' %}data-load-more--grid-item{% endif %}">
+  <div class="product-wrap">
+      <div class="product-image__wrapper">
+        <div class="image__container product__imageContainer one--thirds">
+          <a href="{{ product.url | within: collection }}">
+
+          {% if product.featured_media.preview_image != blank %}
+            <div class="image-element__wrap">
+                <img  alt="{{ alt | escape }}" src="{{ product.featured_media.preview_image | img_url: '2000x' }}" />
+                 {% comment %}     style="width: {{ widthImage }}px;" {% endcomment %}
+               
+            </div>
+          {% else %}
+          {% comment %}Build image element{% endcomment %}
+          <div class="image-element__wrap"
+                      {% if calculate_aspect_ratio %}
+                        data-calculate-aspect-ratio
+                      {% endif %}
+                      style="{{ image_background_color }}{{ height_style }} {% unless stretch_width == true or object_fit %}max-width: {{ image.width }}px;{% endunless %}">
+            <img  alt="{{ alt | escape }}"
+                  class="lazyload transition--{{ settings.image_loading_style }} {{ additional_classes }}"
+                  {% if low_quality_image %}
+                    src="{{ low_quality_image }}"
+                  {% endif %}
+                  data-src="{{ image | img_url: '1600x' }}"
+                  data-sizes="auto"
+                  data-srcset="{{ srcset }}"
+                  data-aspectratio="{{ image.width }}/{{ image.height }}"
+                  height="{{ image.height }}"
+                  width="{{ image.width }}"
+                  srcset="data:image/svg+xml;utf8,<svg%20xmlns='http://www.w3.org/2000/svg'%20width='{{ image.width }}'%20height='{{ image.height }}'></svg>"
+                  style="{{ inline_style }};{{ height_style }}"
+            />
+          </div>
+          {% endif %}
+
+          {% comment %}Fallback for no javascript{% endcomment %}
+          <noscript class="noscript">
+            <img class="{{ additional_classes }}" src="{{ image | img_url: '2000x' }}" alt="{{ alt | escape }}">
+          </noscript>
+          </a>
+        </div>
+      </div>
+      <div class="product-info">
+        <div class="info text-left">
+          <p class="product-title"><a href="{{ product.url | within: collection }}">{{ product.title }}</a></p>
+          <p class="product-useful">{{ product.metafields.accentuate.useful | strip_html}}</p>
+        </div>
+        <div class="button-cart">
+          <a class="button button--add-to-cart" href="{{ product.url | within: collection }}" title="{{ product.title }}">View {{ product.title }}</a> 
+        </div>
+      </div>
+    </div>
+</div>

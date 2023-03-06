@@ -1,0 +1,84 @@
+<div data-section-type="home--rich-text">
+  <div class="container">
+    <div class="section-heading">
+      {%- if section.settings.header_icon_asset_name != blank or section.settings.header_icon != blank -%}
+        <div class="section-heading__icon">
+          {%- if section.settings.header_icon_asset_name != blank-%}
+            {%- include section.settings.header_icon_asset_name -%}  
+          {%- else -%}
+            <img src="{{section.settings.header_icon | image_url: width: 60}}" loading="lazy" width="60" height = "{{section.settings.header_icon | divided_by: section.settings.header_icon.aspect_ratio | floor}}" alt="{{section.settings.header_icon.alt}}">
+          {%- endif -%}
+        </div>
+      {%- endif -%}
+      <p class="section-heading__subtitle">{{section.settings.header_subtitle}}</p>
+      <h3 class="section-heading__title">{{section.settings.title}}</h3>
+    </div>
+    <div class="section-content">{{section.settings.content}}</div>
+    <div class="section-button--wrapper">
+      <a href="{{section.settings.link}}" class="button">{{section.settings.label}}</a>
+    </div>
+  </div>
+</div>
+{% schema %}
+{
+  "name":"Home Rich Text Editor", 
+  "settings":[
+    {
+      "type": "header",
+      "content": "Section Heading"
+    },
+    {
+      "type":"text",
+      "id":"header_icon_asset_name",
+      "label":"Header Icon asset_name"
+    },
+    {
+      "type": "image_picker",
+      "id": "header_icon",
+      "label": "Header Icon"
+    },
+    {
+      "type": "text",
+      "id": "header_subtitle",
+      "label": "SubTitle",
+      "default": "In the last 3 years, we helped over"
+    },
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Title",
+      "default": "15,000 Australian Fur Babies"
+    },
+    {
+      "type": "header",
+      "content": "Section Content"
+    },
+    {
+      "type": "textarea",
+      "id": "content",
+      "label": "Content",
+      "default": "Access promotional offers and check out faster next time you shop"
+    },
+    {
+      "type": "header",
+      "content": "Button"
+    },
+    {
+      "type": "url",
+      "id": "link",
+      "label": "Button URL"
+    },
+    {
+      "type": "text",
+      "id": "label",
+      "label": "label"
+    }
+  ],
+  "presets":[
+    {
+      "name":"Home Rich Text Editor",
+      "category":"Rich Text Editor"
+    }
+  ]
+}
+{% endschema %}

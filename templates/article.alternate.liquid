@@ -1,0 +1,115 @@
+{% comment %}
+  To edit the contents of this file, look inside the `sections` folder for the file name that comes directly after `section`. Eg. {% section 'product__main' %} or {% section 'page__banner' %}
+{% endcomment %}
+<style>
+  .article-main {
+  margin-bottom:20px;
+  }
+  .alternate-article {
+    padding: 80px 0;
+    width:50%;
+  }
+  .article-page .title-post {
+    margin-bottom: 0px;
+  }
+  .alternate-article img {
+    border-radius: 8px;
+  }
+  .subtitle-post h6 {
+    font-size: 48px;
+    font-weight: 200;
+    margin-bottom:50px;
+  }
+  .alternate-article .alternate-article-p {
+  padding:25px 15px 100px;}
+  .alternate-article .alternate-article-p div {
+    line-height: 33px;
+color: #f18079;
+letter-spacing: -.2px;
+    font-size: 33px;
+font-weight: 200;
+    font-family: stevie-sans;margin-bottom: 10px;
+  }
+  .alternate-article .alternate-article-p p {
+    font-size: 14px;
+line-height: 25px;
+    }
+    .alternate-article:nth-child(even) {
+    padding:0 45px 0 0;
+  }
+    .alternate-article:nth-child(odd) {
+    
+      padding:0 0 0 45px;
+  }
+
+  @media (max-width:767px) {
+      .alternate-article {
+width:100%;
+  }
+
+      .alternate-article .alternate-article-p {
+  width:100%;
+    }
+      .alternate-article img {
+  width:100%;
+  }
+        .alternate-article:nth-child(even) {
+    padding:0;
+  }
+    .alternate-article:nth-child(odd) {
+    
+      padding:0;
+  }
+  }
+</style>
+<main id="template-{{ template | replace: '.', '-' | handle }}" class="shopify-section article-page" data-check-for-order="true">
+ {% section 'article__banner' %}
+  <section class="section__wrapper width-container">
+    <div class="container">
+      {% comment %}{% section 'article__sidebar' %}
+      {% section 'article_feature_image' %}{% endcomment %}
+      {% section 'article__main_content' %}
+      {% if article.metafields.accentuate.image_1 != blank %}
+      <div class="alternate-article">
+       	 <img class="alternate-article-image" src="{{ article.metafields.accentuate.image_1 }}" />
+        <div class="alternate-article-p"><div>{{ article.metafields.accentuate.title_1 }}</div>{{ article.metafields.accentuate.text_1 }}</div>
+      </div>
+	{% endif %}
+      {% if article.metafields.accentuate.image_2 != blank %}
+      <div class="alternate-article">
+               	 <img class="alternate-article-image" src="{{ article.metafields.accentuate.image_2 }}" />
+        <div class="alternate-article-p"><div>{{ article.metafields.accentuate.title_2 }}</div>{{ article.metafields.accentuate.text_2 }}</div>
+
+        
+      </div>
+	{% endif %}
+       {% if article.metafields.accentuate.image_3 != blank %}
+      <div class="alternate-article">
+       	 <img class="alternate-article-image" src="{{ article.metafields.accentuate.image_3 }}" />
+        <div class="alternate-article-p"><div>{{ article.metafields.accentuate.title_3 }}</div>{{ article.metafields.accentuate.text_3 }}</div>
+      </div>
+	{% endif %}    
+      {% if article.metafields.accentuate.image_4 != blank %}
+      <div class="alternate-article">
+               	 <img class="alternate-article-image" src="{{ article.metafields.accentuate.image_4 }}" />
+        <div class="alternate-article-p"><div>{{ article.metafields.accentuate.title_4 }}</div>{{ article.metafields.accentuate.text_4 }}</div>
+
+       
+      </div>
+	{% endif %}
+      {% if article.metafields.accentuate.image_5 != blank %}
+      <div class="alternate-article">
+       	 <img class="alternate-article-image" src="{{ article.metafields.accentuate.image_5 }}" />
+        <div class="alternate-article-p"><div>{{ article.metafields.accentuate.title_5 }}</div>{{ article.metafields.accentuate.text_5 }}</div>
+      </div>
+	{% endif %}
+
+      {% unless article.handle contains "head-of-animal-health" or article.handle contains "our-vision" or article.handle contains "hemp-nature-s-precious-gift" or article.handle contains "dr-ailsa-rutherford"%}
+      {% section 'article__products_featured' %}
+      {% endunless %}
+    </div>
+    
+    {% include 'relatedblogs' %}
+  </section>
+</main>
+

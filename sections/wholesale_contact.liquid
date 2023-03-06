@@ -1,0 +1,139 @@
+<section class="wholesale-form">
+  <div class="whole-sale contact-form container">
+    {% if section.settings.section-heading != blank %}
+    	<h2 class="contact-title">{{ section.settings.section-heading }}</h2>
+    {% endif %}
+    {% form 'contact', id: 'form-contact-wholesale' %}
+      
+      <div class="grid">
+        <div class="grid-item media-up-one--half">
+         	{% if section.settings.section-heading != blank %}
+              <label class="label--hidden require" for="ContactFormName">
+                {{ section.settings.label-name }}
+               </label>
+           {% endif %}
+          <input type="text" id="ContactFormName" name="contact[name]" required />
+        </div>
+        <div class="grid-item media-up-one--half">
+          <label class="label--hidden require" for="ContactFormEmail">{{ 'contact.form.email' | t }}</label>
+          <input type="text" id="ContactFormEmail" name="contact[email]" required />
+        </div>
+        <div class="grid-item media-up-one--half">
+          <label class="label--hidden require" for="ContactFormPhone">{{ 'contact.form.phone' | t }}</label>
+          <input type="tel" id="ContactFormPhone" name="contact[body]" required />
+        </div>
+        <div class="grid-item media-up-one--half adress">
+           {% if section.settings.section-heading != blank %}
+          <label class="label--hidden require" for="ContactFormAdress">
+         	{{ section.settings.label-address }}
+           </label>
+           {% endif %}
+          <input type="text" id="ContactFormAddress" name="contact[address]" required />
+        </div>
+        <div class="grid-item media-up-one--half">
+          {% if section.settings.section-heading != blank %}
+          <label class="label--hidden require abn" for="ContactFormABN">
+            {{ section.settings.label-abn }}
+          </label>
+          {% endif %}
+           <input type="text" id="ContactFormAbn" name="contact[abn]" />
+        </div>
+        <div class="grid-item media-up-one--half">
+          <label class="label--hidden require" for="ContactFormMessage">{{ 'contact.form.enquiry' | t }}</label>
+          <input type="text" id="ContactFormMessage" name="contact[message]" required />
+        </div>
+      </div>
+    <div class="action">
+      <input type="submit" class="btn" value="{{ 'contact.form.send' | t }}">
+    </div>
+    {{ form.errors | default_errors }}
+      {% if form.posted_successfully? %}
+          <p class="note form-success">
+            {{ 'contact.form.post_success' | t }}
+          </p>
+      {% endif %}
+    {% endform %}
+  </div>
+</section>
+<script type="text/javascript">
+  $(function($){
+    $("#form-contact-wholesale").validate(
+      {
+        rules: 
+        {
+          'contact[name]': 
+          {
+            required: true
+          },
+          'contact[email]': 
+          {
+            required: true,
+            email: true
+          },
+          'contact[phone]': 
+          {
+            required: true
+          },
+          'contact[message]': 
+          {
+            required: true,
+            maxlength: 1024
+          }
+        },
+        messages: 
+        {
+          'contact[name]': 
+          {
+            required: "Please enter your name"
+          },
+          'contact[email]': 
+          {
+            required: "Please enter your email address. This is required to contact you later."
+          },
+          'contact[body]': 
+          {
+            maxlength: "Please limit the message to {0} letters!"
+          }
+        }
+      });	
+  });
+</script>
+{% schema %}
+  {
+    "name": "Whole-sale Contact-form",
+    "settings": [
+	{
+	"id": "section-heading",
+    "type": "text",
+    "label": "Heading 1"
+	},
+	{
+	"id": "label-name",
+    "type": "text",
+    "label": "label name"
+	},
+	{
+	"id": "label-address",
+    "type": "text",
+    "label": "label address"
+	},
+	{
+	"id": "label-abn",
+    "type": "text",
+    "label": "label abn"
+	}
+	],
+	"presets": [
+    {
+    "name": "Welcome section Test",
+    "category": "ADVANCED LAYOUT"
+    }
+    ]
+  }
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

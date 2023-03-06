@@ -1,0 +1,114 @@
+{
+  "sections": {
+    "1661839528f14e3a79": {
+      "type": "index__rich-text",
+      "settings": {
+        "title": "",
+        "heading_font": "open_sans_n4",
+        "heading_color": "rgba(0,0,0,0)",
+        "heading_alignment": "center",
+        "heading_size": 30,
+        "text": "<p>BUDDYPET is a growing health supplement and wellbeing brand that operates out of NSW. Our products are found in many independents, big box retailers and online e-commerce stores. The map is updated regularly to reflect new stores that carry our products. Please contact one of our distributors below for ranging enquiries.<\/p>",
+        "text_font": "open_sans_n4",
+        "text_color": "rgba(0,0,0,0)",
+        "text_alignment": "left",
+        "text_size": 20,
+        "columns": 1,
+        "button_label": "",
+        "button_link": "",
+        "button_alignment": "center",
+        "button_style": "button--primary",
+        "background": "rgba(0,0,0,0)",
+        "gradient": "rgba(0,0,0,0)",
+        "gradient_rotation": 180,
+        "width": "standard",
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "padding_left": 0,
+        "padding_right": 0,
+        "animation": "none",
+        "css_class": "",
+        "custom_css": ""
+      }
+    },
+    "page-banner": {
+      "type": "stockists_banner",
+      "settings": {
+        "show_banner": false,
+        "image_darken": false,
+        "subtitle": "Subheading",
+        "width": "wide",
+        "banner_height": "medium",
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "css_class": "",
+        "custom_css": ""
+      }
+    },
+    "main": {
+      "type": "page_main_stockists",
+      "settings": {
+        "width": "wide",
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "css_class": "",
+        "custom_css": ""
+      }
+    },
+    "16618397929ef04338": {
+      "type": "index__logo-list",
+      "blocks": {
+        "16618397910c33f17f-1": {
+          "type": "logo_image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/logotransparent2.png",
+            "content": "<p>14 - 16 Fiveways Blvd\nKeysborough\nVictoria 3173<\/p>\n<p>Phone: 03 8769 0500<\/p>",
+            "link": "https:\/\/www.lyppard.com.au\/"
+          }
+        },
+        "16618397910c33f17f-0": {
+          "type": "logo_image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Eastern-Distributors_Logo-3-e1526869812357.png",
+            "content": "<p>31-41 National Drive Dandenong South 3175<\/p>\n<p>Phone: 02 9607 9033<\/p>\n<p>Email: enquiries@eastdist.com<\/p>",
+            "link": "https:\/\/eastdist.com\/"
+          }
+        },
+        "16618397910c33f17f-2": {
+          "type": "logo_image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/western_pet_supplies_logo.png",
+            "content": "<p>24 Bernera Rd, Prestons NSW 2170 <\/p>\n<p>Phone: 02 9607 9033   <\/p>\n<p>Email: orders@westernpet.com.au<\/p>",
+            "link": "https:\/\/www.westernpet.com.au\/"
+          }
+        }
+      },
+      "block_order": [
+        "16618397910c33f17f-1",
+        "16618397910c33f17f-0",
+        "16618397910c33f17f-2"
+      ],
+      "settings": {
+        "logos_per_row": 3,
+        "logo_size": "medium",
+        "background": "rgba(0,0,0,0)",
+        "gradient": "rgba(0,0,0,0)",
+        "gradient_rotation": 0,
+        "width": "wide",
+        "padding_top": 20,
+        "padding_bottom": 0,
+        "padding_left": 0,
+        "padding_right": 0,
+        "animation": "none",
+        "css_class": "",
+        "custom_css": ""
+      }
+    }
+  },
+  "order": [
+    "1661839528f14e3a79",
+    "page-banner",
+    "main",
+    "16618397929ef04338"
+  ]
+}

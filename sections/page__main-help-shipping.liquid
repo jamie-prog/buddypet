@@ -1,0 +1,63 @@
+{% comment %}
+** Image with text - dynamic **
+- Draggable section
+- Uses blocks
+{% endcomment %}
+
+{% assign id = section.id %}
+{% comment %} Layout {% endcomment %}
+{% assign background_color = section.settings.background_color %}
+
+{% comment %} HTML markup {% endcomment %}
+<div class="section-faq section-shipping">
+    <div class="section-inner">
+      	{% if section.settings.title != blank %}
+          	<h2>{{ section.settings.title }}</h2>
+          {% endif %}
+      <ul>
+        
+         {% for block in section.blocks %}
+        <li>
+                <h4>
+                  {{block.settings.title_tab}}
+                </h4>
+           <div class="content">
+                  {{block.settings.content_tab }}
+          		</div>
+          </li>
+           {% endfor %}
+        
+      </ul>
+    </div>
+  </div>
+{% schema %}
+{
+  "name": "Shipping Section",
+  "max_blocks": 21,
+  "settings": [
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Section Title"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "faq",
+      "name": "Faq's",
+      "settings": [
+        {
+          "type": "text",
+          "id": "title_tab",
+          "label": "Title"
+        },
+        {
+          "type": "textarea",
+          "id": "content_tab",
+          "label": "Content"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

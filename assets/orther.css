@@ -1,0 +1,20 @@
+.page-contact .contact-form input,
+.page-contact .contact-form label, .section-faq h4{
+  font-family:'stevie-sans';
+}
+.page-contact .contact-form input{
+	height: 60px;
+    padding: 5px 25px;
+    border: 1px solid #d3d3d3;
+    border-radius: 8px;
+}
+.page-contact .contact-form .contact-form__form{
+  padding:0;
+}
+
+/* page stockists */
+.page-stockists #template-page-stockists>section.section h1.page__title.title,
+body.page-stockists main #stockist-widget .stockist-list-result>div:not(.stockist-result-distance),
+body.page-stockists main #stockist-widget .stockist-query-entry .stockist-search-field{
+  font-family:'stevie-sans';
+}

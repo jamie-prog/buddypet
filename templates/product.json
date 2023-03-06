@@ -1,0 +1,189 @@
+{
+  "sections": {
+    "product-banner": {
+      "type": "product__banner",
+      "settings": {
+        "show_banner": false,
+        "width": "wide",
+        "banner_height": "medium",
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "css_class": "",
+        "custom_css": ""
+      }
+    },
+    "main": {
+      "type": "product__main",
+      "settings": {
+        "product_breadcrumb": false,
+        "display_thumbnails": true,
+        "gallery_arrows": true,
+        "enable_zoom": true,
+        "enable_product_lightbox": true,
+        "slideshow_speed": 0,
+        "slideshow_transition": "slide",
+        "thumbnail_position": "bottom-thumbnails",
+        "enable_thumbnail_slider": true,
+        "display_vendor": false,
+        "display_sku": false,
+        "enable_shopify_product_badges": true,
+        "display_savings": true,
+        "display_collections": false,
+        "display_type": false,
+        "display_tags": false,
+        "product_description_position": "top",
+        "show_payment_button": true,
+        "product_images_position": "left",
+        "set_product_height": false,
+        "product_height": 500,
+        "video_looping": false,
+        "width": "standard",
+        "padding_top": 20,
+        "padding_bottom": 20,
+        "animation": "none",
+        "css_class": "",
+        "custom_css": ""
+      }
+    },
+    "16566386114cc53c2b": {
+      "type": "index__liquid",
+      "settings": {
+        "liquid_content": "<!-- TrustBox widget - Product Reviews Carousel -->\n<div class=\"trustpilot-widget\" data-locale=\"en-GB\" data-template-id=\"60f537b5b0f1639de1fe048c\" data-businessunit-id=\"6233cb04c1f6d2e6e47b6cc9\" data-style-width=\"100%\" data-theme=\"light\" data-sku=\"{{product.selected_or_first_available_variant.sku}}\" data-review-languages=\"en\" data-third-party-reviews=\"true\" data-no-reviews=\"hide\">\n  <a href=\"https:\/\/uk.trustpilot.com\/review\/buddypet.co\" target=\"_blank\" rel=\"noopener\">Trustpilot<\/a>\n<\/div>\n<!-- End TrustBox widget -->",
+        "width": "wide",
+        "padding_top": 0,
+        "padding_bottom": 50,
+        "padding_left": 0,
+        "padding_right": 0,
+        "animation": "none",
+        "css_class": "no-flex-container",
+        "custom_css": ""
+      }
+    },
+    "1656437585bc35be8d": {
+      "type": "product__additional-content",
+      "settings": {
+        "show_contact_info": true,
+        "contact_title": "reach out",
+        "contact_content": "If you have any questions, we'd love to help!",
+        "phone": "Call Us",
+        "email": "Email us",
+        "chat_label": "Chat With Us",
+        "contact_link": "shopify:\/\/pages\/contact"
+      }
+    },
+    "165644569026aa223d": {
+      "type": "product__testimonial",
+      "settings": {
+        "author_image": "shopify:\/\/shop_images\/Mask_Group_4_d3b4269b-c495-43b4-980f-bd2b6dd7d9a2.png",
+        "content_background": "shopify:\/\/shop_images\/testimonial-background_11e2844d-9266-4b2c-8b3d-b8968f1a0483.png",
+        "testimonial_content": "<p>{{ product.metafields.custom.testimonial | metafield_tag }}<\/p>",
+        "testimonial_author": "Dr. Ailsa Rutherford",
+        "read_more_link": ""
+      }
+    },
+    "1656428708a67bb26e": {
+      "type": "index__logo-list",
+      "blocks": {
+        "1656428708369abcfe-0": {
+          "type": "logo_image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Group_417.png",
+            "content": "100% Australian Grown\n& Manufactured",
+            "link": ""
+          }
+        },
+        "1656428708369abcfe-1": {
+          "type": "logo_image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/7977468_natural_resources_sustainability_ecology_growth_icon_f95ee3c8-9b2f-426d-afdc-fb5766882cf2.png",
+            "content": "100% Natural Organic & GMO Free",
+            "link": ""
+          }
+        },
+        "1656428708369abcfe-2": {
+          "type": "logo_image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Air_quality_control.png",
+            "content": "Quality Assured, Safe & Sustainable",
+            "link": ""
+          }
+        },
+        "1656428708369abcfe-3": {
+          "type": "logo_image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Economic_sustainability.png",
+            "content": "Money Back\nGuarantee",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "1656428708369abcfe-0",
+        "1656428708369abcfe-1",
+        "1656428708369abcfe-2",
+        "1656428708369abcfe-3"
+      ],
+      "settings": {
+        "logos_per_row": 5,
+        "logo_size": "medium",
+        "background": "rgba(0,0,0,0)",
+        "gradient": "rgba(0,0,0,0)",
+        "gradient_rotation": 0,
+        "width": "standard",
+        "padding_top": 20,
+        "padding_bottom": 0,
+        "padding_left": 0,
+        "padding_right": 0,
+        "animation": "none",
+        "css_class": "",
+        "custom_css": ""
+      }
+    },
+    "1656435221d3feb9f5": {
+      "type": "home__featured-blog",
+      "settings": {
+        "blog": "learn",
+        "title": "learn more about natural pet care",
+        "link": "",
+        "css_class": ""
+      }
+    },
+    "1656638603b9ce4ed9": {
+      "type": "index__liquid",
+      "settings": {
+        "liquid_content": "<!-- TrustBox widget - Product Reviews MultiSource SEO -->\n<div class=\"trustpilot-widget\" data-locale=\"en-GB\" data-template-id=\"5763bccae0a06d08e809ecbb\" data-businessunit-id=\"6233cb04c1f6d2e6e47b6cc9\" data-style-height=\"700px\" data-style-width=\"100%\" data-theme=\"light\" data-sku=\"{{product.selected_or_first_available_variant.sku}}\" data-name=\"{{product.handle}}\" data-review-languages=\"en\" data-no-reviews = \"hide\" data-third-party-reviews=\"true\">\n  <a href=\"https:\/\/uk.trustpilot.com\/review\/buddypet.co\" target=\"_blank\" rel=\"noopener\">Trustpilot<\/a>\n<\/div>\n<!-- End TrustBox widget -->",
+        "width": "standard",
+        "padding_top": 80,
+        "padding_bottom": 80,
+        "padding_left": 0,
+        "padding_right": 0,
+        "animation": "none",
+        "css_class": "",
+        "custom_css": ""
+      }
+    },
+    "16564285677961799f": {
+      "type": "product__recommendations",
+      "settings": {
+        "show_product_recommendations": true,
+        "product_recommendations_style": "slider",
+        "product_recommendations_heading": "You may also like",
+        "products_per": 3,
+        "recommended_products_limit": 4,
+        "align_height": false,
+        "collection_height": 200
+      }
+    }
+  },
+  "order": [
+    "product-banner",
+    "main",
+    "16566386114cc53c2b",
+    "1656437585bc35be8d",
+    "165644569026aa223d",
+    "1656428708a67bb26e",
+    "1656435221d3feb9f5",
+    "1656638603b9ce4ed9",
+    "16564285677961799f"
+  ]
+}

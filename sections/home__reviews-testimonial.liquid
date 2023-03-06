@@ -1,0 +1,96 @@
+{% if section.blocks.size > 0 %}
+    <link rel="stylesheet" href="{{'home__reviews-testimonial.css' | asset_url}}">
+    <script src="{{'home_reviews-testimonial.js' | asset_url}}" defer></script>
+    <section data-section-type="reviews-testimonial" class="container">
+        <div class="review-carousel--wrapper">
+            <div class="reviews-testimonial--wrapper reviews-testimonial owl-carousel owl-theme">
+                {% for block in section.blocks %}
+                    <div class="review-testimonial">
+                        <div class="testimonial-heading">
+                            <img src="{{section.settings.stars_icon | image_url: width: 105}}" alt="stars_icon" width="{{section.settings.stars_icon.width}}" height="{{section.settings.stars_icon.height}}" loading="lazy">
+                            <span class="publish_date">{{block.settings.publish_date}}</span>
+                        </div>
+                        <div class="testimonial-content">
+                            <h3 class="testimonial-title">{{block.settings.title}}</h3>
+                            <p class="testimonail-content">{{block.settings.content}}</p>
+                            <p class="testimonial-author">{{block.settings.author}}</p>
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+        {%- if section.settings.show_badge -%}
+            <div class="section__bottom">
+                {%- if section.settings.badge != blank  -%}                    
+                <img src="{{section.settings.badge | image_url: width: 140}}" alt="badge" class="testimonial-review__badge section-bottom__item" width="140" height="{{ 140 | divided_by: section.settings.badge.aspect_ratio | floor}}" loading="lazy">
+                {%- endif -%}
+                <img src="{{section.settings.stars_icon | image_url: width: 105}}" class="testimonial-review-stars section-bottom__item" alt="stars_icon" width="{{section.settings.stars_icon.width}}" height="{{section.settings.stars_icon.height}}" loading="lazy">
+                <span class="total-reviews-count section-bottom__item">{{section.settings.total_review_text}}</span>
+            </div>
+        {%- endif -%}
+    </section>
+{% endif %}
+
+{% schema %}
+{
+    "name":"Reviews Testimonial", 
+    "settings":[
+        {
+            "type":"checkbox", 
+            "id":"show_badge", 
+            "label":"Show Badge",
+            "default": true
+        },
+        {
+            "type": "image_picker",
+            "id": "badge",
+            "label": "Badge"
+        },
+        {
+            "type": "image_picker",
+            "id": "stars_icon",
+            "label": "Stars Icon"
+        },
+        {
+            "type": "text",
+            "id": "total_review_text",
+            "label": "Total Review Text",
+            "default": "50 Reviews"
+        }
+    ],
+    "blocks":[
+        {
+            "type":"review", 
+            "name":"Review Testimonial",
+            "settings":[
+                {
+                    "type": "text",
+                    "id": "publish_date",
+                    "label": "Publish Date"
+                },
+                {
+                    "type": "text",
+                    "id": "title",
+                    "label": "Title"
+                },
+                {
+                    "type": "textarea",
+                    "id": "content",
+                    "label": "Content"
+                },
+                {
+                    "type": "text",
+                    "id": "author",
+                    "label": "Author"
+                }
+            ]
+        }
+    ],
+    "presets":[
+        {
+            "name":"Reviews Testimonial", 
+            "category":"Testimonial"
+        }
+    ]
+}
+{% endschema %}

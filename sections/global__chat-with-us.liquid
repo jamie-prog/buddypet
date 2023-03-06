@@ -1,0 +1,54 @@
+<div data-section-type="chat-with-us" data-section-id="{{section.id}}">
+  <div class="container">
+    <div class="chat-with-us">
+      <p class="description">{{ section.settings.chat_description }}</p>
+      <div class="contact-addresses--wrapper">
+        {%- if section.settings.phone -%}
+          <a href="tel:{{section.settings.phone}}" class="contact-item">{% render 'icon-phone' %}Call Us</a>
+        {%- endif -%}
+        {%- if section.settings.email -%}
+          <a href="mailto:{{section.settings.email}}" class="contact-item">{% render 'icon-email' %}Email Us</a>
+        {%- endif -%}
+        <a href="{{ section.settings.chat_link_url }}" class="contact-item">{% render 'icon-chat' %}{{ section.settings.chat_link_text }}</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name":"Chat with us", 
+  "settings":[
+    {
+      "type": "text",
+      "id": "chat_description",
+      "label": "Description"
+    },
+    {
+      "type": "text",
+      "id": "chat_link_text",
+      "label": "Chat text"
+    },
+    {
+      "type": "url",
+      "id": "chat_link_url",
+      "label": "Link URL"
+    },
+    {
+      "type": "text",
+      "id": "email",
+      "label": "Email"
+    },
+    {
+      "type": "text",
+      "id": "phone",
+      "label": "Phone"
+    }
+  ],
+  "presets":[
+    {
+      "name":"Chat with us"
+    }
+  ]
+}
+{% endschema %}

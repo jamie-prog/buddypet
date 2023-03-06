@@ -1,0 +1,128 @@
+<div data-section-type="page-about--main" data-section-id="{{section.id}}">
+    <div class="container">
+        <div class="about-page--main_content--wrapper">
+            {%- for block in section.blocks -%}
+                <div class="about-page--block {{block.type}} about-page--block__{{block.id}}">
+                    {% case block.type %}
+                        {%- when "image" -%}                            
+                            <img srcset="
+                                    {%- if block.settings.image.width >= 180 -%}{{block.settings.image | image_url: width: 180}} 180w,{%- endif -%}                                        
+                                    {%- if block.settings.image.width >= 360 -%}{{block.settings.image | image_url: width: 360}} 360w,{%- endif -%}
+                                    {%- if block.settings.image.width >= 540 -%}{{block.settings.image | image_url: width: 540}} 540w,{%- endif -%}
+                                    {%- if block.settings.image.width >= 720 -%}{{block.settings.image | image_url: width: 520}} 720w,{%- endif -%}
+                                    {%- if block.settings.image.width >= 900 -%}{{block.settings.image | image_url: width: 900}} 900w,{%- endif -%}
+                                    {%- if block.settings.image.width >= 1080 -%}{{block.settings.image | image_url: width: 1080}} 1080w,{%- endif -%}
+                                    {%- if block.settings.image.width >= 1240 -%}{{block.settings.image | image_url: width: 1240}} 1240w,{%- endif -%}
+                                    {%- if block.settings.image.width >= 1440 -%}{{block.settings.image | image_url: width: 1240}} 1440w,{%- endif -%}
+                                    {%- if block.settings.image.width >= 1620 -%}{{block.settings.image | image_url: width: 1620}} 1620w,{%- endif -%}
+                                    {%- if block.settings.image.width >= 1620 -%}{{block.settings.image | image_url: width: 1800}} 1800w,{%- endif -%}
+                                    {%- if block.settings.image.width >= 1920 -%}{{block.settings.image | image_url: width: 1920}} 1920w,{%- endif -%}
+                                    {%- if block.settings.image.width >= 2560 -%}{{block.settings.image | image_url: width: 2560}} 2560w{%- endif -%}"
+                                sizes="auto"
+                                class="page-page--image"
+                                loading="lazy"
+                                alt="">
+                        {%- when "main-content" -%}
+                            <div class="about-page--richtext">
+                                <h3 class="about-page--heading {{block.settings.title_class}}" style="color: {{block.settings.title_color}}">{{block.settings.title}}</h3>
+                                <div class="about-page--text-content">{{ block.settings.content }}</div>
+                            </div>
+                    {% endcase %}
+                </div>
+
+                <style>
+                        .about-page--block__{{block.id}}{
+                        flex: 1 1 {{block.settings.block_width}}%;
+                        max-width: {{block.settings.block_width}}%;
+                    }
+                </style>
+            {%- endfor -%}
+        </div>
+    </div>
+</div>
+{% schema %}
+{
+    "name":"Page--About", 
+    "templates":["page"],
+    "settings":[],
+    "blocks":[
+        {
+            "type":"image", 
+            "name":"Image",
+            "settings":[
+                {
+                    "type":"image_picker", 
+                    "id":"image",
+                    "label":"Image"
+                },
+                {
+                    "type": "range",
+                    "id": "block_width",
+                    "label": "Block Width",
+                    "unit": "%",
+                    "min": 1,
+                    "max": 100,
+                    "step": 1,
+                    "default": 35
+                },
+                {
+                    "type": "header",
+                    "content": "Block Background"
+                },
+                {
+                    "type": "image_picker",
+                    "id": "background",
+                    "label": "Background"
+                },
+                {
+                    "type": "textarea",
+                    "id": "custom_bg_css",
+                    "label": "Custom Css for background"
+                }
+            ]
+        },
+        {
+            "type":"main-content", 
+            "name":"Main Content", 
+            "settings":[
+                {
+                    "type": "text",
+                    "id": "title",
+                    "label": "Title"
+                },
+                {
+                    "type": "color",
+                    "id": "title_color",
+                    "label": "Title Color",
+                    "default": "#294d45"
+                },
+                {
+                    "type":"text", 
+                    "id":"title_class", 
+                    "label":"Title CSS Class"
+                },
+                {
+                    "type":"richtext", 
+                    "id":"content", 
+                    "label":"Content"
+                },
+                {
+                    "type": "range",
+                    "id": "block_width",
+                    "label": "Block Width",
+                    "unit": "%",
+                    "min": 1,
+                    "max": 100,
+                    "step": 1,
+                    "default": 35
+                }
+            ]
+        }
+    ],
+    "presets":[
+        {
+            "name":"Page--About"
+        }
+    ]
+}
+{% endschema %}

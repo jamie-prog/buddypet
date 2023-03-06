@@ -1,0 +1,899 @@
+{
+  "form": {
+    "id": "xPtY2L",
+    "name": "BuddyPet Crew",
+    "handle": "buddypet-crew",
+    "theme_id": "128015696049",
+    "settings": {
+      "locales": {
+        "back": "Back",
+        "next": "Next",
+        "cancel": "Cancel",
+        "edit_link": "Edit account",
+        "fix_errors": "Please fix errors before continuing",
+        "is_invalid": "{{label}} is invalid",
+        "email_taken": "Email has already been taken",
+        "phone_taken": "Phone number has already been taken",
+        "server_error": "Could not save form, please try again later",
+        "step_counter": "Step {{current}} of {{total}}",
+        "verify_email": "Check your email for a verification link to activate your account.",
+        "not_available": "An error occurred while saving your account, please try again in a few minutes.",
+        "create_account": "Create account",
+        "update_account": "Update account",
+        "recaptcha_error": "Challenge verification failed, please try again",
+        "creating_account": "Creating account...",
+        "updating_account": "Updating account...",
+        "reset_password_link": "Reset your password",
+        "invalid_email_domain": "Email contains an invalid domain name",
+        "reset_password_email_sent": "Check your inbox for a link to reset your password.",
+        "reset_password_too_many_attempts": "You tried to reset your password too many times. Please wait and try again later."
+      },
+      "whitelistedTags": "",
+      "markRequiredFields": false,
+      "displayCancelButton": true,
+      "redirectAfterSubmit": false,
+      "goBackAfterSubmission": false,
+      "accountApprovalRequired": false,
+      "cancelButtonRedirectUrl": "\/account\/login",
+      "emailVerificationRequired": true,
+      "postSubmissionRedirectUrl": "\/account",
+      "showSuccessStepAfterSubmit": true,
+      "goBackAfterCancelButtonClick": false
+    },
+    "install_locations": [
+      "page_template",
+      "manual"
+    ],
+    "created_at": "2021-11-24T01:53:33Z",
+    "updated_at": "2021-12-13T02:24:49Z",
+    "revision_ids": [
+      "4aTRpGX",
+      "X1Tk45R",
+      "rATy0ly",
+      "4aTRP7o",
+      "rATym4a",
+      "58T7PRk",
+      "2ETzPxv",
+      "kdT5ZqM"
+    ]
+  },
+  "revision": {
+    "id": "4aTRpGX",
+    "created_at": "2021-12-13T02:27:33Z",
+    "updated_at": "2021-12-13T02:28:09Z",
+    "embed_version": "4.8.1",
+    "published_at": "2021-12-13T02:28:09Z",
+    "fields": [
+      {
+        "id": 513152,
+        "dataColumn": null,
+        "parentId": null,
+        "position": 0,
+        "type": "heading",
+        "stepId": 122673,
+        "default": "",
+        "label": "Account request sent heading",
+        "placeholder": null,
+        "description": "",
+        "enum": [
+
+        ],
+        "appearance": {
+          "width": 12,
+          "alignment": "center"
+        },
+        "settings": {
+          "size": 1,
+          "content": "Success!",
+          "hideLabel": true,
+          "fontWeight": "bold"
+        },
+        "validations": [
+
+        ],
+        "sensitive": null,
+        "preset": null,
+        "autotag": null
+      },
+      {
+        "id": 380661,
+        "dataColumn": null,
+        "parentId": null,
+        "position": 1,
+        "type": "paragraph",
+        "stepId": 122673,
+        "default": "",
+        "label": "Reviewing submission explanation",
+        "placeholder": null,
+        "description": "",
+        "enum": [
+
+        ],
+        "appearance": {
+          "width": 12
+        },
+        "settings": {
+          "content": "<p style=\"text-align: center;\">The form has been successfully submitted.<\/p>",
+          "fontSize": 14,
+          "hideLabel": true
+        },
+        "validations": [
+
+        ],
+        "sensitive": null,
+        "preset": null,
+        "autotag": null
+      },
+      {
+        "id": 100049,
+        "dataColumn": null,
+        "parentId": null,
+        "position": 2,
+        "type": "link",
+        "stepId": 122673,
+        "default": "",
+        "label": "Back to home link",
+        "placeholder": null,
+        "description": "",
+        "enum": [
+
+        ],
+        "appearance": {
+          "width": 12,
+          "alignment": "center"
+        },
+        "settings": {
+          "url": "\/",
+          "content": "Back to home",
+          "fontSize": 14,
+          "hideLabel": true,
+          "fontWeight": "normal",
+          "openInNewTab": false
+        },
+        "validations": [
+
+        ],
+        "sensitive": null,
+        "preset": null,
+        "autotag": null
+      },
+      {
+        "id": 684224,
+        "dataColumn": {
+          "key": "first_name",
+          "label": "First name",
+          "dataType": "text"
+        },
+        "parentId": null,
+        "position": 0,
+        "type": "text",
+        "stepId": 214295,
+        "default": "",
+        "label": "First name",
+        "placeholder": "First name",
+        "description": null,
+        "enum": null,
+        "appearance": {
+          "width": 12
+        },
+        "settings": {
+          "hideLabel": true
+        },
+        "validations": [
+          {
+            "metadata": {
+              "hiddenInApp": true
+            },
+            "operator": "not_blank",
+            "comparand": "",
+            "errorMessage": "Must not be blank"
+          }
+        ],
+        "sensitive": null,
+        "preset": "first_name",
+        "autotag": null
+      },
+      {
+        "id": 360087,
+        "dataColumn": {
+          "key": "last_name",
+          "label": "Last name",
+          "dataType": "text"
+        },
+        "parentId": null,
+        "position": 1,
+        "type": "text",
+        "stepId": 214295,
+        "default": "",
+        "label": "Last name",
+        "placeholder": "Last name",
+        "description": null,
+        "enum": null,
+        "appearance": {
+          "width": 12
+        },
+        "settings": {
+          "hideLabel": true
+        },
+        "validations": [
+          {
+            "metadata": {
+              "hiddenInApp": true
+            },
+            "operator": "not_blank",
+            "comparand": "",
+            "errorMessage": "Must not be blank"
+          }
+        ],
+        "sensitive": null,
+        "preset": "last_name",
+        "autotag": null
+      },
+      {
+        "id": 168525,
+        "dataColumn": {
+          "key": "default_address.address1",
+          "label": "Address line 1",
+          "dataType": "text"
+        },
+        "parentId": null,
+        "position": 10,
+        "type": "text",
+        "stepId": 214295,
+        "default": "",
+        "label": "Address",
+        "placeholder": "Address",
+        "description": "",
+        "enum": [
+
+        ],
+        "appearance": {
+          "width": 12
+        },
+        "settings": {
+          "hideLabel": true
+        },
+        "validations": [
+
+        ],
+        "sensitive": null,
+        "preset": "address1",
+        "autotag": null
+      },
+      {
+        "id": 419238,
+        "dataColumn": {
+          "key": "default_address.address2",
+          "label": "Address line 2",
+          "dataType": "text"
+        },
+        "parentId": null,
+        "position": 11,
+        "type": "text",
+        "stepId": 214295,
+        "default": "",
+        "label": "Apartment, suite, etc.",
+        "placeholder": "Apartment, suite, etc.",
+        "description": "",
+        "enum": [
+
+        ],
+        "appearance": {
+          "width": 12
+        },
+        "settings": {
+          "hideLabel": true
+        },
+        "validations": [
+
+        ],
+        "sensitive": null,
+        "preset": "address2",
+        "autotag": null
+      },
+      {
+        "id": 141549,
+        "dataColumn": {
+          "key": "default_address.city",
+          "label": "City",
+          "dataType": "text"
+        },
+        "parentId": null,
+        "position": 12,
+        "type": "text",
+        "stepId": 214295,
+        "default": "",
+        "label": "City",
+        "placeholder": "City",
+        "description": "",
+        "enum": [
+
+        ],
+        "appearance": {
+          "width": 12
+        },
+        "settings": {
+          "hideLabel": true
+        },
+        "validations": [
+
+        ],
+        "sensitive": null,
+        "preset": "city",
+        "autotag": null
+      },
+      {
+        "id": 398546,
+        "dataColumn": {
+          "key": "default_address.zip",
+          "label": "Zip\/Postal code",
+          "dataType": "text"
+        },
+        "parentId": null,
+        "position": 13,
+        "type": "text",
+        "stepId": 214295,
+        "default": "",
+        "label": "Zip\/Postal code",
+        "placeholder": "Zip\/Postal code",
+        "description": "",
+        "enum": [
+
+        ],
+        "appearance": {
+          "width": 12
+        },
+        "settings": {
+          "hideLabel": true
+        },
+        "validations": [
+
+        ],
+        "sensitive": null,
+        "preset": "zip",
+        "autotag": null
+      },
+      {
+        "id": 212300,
+        "dataColumn": {
+          "key": "default_address.country",
+          "label": "Country",
+          "dataType": "text"
+        },
+        "parentId": null,
+        "position": 14,
+        "type": "dropdown",
+        "stepId": 214295,
+        "default": "Australia",
+        "label": "Country",
+        "placeholder": "Country",
+        "description": "",
+        "enum": [
+          {
+            "label": "",
+            "value": ""
+          }
+        ],
+        "appearance": {
+          "width": 12
+        },
+        "settings": {
+          "hideLabel": true,
+          "isCountryField": true
+        },
+        "validations": [
+
+        ],
+        "sensitive": null,
+        "preset": "country",
+        "autotag": null
+      },
+      {
+        "id": 796592,
+        "dataColumn": {
+          "key": "default_address.province",
+          "label": "State\/Province",
+          "dataType": "text"
+        },
+        "parentId": null,
+        "position": 15,
+        "type": "dropdown",
+        "stepId": 214295,
+        "default": "",
+        "label": "State\/Province",
+        "placeholder": "State\/Province",
+        "description": "",
+        "enum": [
+
+        ],
+        "appearance": {
+          "width": 12
+        },
+        "settings": {
+          "hideLabel": true,
+          "defaultCountry": "Australia",
+          "isProvinceField": true
+        },
+        "validations": [
+
+        ],
+        "sensitive": null,
+        "preset": "province",
+        "autotag": null
+      },
+      {
+        "id": 154669,
+        "dataColumn": {
+          "key": "accepts_marketing",
+          "label": "Accepts marketing",
+          "dataType": "boolean"
+        },
+        "parentId": null,
+        "position": 16,
+        "type": "checkbox",
+        "stepId": 214295,
+        "default": true,
+        "label": "Opt-in for our direct marketing communication of promotional offers and product news via email and SMS",
+        "placeholder": null,
+        "description": "",
+        "enum": [
+
+        ],
+        "appearance": {
+          "width": 12
+        },
+        "settings": {
+        },
+        "validations": [
+
+        ],
+        "sensitive": null,
+        "preset": "accepts_marketing",
+        "autotag": null
+      },
+      {
+        "id": 568859,
+        "dataColumn": {
+          "key": "email",
+          "label": "Email address",
+          "dataType": "email"
+        },
+        "parentId": null,
+        "position": 2,
+        "type": "email",
+        "stepId": 214295,
+        "default": "",
+        "label": "Email address",
+        "placeholder": "Email address",
+        "description": "Used for account login and order notifications",
+        "enum": null,
+        "appearance": {
+          "width": 12
+        },
+        "settings": {
+          "hideLabel": true
+        },
+        "validations": [
+          {
+            "operator": "is_valid_email",
+            "comparand": null,
+            "errorMessage": "Please provide a valid email address"
+          },
+          {
+            "metadata": {
+              "hiddenInApp": true
+            },
+            "operator": "not_blank",
+            "comparand": "",
+            "errorMessage": "Must not be blank"
+          }
+        ],
+        "sensitive": null,
+        "preset": "email_address",
+        "autotag": null
+      },
+      {
+        "id": 171512,
+        "dataColumn": {
+          "key": "age_bracket",
+          "label": "Age bracket",
+          "dataType": "text"
+        },
+        "parentId": null,
+        "position": 3,
+        "type": "dropdown",
+        "stepId": 214295,
+        "default": "",
+        "label": "Your Age",
+        "placeholder": "Your Age",
+        "description": "",
+        "enum": [
+          {
+            "label": "18-24",
+            "value": "18-24"
+          },
+          {
+            "label": "25-34",
+            "value": "25-34"
+          },
+          {
+            "label": "35-44",
+            "value": "35-44"
+          },
+          {
+            "label": "45-55",
+            "value": "45-55"
+          },
+          {
+            "label": "55-65",
+            "value": "55-65"
+          },
+          {
+            "label": "65+",
+            "value": "65+"
+          }
+        ],
+        "appearance": {
+          "width": 12
+        },
+        "settings": {
+          "end": 10,
+          "start": 1,
+          "enumType": "list",
+          "hideLabel": true,
+          "separateValues": false
+        },
+        "validations": [
+
+        ],
+        "sensitive": null,
+        "preset": null,
+        "autotag": true
+      },
+      {
+        "id": 146523,
+        "dataColumn": {
+          "key": "gender",
+          "label": "Gender",
+          "dataType": "text"
+        },
+        "parentId": null,
+        "position": 4,
+        "type": "dropdown",
+        "stepId": 214295,
+        "default": "",
+        "label": "Your Gender",
+        "placeholder": "Your Gender",
+        "description": "",
+        "enum": [
+          {
+            "label": "Male",
+            "value": "Male"
+          },
+          {
+            "label": "Female",
+            "value": "Female"
+          }
+        ],
+        "appearance": {
+          "width": 12
+        },
+        "settings": {
+          "end": 10,
+          "start": 1,
+          "enumType": "list",
+          "hideLabel": true,
+          "separateValues": false
+        },
+        "validations": [
+
+        ],
+        "sensitive": null,
+        "preset": null,
+        "autotag": true
+      },
+      {
+        "id": 204648,
+        "dataColumn": {
+          "key": "pet",
+          "label": "Pet",
+          "dataType": "text"
+        },
+        "parentId": null,
+        "position": 5,
+        "type": "dropdown",
+        "stepId": 214295,
+        "default": "",
+        "label": "Your Pet",
+        "placeholder": "Your Pet",
+        "description": "",
+        "enum": [
+          {
+            "label": "Cat",
+            "value": "Cat"
+          },
+          {
+            "label": "Dog",
+            "value": "Dog"
+          },
+          {
+            "label": "Cats and Dogs",
+            "value": "Cats and Dogs"
+          },
+          {
+            "label": "Other",
+            "value": "Other"
+          }
+        ],
+        "appearance": {
+          "width": 12
+        },
+        "settings": {
+          "end": 10,
+          "start": 1,
+          "enumType": "list",
+          "hideLabel": true,
+          "separateValues": false
+        },
+        "validations": [
+
+        ],
+        "sensitive": null,
+        "preset": null,
+        "autotag": true
+      },
+      {
+        "id": 142498,
+        "dataColumn": {
+          "key": "pets_age",
+          "label": "Pet's age",
+          "dataType": "text"
+        },
+        "parentId": null,
+        "position": 6,
+        "type": "dropdown",
+        "stepId": 214295,
+        "default": "",
+        "label": "Pet's age",
+        "placeholder": "Pet's age",
+        "description": "",
+        "enum": [
+          {
+            "label": "Less than 2",
+            "value": "Less than 2"
+          },
+          {
+            "label": "2-6",
+            "value": "2-6"
+          },
+          {
+            "label": "7-11",
+            "value": "7-11"
+          },
+          {
+            "label": "12+",
+            "value": "12+"
+          }
+        ],
+        "appearance": {
+          "width": 12
+        },
+        "settings": {
+          "end": 10,
+          "start": 1,
+          "enumType": "list",
+          "hideLabel": true,
+          "separateValues": false
+        },
+        "validations": [
+
+        ],
+        "sensitive": null,
+        "preset": null,
+        "autotag": true
+      },
+      {
+        "id": 143586,
+        "dataColumn": {
+          "key": "primary_health_concern_che",
+          "label": "Primary health concern (check all that applies)",
+          "dataType": "list"
+        },
+        "parentId": null,
+        "position": 7,
+        "type": "checkbox_list",
+        "stepId": 214295,
+        "default": "",
+        "label": "Primary health concern (check all that applies)",
+        "placeholder": "",
+        "description": "",
+        "enum": [
+          {
+            "label": "arthritis",
+            "value": "arthritis"
+          },
+          {
+            "label": "digestive issues",
+            "value": "digestive issues"
+          },
+          {
+            "label": "seizures",
+            "value": "seizures"
+          },
+          {
+            "label": "pain management",
+            "value": "pain management"
+          },
+          {
+            "label": "post-surgery recovery",
+            "value": "post-surgery recovery"
+          },
+          {
+            "label": "anxiety",
+            "value": "anxiety"
+          },
+          {
+            "label": "sleep disorders",
+            "value": "sleep disorders"
+          },
+          {
+            "label": "sensitive skin",
+            "value": "sensitive skin"
+          },
+          {
+            "label": "allergies",
+            "value": "allergies"
+          },
+          {
+            "label": "itchy skin",
+            "value": "itchy skin"
+          },
+          {
+            "label": "autoimmune disease",
+            "value": "autoimmune disease"
+          },
+          {
+            "label": "other",
+            "value": "other"
+          }
+        ],
+        "appearance": {
+          "width": 12
+        },
+        "settings": {
+          "end": 10,
+          "start": 1,
+          "enumType": "list",
+          "direction": "column",
+          "separateValues": false
+        },
+        "validations": [
+
+        ],
+        "sensitive": null,
+        "preset": null,
+        "autotag": true
+      },
+      {
+        "id": 711315,
+        "dataColumn": {
+          "key": "phone",
+          "label": "Phone number",
+          "dataType": "phone"
+        },
+        "parentId": null,
+        "position": 8,
+        "type": "phone",
+        "stepId": 214295,
+        "default": "",
+        "label": "Phone number (optional)",
+        "placeholder": "Phone number",
+        "description": "",
+        "enum": [
+
+        ],
+        "appearance": {
+          "width": 12
+        },
+        "settings": {
+          "hideLabel": true,
+          "defaultCountryCode": "AU"
+        },
+        "validations": [
+          {
+            "metadata": {
+              "hiddenInApp": true
+            },
+            "operator": "not_blank",
+            "comparand": "",
+            "errorMessage": "Must not be blank"
+          }
+        ],
+        "sensitive": null,
+        "preset": "phone_number",
+        "autotag": null
+      },
+      {
+        "id": 458242,
+        "dataColumn": {
+          "key": "default_address.company",
+          "label": "Company",
+          "dataType": "text"
+        },
+        "parentId": null,
+        "position": 9,
+        "type": "text",
+        "stepId": 214295,
+        "default": "",
+        "label": "Company",
+        "placeholder": "Company",
+        "description": "",
+        "enum": [
+
+        ],
+        "appearance": {
+          "width": 12
+        },
+        "settings": {
+          "hideLabel": true
+        },
+        "validations": [
+
+        ],
+        "sensitive": null,
+        "preset": "company",
+        "autotag": null
+      }
+    ],
+    "steps": [
+      {
+        "id": 214295,
+        "title": "Step 1",
+        "description": ""
+      },
+      {
+        "id": 122673,
+        "title": "Submission success",
+        "metadata": {
+          "isSuccessStep": true
+        },
+        "description": ""
+      }
+    ],
+    "rules": [
+      {
+        "id": 574723,
+        "title": "New rule 1",
+        "actions": [
+          {
+            "effect": "tag_customer",
+            "metadata": {
+              "value": "Crew"
+            }
+          }
+        ],
+        "conditions": [
+          {
+            "operand": null,
+            "metadata": {
+              "column": {
+                "id": null,
+                "key": "email",
+                "label": "Email",
+                "dataType": "email",
+                "favorite": false,
+                "readOnly": false,
+                "createdAt": null,
+                "dedicated": true,
+                "archivedAt": null,
+                "expandedLabel": "Email"
+              }
+            },
+            "operator": null
+          }
+        ],
+        "conditionChaining": "all"
+      }
+    ]
+  }
+}

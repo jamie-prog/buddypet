@@ -1,0 +1,151 @@
+{% comment %}
+** Registration template - main content area **
+{% endcomment %}
+
+{% assign id = section.id %}
+{% comment %}Layout{% endcomment %}
+{% assign width = section.settings.width %}
+{% assign padding_top = section.settings.padding_top %}
+{% assign padding_bottom = section.settings.padding_bottom %}
+{% comment %}Advanced{% endcomment %}
+{% assign css_class = section.settings.css_class %}
+{% assign custom_css = section.settings.custom_css %}
+
+{% style %}
+
+  .section__wrapper {
+    padding-top: {{ padding_top }}px;
+    padding-bottom: {{ padding_bottom }}px;
+  }
+
+  {% render 'css-loop',
+          css: custom_css,
+          id: id
+  %}
+{% endstyle %}
+
+<section class="section section__wrapper is-width-{{ width }} {{ css_class }}">
+  <header class="container" style="min-width: 600px;">
+    {%- capture title -%}BuddyPet Crew{%- endcapture -%}
+    {% render 'heading',
+            title: title,
+            heading_tag: 'h1',
+            context: 'register',
+            text_alignment: 'left'
+    %}
+  </header>
+
+  <div class="container" style="min-width: 600px;">
+    <div class="register has-padding-bottom" style="min-width: 600px;">
+      <div id="customer" class="register__form" style="min-width: 600px;">
+
+        <!-- Create Customer -->
+        <div id="create-customer">
+
+{% render "customer-fields", form_id: "xPtY2L" %}
+
+        </div><!-- /#create-customer -->
+      </div>
+    </div>
+
+    <div class="register__image is-order-aligned-{{ section.settings.image_position }}">
+      {% if section.settings.image %}
+        {% render 'image-element',
+                image: section.settings.image,
+                alt: section.settings.image.alt
+        %}
+      {% endif %}
+    </div>
+  </div>
+</section>
+
+{% schema %}
+  {
+    "name": "Register",
+    "class": "register-section",
+    "settings": [
+      {
+        "type": "richtext",
+        "id": "richtext",
+        "label": "Text"
+      },
+      {
+        "type": "image_picker",
+        "id": "image",
+        "label": "Image"
+      },
+      {
+        "type": "select",
+        "id": "image_position",
+        "label": "Image position",
+        "options": [
+          {
+            "value": "left",
+            "label": "Left"
+          },
+          {
+            "value": "right",
+            "label": "Right"
+          }
+        ],
+        "default": "right"
+      },
+      {
+        "type": "header",
+        "content": "Layout"
+      },
+      {
+        "type": "select",
+        "id": "width",
+        "label": "Width",
+        "default": "standard",
+        "options": [
+          {
+            "value": "standard",
+            "label": "Standard"
+          },
+          {
+            "value": "wide",
+            "label": "Wide"
+          }
+        ]
+      },
+      {
+        "type": "range",
+        "id": "padding_top",
+        "label": "Top spacing",
+        "min": 0,
+        "max": 80,
+        "default": 40,
+        "unit": "px"
+      },
+      {
+        "type": "range",
+        "id": "padding_bottom",
+        "label": "Bottom spacing",
+        "min": 0,
+        "max": 80,
+        "default": 40,
+        "unit": "px"
+      },
+      {
+        "type": "header",
+        "content": "Advanced"
+      },
+      {
+        "type": "paragraph",
+        "content": "[Learn more](https://help.outofthesandbox.com/hc/en-us/articles/360022329373)"
+      },
+      {
+        "type": "text",
+        "id": "css_class",
+        "label": "CSS Class"
+      },
+      {
+        "type": "textarea",
+        "id": "custom_css",
+        "label": "Custom CSS"
+      }
+    ]
+  }
+{% endschema %}

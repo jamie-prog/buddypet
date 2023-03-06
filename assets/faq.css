@@ -1,0 +1,77 @@
+.page-faq button{
+  height:fit-content;
+}
+.page-faq .faq-accordion dt{
+  margin-bottom:10px;
+}
+
+.page-faq .title{
+	font-size:70px;
+	line-height:94px;
+	font-family:'stevie-sans';
+}
+
+.page-faq .faq-title {
+	font-size:40px;
+}
+.page-faq .accordion dt a,
+.page-faq .accordion dt button,
+.page-faq .faq-accordion dt a,
+.page-faq .faq-accordion dt button{
+	font-size: 18px;
+	line-height: 24px;
+	font-family:'stevie-sans';
+	font-weight: 600;
+	letter-spacing: 0px;
+	overflow: hidden; 
+	text-overflow: ellipsis;
+  border-radius:inherit;
+}
+  .page-stockists .container,
+  .page-faq .container{
+  padding:15px;
+}
+.page-faq .faq-accordion dt button:hover,
+.page-faq .faq-accordion dt button:focus{
+  border-radius:inherit;
+}
+@media(max-width:1400px){
+	.page-faq .title{
+		font-size: 60px;
+		line-height: 72px;
+	}
+}
+@media(max-width:1024px){
+	.page-faq .title{
+		font-size: 45px;
+		line-height: 55px;
+	}
+	.page-faq .accordion dt a,
+	.page-faq .accordion dt button,
+	.page-faq .faq-accordion dt a,
+	.page-faq .faq-accordion dt button{
+		font-size: 16px;
+		line-height: 31px;
+		min-width: 220px;
+	}
+  .faq-accordion dt .accordion-style--plus_and_minus .icon.icon--active{
+	margin-top:-5px;
+}
+}
+@media(max-width:767.98px){
+	.page-faq .title{
+		font-size: 30px;
+		line-height: 40px;
+	}
+  .page-contact .container,
+  .page-stockists .container,
+  .page-faq .container{
+  padding:7.5px;
+}
+  .page-stockists main #stockist-widget .stockist-map:after,
+  .page-stockists main #stockist-widget .stockist-map:before{
+    content:none;
+  }
+}
+@media(max-width:480px){
+}

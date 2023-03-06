@@ -1,0 +1,65 @@
+<div data-section-id="{{section.id}}" data-section-type="page-blogs-main">
+    <div class="container">
+        <h3 class="section--title text-center">{{section.settings.title}}</h3>
+        {%- if section.blocks.size > 0 -%}
+            <div class="blogs--wrapper">
+                {%- for block in section.blocks -%}
+                    <a href="{{block.settings.blog.url}}" class="blog__items {%- unless block.settings.image -%} no-bg-image square{%- endunless-%}">
+                        <span class="blog-image__wrapper">
+                            {%- if block.settings.image -%}
+                                <img src="{{block.settings.image | image_url: width}}" alt="{{block.settings.image.alt}}" loading="lazy" width="{{block.settings.image.width}}" height="{{block.settings.image.height}}">
+                            {%- endif -%}
+                        </span>
+                        <span class="blog__title--wrapper">
+                            <span class="blog-title">
+                                {{ block.settings.title | default: 'Blog Title'}}
+                            </span>
+                            <span class="article--counts">{{blog.articles_count | default: 0}} POSTS</span>
+                        </span>
+                    </a>
+                {%- endfor -%}
+            </div>            
+        {%- endif -%}
+    </div>
+</div>
+{% schema %}
+{
+    "name":"Page blogs",
+    "settings":[
+        {
+            "type": "text",
+            "id": "title",
+            "label": "Title",
+            "default": "browse through our libray of tips and insights"
+        }
+    ],
+    "blocks":[
+        {
+            "name":"Blog", 
+            "type":"blog", 
+            "settings":[
+                {
+                    "type": "blog",
+                    "id": "blog",
+                    "label": "Blog"
+                },
+                {
+                    "type": "text",
+                    "id": "title",
+                    "label": "title"
+                },
+                {
+                    "type": "image_picker",
+                    "id": "image",
+                    "label": "Image"
+                }
+            ]
+        }
+    ],
+    "presets":[
+        {
+            "name":"Page Blogs"
+        }
+    ]
+}
+{% endschema %}

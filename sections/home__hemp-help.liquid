@@ -1,0 +1,119 @@
+{% if section.blocks.size > 0 %}
+<div class="{{ section.settings.css_class }}" data-section-type="hemp-help">
+  <div class="container">
+    <div class="collection_hemp-help">
+      <div class="section-title">
+        {%- if section.settings.image != blank -%}
+          <img src="{{section.settings.image |  img_url: 'master'}}" alt="">
+        {% endif %}
+        <h4>{{section.settings.title}}</h4>
+        <a class="link action primary hide-mobile" href="{{ section.settings.link }}">Shop Now</a>
+      </div>
+      <div class="section-content">
+        <ul class="navigation">
+          {% for block in section.blocks %}
+            {% if block.settings.title != blank %}
+              <div class="item">
+                {% if block.settings.link != blank %}
+                <a href="{{ block.settings.link }}">
+                  {% endif %}
+                  <span>{{ block.settings.title }}</span>
+                  {% if block.settings.link != blank %}
+                </a>
+                {% endif %}
+              </div>
+            {% endif %}
+          {% endfor %}
+        </ul>
+      </div>
+      <div class="button-mobile hide-desktop">
+        <a class="link action primary" href="{{- section.settings.link -}}">Shop Now</a>
+      </div>
+    </div>
+  </div>
+</div>
+{% endif %}
+{%- if section.settings.section_background -%}
+  {% style %}
+    [data-section-type="hemp-help"]:before{
+      background-image: url("{{section.settings.section_background | image_url}}");
+      content: '';
+      display: inline-block;
+      height: {{ section.settings.section_background.height }}px;
+      width: {{ section.settings.section_background.width }}px;
+      position: absolute;
+      top: -200px;
+    }
+    [data-section-type="hemp-help"] .collection_hemp-help{
+      position: relative;
+    }
+  {% endstyle %}
+{%- endif -%}
+
+{% schema %}
+  {
+    "name": "Hemp Help",
+    "class": "hemp-help",
+    "settings": [
+      {
+        "type": "image_picker",
+        "id": "section_background",
+        "label": "Section background"
+      },
+      {
+        "type": "text",
+        "id": "title",
+        "label": "Title"
+      },
+      {
+        "type": "image_picker",
+        "id": "image",
+        "label": "Image"
+      },
+      {
+        "type": "url",
+        "id": "link",
+        "label": "Link"
+      },
+      {
+        "type": "header",
+        "content": "Advanced"
+      },
+      {
+        "type": "text",
+        "id": "css_class",
+        "label": "CSS Class"
+      }
+    ],
+    "blocks": [
+      {
+        "type": "link_list",
+        "name": "Menu",
+        "settings": [
+          {
+            "type": "text",
+            "id": "title",
+            "label": "Title" 
+          },
+          {
+            "type": "url",
+            "id": "link",
+            "label": "Link" 
+          }
+        ]
+      }
+    ],
+    "presets": [
+      {
+        "name": "Hemp Help",
+        "category": "Home"
+      }
+    ]
+  }
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

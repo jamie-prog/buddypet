@@ -1,0 +1,668 @@
+
+{% comment %} Wholesale_Club_Product_Prices Start {% endcomment %}
+{% assign base_product = product %}
+{% assign base_variant = product.selected_or_first_available_variant %}
+
+{% if shop.metafields.sawholesale['base_price'] == blank %}
+  {% assign base_price = 'compare_at_price' %}
+{% else %}
+  {% assign base_price = shop.metafields.sawholesale['base_price'] %}
+{% endif %}
+
+{% assign saw_discount = 0 %}{% assign saw_has_discount = false %}
+
+{% if customer.tags != blank %}
+  {% for mf in base_product.metafields.sawholesale %}
+    {% capture product_customer_tag %}{{ mf | first | replace: 'discount_', '' }}{% endcapture %}
+    {% if customer.tags contains product_customer_tag %}
+      {% assign saw_has_discount = true %}
+      {% assign discount_key = product_customer_tag | prepend: 'discount_' %}
+      {% assign price_key = product_customer_tag | prepend: 'price_' %}
+      {% assign saw_discount = base_product.metafields.sawholesale[discount_key] | divided_by: 100.0 %}
+    {% endif %}
+  {% endfor %}
+{% endif %}
+
+{% assign saw_discount = 1 | minus: saw_discount %}
+
+{% if base_price == 'price' or base_variant.compare_at_price == blank  or base_variant.compare_at_price == 0 or base_variant.compare_at_price < base_variant.price %}
+  {% assign saw_variant_compare_at_price = base_variant.price %}
+{% else %}
+  {% assign saw_variant_compare_at_price = base_variant.compare_at_price %}
+{% endif %}
+
+{% assign cpe = shop.metafields.sawholesale['cpe'] | default: "true" %}
+{% if base_variant.metafields.sawholesale[price_key] != blank and cpe == "true" %}
+  {% assign saw_variant_price = base_variant.metafields.sawholesale[price_key] %}
+{% else %}
+  {% assign saw_variant_price = saw_variant_compare_at_price | times: saw_discount %}
+{% endif %}
+
+{% if saw_has_discount == false or saw_variant_price >= saw_variant_compare_at_price %}
+  {% assign WCProduct_Price = base_product.price %}
+  {% assign WCProduct_ComparePrice = base_product.compare_at_price %}
+  {% assign WCProduct_PriceMin = base_product.price_min %}
+  {% assign WCProduct_ComparePriceMin = base_product.compare_at_price_min %}
+  {% assign WCProduct_PriceMax = base_product.price_max %}
+  {% assign WCProduct_ComparePriceMax = base_product.compare_at_price_max %}
+  {% assign WCProduct_VariantPrice = base_variant.price %}
+  {% assign WCProduct_VariantComparePrice = base_variant.compare_at_price %}
+{% else %}   
+  {% assign WCProduct_Price = saw_variant_price %}
+  {% assign WCProduct_PriceMin = base_product.price_min | times: saw_discount %}
+  {% assign WCProduct_PriceMax = base_product.price_max | times: saw_discount %}
+  {% assign WCProduct_ComparePrice = saw_variant_compare_at_price %}
+  {% if base_product.compare_at_price_min != 0 %}{% assign WCProduct_ComparePriceMin = base_product.compare_at_price_min %}{% else %}{% assign WCProduct_ComparePriceMin = base_product.price_min %}{% endif %}
+  {% if base_product.compare_at_price_max != 0 %}{% assign WCProduct_ComparePriceMax = base_product.compare_at_price_max %}{% else %}{% assign WCProduct_ComparePriceMax = base_product.price_max %}{% endif %}
+  {% assign WCProduct_VariantPrice = saw_variant_price %}
+  {% assign WCProduct_VariantComparePrice = saw_variant_compare_at_price %}
+{% endif %}
+{% comment %} Wholesale_Club_Product_Prices End {% endcomment %}
+{% comment %}
+** Product - main content area **
+- Product template
+{% endcomment %}
+
+{% assign id = section.id %}
+{% comment %} Layout {% endcomment %}
+{% assign width = section.settings.width %}
+{% assign padding_top = section.settings.padding_top %}
+{% assign padding_bottom = section.settings.padding_bottom %}
+{% comment %} Advanced {% endcomment %}
+{% assign css_class = section.settings.css_class %}
+{% assign custom_css = section.settings.custom_css %}
+
+{% comment %} Section specific CSS {% endcomment %}
+{% style %}
+  .section__wrapper {
+    padding-top: {{ padding_top }}px;
+    padding-bottom: {{ padding_bottom }}px;
+  }
+
+  .section--has-sidebar-option.has-sidebar-enabled {
+    {% if width == 'wide' -%}
+      width: 100%;
+      max-width: 95%;
+    {%- endif %}
+  }
+
+  .section--has-sidebar-option.has-sidebar-disabled {
+    width: 100%;
+    max-width: none;
+  }
+
+  {% if section.settings.product_breadcrumb == false %}
+    .breadcrumb__container {
+      display: none;
+    }
+  {% endif %}
+
+  {% render 'css-loop',
+          css: custom_css,
+          id: id
+  %}
+{% endstyle %}
+
+{% assign collection_handles = product.collections | map: 'handle' %}
+{% assign variant = product.selected_or_first_available_variant %}
+{% assign product_tags = product.tags | join: ' ' %}
+
+{% render 'product__structured-data' %}
+
+{% comment %} HTML markup {% endcomment %}
+<section class="section is-width-{{ width }} {{ css_class }}">
+  <div class="product-{{ product.id }} product-content-top">  
+    {% comment %}
+    Product Informaition
+    {% endcomment %}
+
+    {% comment %}Assign object as block or section{% endcomment %}
+    {% if type == 'block' %}
+      {% assign object = block %}
+    {% else %}
+      {% assign object = section %}
+    {% endif %}
+
+      <div class="product__information
+                  has-product-sticker
+                  one-half
+                  column
+                  medium-down--one-whole">
+
+        {% comment %} Sale sticker {% endcomment %}
+        {% if settings.stickers_enabled %}
+          {% render 'product-thumbnail__sticker',
+                  context: 'product',
+                  collection_handles: collection_handles
+          %}
+        {% endif %}
+
+        {% comment %} Review stars {% endcomment %}
+        {% if object.settings.enable_shopify_product_badges and settings.enable_shopify_review_comments %}
+          <span class="shopify-product-reviews-badge" data-id="{{ product.id }}"></span>
+        {% endif %}
+
+        {% comment %} Vendor {% endcomment %}
+        {% if object.settings.display_vendor %}
+          <p class="vendor">
+            <span class="vendor">{{ product.vendor | link_to_vendor }}</span>
+          </p>
+        {% endif %}
+
+        {% comment %} Sku {% endcomment %}
+        {% if variant.sku != blank and object.settings.display_sku %}
+          <p class="sku">
+            {{ variant.sku }}
+          </p>
+        {% endif %}
+
+        <div class="product-content-mid">
+
+          {% comment %} Name {% endcomment %}
+          {% for tag in product.tags %}
+            {% if tag contains 'title_color' %}
+                {% assign colour = tag | split: ':' %}
+                {% assign bkgColour = tag | split: ':' %}
+            {% endif %}
+          {% endfor %}
+          {% for tag in product.tags %}
+            {% if tag contains 'color_product' %}
+                {% assign colour = tag | split: ':' %}
+            {% endif %}
+          {% endfor %}
+          <div class="content-title">
+            <h1 class="product_name title" style="color: #{{colour[1]}}">{{ product.title }}</h1>
+            <!-- Product Reviews -->
+            <!-- TrustBox widget - Product Mini MultiSource -->
+            <div class="trustpilot-widget" data-locale="en-GB" data-template-id="577258fb31f02306e4e3aaf9" data-businessunit-id="6233cb04c1f6d2e6e47b6cc9" data-style-height="24px" data-style-width="100%" data-theme="light" data-sku="{{product.selected_or_first_available_variant.sku}}" data-no-reviews="hide" data-scroll-to-list="true">
+              <a href="https://uk.trustpilot.com/review/buddypet.co" target="_blank" rel="noopener">Trustpilot</a>
+            </div>
+            <!-- End TrustBox widget -->
+            {%- comment -%}
+            <div class="number-rating rating-desktop-show"><span class="shopify-product-reviews-badge" data-id="{{ product.id }}"></span></div>
+            {%- endcomment -%}
+          </div>
+          <!-- Product Useful -->
+          <h6 class="product-useful">{{ product.metafields.accentuate.useful }}</h6>
+            
+        </div>
+
+        {% comment %} Description - top {% endcomment %}
+        {% if object.settings.product_description_position == "top" %}
+          {% if product.description != blank %}
+            <div class="description content has-padding-top">
+              {{ product.description | split: '<!-- split -->' | first }}
+            </div>
+          {% endif %}
+        {% endif %}
+        
+        {% comment %} Description - bottom {% endcomment %}
+        {% if object.settings.product_description_position == "bottom" %}
+          {% if product.description != blank %}
+            <div class="description content bottom has-padding-top">
+              {{ product.description | split: '<!-- split -->' | first }}
+            </div>
+          {% endif %}
+        {% endif %}
+        
+        {% comment %} Purchase form {% endcomment %}
+        <div class="product-form-container has-padding-top">
+
+          {% comment %} Notify form {% endcomment %}
+          {% render 'product__notify-me-form', product: product %}
+
+          {% comment %} Product form {% endcomment %}
+          {% unless collection_handles contains 'coming-soon' %}
+            {% render 'product__form',
+                    context: 'product',
+                    show_payment_button: object.settings.show_payment_button,
+                    collection_handles: collection_handles, 
+                    object: object,
+                    WCProduct_VariantComparePrice: WCProduct_VariantComparePrice,
+                    WCProduct_VariantPrice: WCProduct_VariantPrice
+            %}
+          {% endunless %}
+
+        </div>
+
+        {% comment %} Collections, type, tags {% endcomment %}
+        {% if object.settings.display_collections or object.settings.display_tags or object.settings.display_type %}
+          <div class="product__classification-links has-padding-top">
+            {% if object.settings.display_collections %}
+              <p class="product__collections-list tags">
+                <span class="product__classification-title">{{ 'products.product.collections' | t }}:</span>
+                {% for col in product.collections %}
+                  <span class="tag tag--{{ settings.tag_style }}">
+                    <a href="{{ col.url }}" title="{{ col.title }}">{{ col.title }}</a>
+                  </span>
+                {% endfor %}
+              </p>
+            {% endif %}
+
+            {% if object.settings.display_type %}
+              <p class="product__type-list tags">
+                <span class="product__classification-title">{{ 'products.product.product_types' | t }}:</span>
+                <span class="tag tag--{{ settings.tag_style }}">{{ product.type | link_to_type }}</span>
+              </p>
+            {% endif %}
+
+            {% if object.settings.display_tags and product.tags.size > 0 %}
+              <p class="product__tags-list tags">
+                <span class="product__classification-title">{{ 'products.product.tags' | t }}:</span>
+                {% for tag in product.tags %}
+                  {% unless tag contains 'meta-' %}
+                    <span class="tag tag--{{ settings.tag_style }}">
+                      <a href="{{ routes.collections_url }}/{% if collection %}{{ collection.handle }}{% else %}all{% endif %}/{{ tag | handle }}" title="{{ 'products.product.products_tagged' | t: tag: tag }}">{{ tag }}</a>
+                    </span>
+                  {% endunless %}
+                {% endfor %}
+              </p>
+            {% endif %}
+          </div>
+        {% endif %}
+
+      </div>
+      
+
+      <div class="product__images
+                  one-half
+                  column
+                  medium-down--one-whole">
+        {% render 'product_image_custom',
+                product: product,
+                display_thumbnails: object.settings.display_thumbnails,
+                thumbnail_position: object.settings.thumbnail_position,
+                enable_thumbnail_slider: object.settings.enable_thumbnail_slider,
+                product_height: object.settings.product_height,
+                set_product_height: object.settings.set_product_height,
+                video_looping: object.settings.video_looping
+                gallery_arrows: object.settings.gallery_arrows,
+                slideshow_transition: object.settings.slideshow_transition,
+                enable_product_lightbox: object.settings.enable_product_lightbox,
+                enable_zoom: object.settings.enable_zoom
+        %}
+      </div>
+      
+    </div><!-- .product_section_top -->
+  </div>
+</section>
+
+{% comment %} Used to ensure product review app installs succesfully {% endcomment %}
+
+
+
+{% comment %} JavaScript {% endcomment %}
+<script
+  type="application/json"
+  data-section-id="{{ section.id }}"
+  data-section-data
+>
+  {
+    "gallery_arrows": {{ section.settings.gallery_arrows | json }},
+    "thumbnail_arrows": {{ section.settings.gallery_arrows | json }},
+    "enable_zoom": {{ section.settings.enable_zoom | json }},
+    "enable_product_lightbox": {{ section.settings.enable_product_lightbox | json }},
+    "enable_thumbnail_slider": {{ section.settings.enable_thumbnail_slider | json }},
+    "slideshow_speed": {{ section.settings.slideshow_speed | json }},
+    "slideshow_transition": {{ section.settings.slideshow_transition | json }},
+    "thumbnails_enabled": {{ section.settings.display_thumbnails | json }},
+    "thumbnail_position": {{ section.settings.thumbnail_position | json }},
+    "product_media_amount": {{ product.media.size }},
+    "template": "classic"
+  }
+</script>
+<script type="application/json" id="product_data">{{product | json}}</script>
+<script src="{{ 'z__jsProduct.js' | asset_url }}"></script>
+
+{% comment %} Shopify-XR {% endcomment %}
+{% if product.media %}
+  <script>
+    window.ShopifyXR=window.ShopifyXR||function(){(ShopifyXR.q=ShopifyXR.q||[]).push(arguments)}
+      {% assign models = product.media | where: 'media_type', 'model' | json %}
+      ShopifyXR('addModels', {{ models }});
+  </script>
+{% endif %}
+<script>
+  class SubBundle extends HTMLElement{
+    constructor(){
+      super();
+    }
+    connectedCallback(){
+      this.selling_plan_input = this.querySelector("[name='selling_plan']"); 
+      this.vidInput = document.querySelector("[name='id']");
+      this.curVid = this.vidInput.value;
+      this.bundleSelectors = document.querySelectorAll("[data-selector-type='bundle_multi']");
+
+      if(this.bundleSelectors.length > 0 ){
+        this.bundleSelectors.forEach((bundleSelector)=>{
+          if(bundleSelector.checked){
+            this.vidInput.value = bundleSelector.value;
+          }
+        })
+      }
+
+      if(this.bundleSelector && this.bundleSelector.checked){
+        this.vidInput.value = this.bundleSelector.value;
+      }
+      this.addEventListener('change', (e) =>{
+        console.log(e.target);
+
+        if(e.target.dataset.selectorType == 'single'){
+          this.vidInput.value = e.target.value;
+        } else if (e.target.dataset.selectorType == 'bundle_multi'){
+          this.vidInput.value = e.target.value;
+          this.selling_plan_input.value = '';
+        } else if(e.target.dataset.selectorType == 'subscribe'){
+          this.selling_plan_input.value = e.target.value;
+          this.vidInput.value = this.curVid;
+        }
+      })
+    }
+  }
+customElements.define("subscription-bundle-selector", SubBundle);
+</script>
+{% schema %}
+
+{
+  "name": "Product",
+  "class": "product-template product-main has-sidebar-option jsProduct",
+  "settings": [
+    {
+      "type": "checkbox",
+      "id": "product_breadcrumb",
+      "label": "Show breadcrumb links"
+    },
+    {
+      "type": "header",
+      "content": "Product gallery"
+    },
+    {
+      "type": "checkbox",
+      "id": "display_thumbnails",
+      "label": "Show thumbnails",
+      "default": true
+    },
+    {
+      "type": "checkbox",
+      "id": "gallery_arrows",
+      "label": "Show arrows",
+      "info": "Applies to desktop only.",
+      "default": true
+    },
+    {
+      "type": "checkbox",
+      "id": "enable_zoom",
+      "label": "Magnify on hover",
+      "default": true
+    },
+    {
+      "type": "checkbox",
+      "id": "enable_product_lightbox",
+      "label": "Enable lightbox",
+      "default": true
+    },
+    {
+      "type": "range",
+      "id": "slideshow_speed",
+      "label": "Gallery speed",
+      "min": 0,
+      "max": 6,
+      "unit": "sec",
+      "default": 0,
+      "info": "Set to 0 to disable autoplay."
+    },
+    {
+      "type": "select",
+      "id": "slideshow_transition",
+      "label": "Gallery transition",
+      "options": [
+        {
+          "value": "slide",
+          "label": "Slide"
+        },
+        {
+          "value": "fade",
+          "label": "Fade"
+        }
+      ],
+      "default": "slide"
+    },
+    {
+      "type": "select",
+      "id": "thumbnail_position",
+      "label": "Thumbnails",
+      "options": [
+        {
+          "value": "left-thumbnails",
+          "label": "Left"
+        },
+        {
+          "value": "right-thumbnails",
+          "label": "Right"
+        },
+        {
+          "value": "bottom-thumbnails",
+          "label": "Bottom"
+        }
+      ],
+      "default": "bottom-thumbnails"
+    },
+    {
+      "type": "checkbox",
+      "id": "enable_thumbnail_slider",
+      "label": "Enable thumbnail slider",
+      "default": true
+    },
+    {
+      "type": "header",
+      "content": "Product information"
+    },
+    {
+      "type": "checkbox",
+      "id": "display_vendor",
+      "label": "Show vendor",
+      "default": false
+    },
+    {
+      "type": "checkbox",
+      "id": "display_sku",
+      "label": "Show SKU",
+      "default": false
+    },
+    {
+      "type": "checkbox",
+      "id": "enable_shopify_product_badges",
+      "label": "Show star rating",
+      "info": "Reviews app must be enabled. [Learn more](https://help.outofthesandbox.com/hc/en-us/articles/360008549274#section2)",
+      "default": false
+    },
+    {
+      "type": "checkbox",
+      "id": "display_savings",
+      "label": "Show price savings",
+      "default": true
+    },
+    {
+      "type": "checkbox",
+      "id": "display_collections",
+      "label": "Show collections",
+      "default": false
+    },
+    {
+      "type": "checkbox",
+      "id": "display_type",
+      "label": "Show type",
+      "default": false
+    },
+    {
+      "type": "checkbox",
+      "id": "display_tags",
+      "label": "Show tags",
+      "default": false
+    },
+    {
+      "type": "radio",
+      "id": "product_description_position",
+      "label": "Description position",
+      "options": [
+        {
+          "value": "top",
+          "label": "Above 'add to cart'"
+        },
+        {
+          "value": "bottom",
+          "label": "Below 'add to cart'"
+        }
+      ],
+      "default": "top"
+    },
+    {
+      "type": "header",
+      "content": "Dynamic Checkout Button"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_payment_button",
+      "label": "Show dynamic checkout button",
+      "info": "Each customer will see their preferred payment method from those available on your store, such as PayPal or Apple Pay. [Learn more](https:\/\/help.shopify.com\/manual\/using-themes\/change-the-layout\/dynamic-checkout)",
+      "default": true
+    },
+    {
+      "type": "header",
+      "content": "Media",
+      "info": "Learn more about [media types](https://help.shopify.com/en/manual/products/product-media)"
+    },
+    {
+      "type": "radio",
+      "id": "product_images_position",
+      "label": "Media position",
+      "options": [
+        {
+          "value": "left",
+          "label": "Left"
+        },
+        {
+          "value": "right",
+          "label": "Right"
+        }
+      ],
+      "default": "left"
+    },
+    {
+      "type": "checkbox",
+      "id": "set_product_height",
+      "label": "Set height of product media",
+      "default": false
+    },
+    {
+      "type": "range",
+      "id": "product_height",
+      "label": "Product media height",
+      "min": 200,
+      "max": 800,
+      "step": 10,
+      "default": 500,
+      "unit": "px"
+    },
+    {
+      "type": "checkbox",
+      "id": "video_looping",
+      "label": "Enable video looping",
+      "default": false
+    },
+    {
+      "type": "header",
+      "content": "Layout"
+    },
+    {
+      "type": "select",
+      "id": "width",
+      "label": "Width",
+      "options": [
+        {
+          "value": "standard",
+          "label": "Standard"
+        },
+        {
+          "value": "wide",
+          "label": "Wide"
+        }
+      ],
+      "default": "standard"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "label": "Top spacing",
+      "min": 0,
+      "max": 80,
+      "default": 20,
+      "unit": "px"
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "label": "Bottom spacing",
+      "min": 0,
+      "max": 80,
+      "default": 20,
+      "unit": "px"
+    },
+    {
+      "type": "select",
+      "id": "animation",
+      "label": "Animation",
+      "default": "none",
+      "options": [
+        {
+          "value": "none",
+          "label": "None"
+        },
+        {
+          "value": "fadeIn",
+          "label": "Fade in"
+        },
+        {
+          "value": "fadeInDown",
+          "label": "Fade in down"
+        },
+        {
+          "value": "fadeInLeft",
+          "label": "Fade in left"
+        },
+        {
+          "value": "fadeInRight",
+          "label": "Fade in right"
+        },
+        {
+          "value": "slideInLeft",
+          "label": "Slide in left"
+        },
+        {
+          "value": "slideInRight",
+          "label": "Slide in right"
+        }
+      ]
+    },
+    {
+      "type": "header",
+      "content": "Advanced"
+    },
+    {
+      "type": "paragraph",
+      "content": "[Learn more](https://help.outofthesandbox.com/hc/en-us/articles/360022329373)"
+    },
+    {
+      "type": "text",
+      "id": "css_class",
+      "label": "CSS Class"
+    },
+    {
+      "type": "textarea",
+      "id": "custom_css",
+      "label": "Custom CSS"
+    }
+  ]
+}
+
+{% endschema %}

@@ -1,0 +1,186 @@
+{
+  "sections": {
+    "1656941215a740789d": {
+      "type": "page__blogs-header",
+      "settings": {
+        "title": "",
+        "subtitle": "learn more about natural pet care"
+      }
+    },
+    "1656945703a013e469": {
+      "type": "page__blogs-description",
+      "blocks": {
+        "15f01d15-f9b6-4b2c-b5d6-bbd9ada1f548": {
+          "type": "author_social",
+          "settings": {
+            "social_type": "youtube",
+            "social_icon": "shopify:\/\/shop_images\/Icon_simple-youtube.png",
+            "social_link": ""
+          }
+        },
+        "fbca33d8-0911-4f3f-bebb-3ebb3a50617c": {
+          "type": "author_social",
+          "settings": {
+            "social_type": "reddit",
+            "social_icon": "shopify:\/\/shop_images\/Icon_awesome-reddit-alien.png",
+            "social_link": ""
+          }
+        },
+        "12d69759-8cc5-4c3b-902c-cfe7125bcf91": {
+          "type": "author_social",
+          "settings": {
+            "social_type": "medium",
+            "social_icon": "shopify:\/\/shop_images\/Icon_awesome-medium-m.png",
+            "social_link": ""
+          }
+        }
+      },
+      "block_order": [
+        "15f01d15-f9b6-4b2c-b5d6-bbd9ada1f548",
+        "fbca33d8-0911-4f3f-bebb-3ebb3a50617c",
+        "12d69759-8cc5-4c3b-902c-cfe7125bcf91"
+      ],
+      "settings": {
+        "content": "<p><strong>Our Head of Animal Health, Dr Aisla Rutherford,<\/strong> heads up our product development as well as our writing team, which includes practicing veterinarians, vet technicians and nurses, animal trainers and behavioural specialists, and people who are passionate about the health and wellness of Australian fur babies.<\/p>",
+        "author_image": "shopify:\/\/shop_images\/Mask_Group_4_42b7eecc-1024-4a72-9968-576b98e62c13.png",
+        "author_image_width": 380,
+        "follow_author_text": "Follow Ailsa's blog on",
+        "background": "shopify:\/\/shop_images\/page-blogs-description-banner.png"
+      }
+    },
+    "main": {
+      "type": "page__blogs-main",
+      "blocks": {
+        "11745f6f-8641-4826-be8b-f2fdbfcee2b9": {
+          "type": "blog",
+          "settings": {
+            "blog": "",
+            "title": "pet superfoods",
+            "image": "shopify:\/\/shop_images\/blogs_01.png"
+          }
+        },
+        "0a6c50cf-f33d-4d7b-b65b-c43a68191fda": {
+          "type": "blog",
+          "settings": {
+            "blog": "",
+            "title": "anxiety, stress",
+            "image": "shopify:\/\/shop_images\/blogs_02.png"
+          }
+        },
+        "c348ee00-d738-4be6-9a28-e35ee47fe6ee": {
+          "type": "blog",
+          "settings": {
+            "blog": "",
+            "title": "anxiety, stress",
+            "image": "shopify:\/\/shop_images\/blogs_03.png"
+          }
+        },
+        "7f1c42dd-3216-497d-90a0-71ed3dec1053": {
+          "type": "blog",
+          "settings": {
+            "blog": "",
+            "title": "anxiety, stress",
+            "image": "shopify:\/\/shop_images\/blogs_04.png"
+          }
+        },
+        "cebd8f9a-0187-45f3-88e2-aa4e90ace27d": {
+          "type": "blog",
+          "settings": {
+            "blog": "",
+            "title": "gut health",
+            "image": "shopify:\/\/shop_images\/blogs_05.png"
+          }
+        },
+        "b34124dd-e7e1-470a-a36e-4877b7ee937b": {
+          "type": "blog",
+          "settings": {
+            "blog": "",
+            "title": "renal health",
+            "image": "shopify:\/\/shop_images\/blogs_06.png"
+          }
+        },
+        "4006f21f-8a3b-4821-a480-6173c487c68a": {
+          "type": "blog",
+          "settings": {
+            "blog": "",
+            "title": "renal health",
+            "image": "shopify:\/\/shop_images\/blogs_07.png"
+          }
+        },
+        "5fa7beee-af73-4f52-81bd-b9ca15f5b7d8": {
+          "type": "blog",
+          "settings": {
+            "blog": "",
+            "title": "renal health",
+            "image": "shopify:\/\/shop_images\/blogs_08.png"
+          }
+        },
+        "64f4907f-75cd-4559-9350-46ff9debeedc": {
+          "type": "blog",
+          "settings": {
+            "blog": "",
+            "title": "care for senior cats",
+            "image": "shopify:\/\/shop_images\/blogs_09.png"
+          }
+        },
+        "e5932453-19d0-4da8-9a3e-15a4ba25766b": {
+          "type": "blog",
+          "settings": {
+            "blog": "",
+            "title": "care for senior dogs",
+            "image": "shopify:\/\/shop_images\/blogs_10.png"
+          }
+        },
+        "225a2ee8-bd4f-44bd-a762-b0e5e5d979fa": {
+          "type": "blog",
+          "settings": {
+            "blog": "",
+            "title": "care for senior dogs",
+            "image": "shopify:\/\/shop_images\/blogs_11.png"
+          }
+        },
+        "0d8fe005-44bb-42fe-887c-afd8a20743d3": {
+          "type": "blog",
+          "settings": {
+            "blog": "",
+            "title": "care for senior dogs",
+            "image": "shopify:\/\/shop_images\/blogs_12.png"
+          }
+        }
+      },
+      "block_order": [
+        "11745f6f-8641-4826-be8b-f2fdbfcee2b9",
+        "0a6c50cf-f33d-4d7b-b65b-c43a68191fda",
+        "c348ee00-d738-4be6-9a28-e35ee47fe6ee",
+        "7f1c42dd-3216-497d-90a0-71ed3dec1053",
+        "cebd8f9a-0187-45f3-88e2-aa4e90ace27d",
+        "b34124dd-e7e1-470a-a36e-4877b7ee937b",
+        "4006f21f-8a3b-4821-a480-6173c487c68a",
+        "5fa7beee-af73-4f52-81bd-b9ca15f5b7d8",
+        "64f4907f-75cd-4559-9350-46ff9debeedc",
+        "e5932453-19d0-4da8-9a3e-15a4ba25766b",
+        "225a2ee8-bd4f-44bd-a762-b0e5e5d979fa",
+        "0d8fe005-44bb-42fe-887c-afd8a20743d3"
+      ],
+      "settings": {
+        "title": "browse through our libray of tips and insights"
+      }
+    },
+    "1656957462c4dfc6b1": {
+      "type": "global__chat-with-us",
+      "settings": {
+        "chat_description": "Can't find what you are looking for? Get in touch. We'd love to help!",
+        "chat_link_text": "Chat with Us",
+        "chat_link_url": "",
+        "email": "",
+        "phone": ""
+      }
+    }
+  },
+  "order": [
+    "1656941215a740789d",
+    "1656945703a013e469",
+    "main",
+    "1656957462c4dfc6b1"
+  ]
+}

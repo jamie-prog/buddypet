@@ -1,0 +1,175 @@
+.customers-addresses .address_actions > * {
+    display: inline-block;
+    vertical-align: middle;
+}
+.customers-addresses .address_title {
+    margin-bottom: 0;
+}
+.customers-addresses .address_table .customer_address {
+    margin-bottom: 20px;
+}
+.customers-addresses #address_tables {
+  font-size: 0;
+}
+.customers-addresses #address_tables label,
+.customers-addresses #address_tables select,
+.customers-addresses .account-sidebar select,
+.customers-addresses .account-sidebar label{
+    font-size: 20px;
+    line-height: 35px;
+    font-weight: 400;
+    font-family: 'stevie-sans';
+    letter-spacing: 0;
+    color: #676158;
+}
+.customers-addresses #address_tables .select:after,
+.customers-addresses .account-sidebar .select:after{
+  	font-size:initial;
+}
+.customers-addresses #address_tables .select,
+.customers-addresses #address_tables .select select,
+.customers-addresses .account-sidebar .select,
+.customers-addresses .account-sidebar .select select{
+	width: 100%;
+  	height: auto;
+  	height: 60px;
+    border-radius: 8px;
+}
+.customers-addresses #address_tables .address_table{
+  margin-left: 0;
+  margin-right: 0;
+  width: 50%;
+  display: inline-block;
+  vertical-align: top;
+  padding-right: 15px;
+}
+.customers-addresses .account-sidebar .button,
+.customers-account .account-sidebar .button{
+	min-width: auto;
+}
+.customers-account #customer_orders .table th,
+.customers-account #customer_orders .table td,
+.customers-order .table th,
+.customers-order .table td{
+    font-size: 16px;
+    font-weight: 350;
+}
+.customers-account #customer_orders .table.is-bordered td,
+.customers-account #customer_orders .table.is-bordered th,
+.customers-order .table.is-bordered td,
+.customers-order .table.is-bordered th{
+    border-color: #878076;
+}
+.customers-account #customer_orders h2.title {
+    line-height: 79px;
+}
+.customers-order .section header h1.title + div {
+    display: none;
+}
+.customers-order .section header  h1.title,
+.customers-order .section header .heading-wrapper:first-child{
+    margin-bottom: 0;
+}
+.customers-account .button:hover,
+.customers-order .button:hover,
+.customers-addresses .button:hover,
+.customers-account .button:active,
+.customers-order .button:active,
+.customers-addresses .button:active,
+.customers-account .button:focus,
+.customers-order .button:focus,
+.customers-addresses .button:focus{
+	box-shadow: none !important;
+}
+.customers-addresses .edit_address .action_bottom input[type=submit], 
+.customers-addresses .edit_address .action_bottom .note {
+    width: 100%;
+    margin-right: 0;
+    display: inline-block;
+    text-align: center;
+    margin-bottom: 10px;
+}
+.customers-addresses .edit_address .action_bottom {
+    display: block;
+}
+@media (max-width: 1280px){
+  .customers-account .account-sidebar .button,
+  .customers-addresses .account-sidebar .button {
+      padding-left: 15px;
+      padding-right: 15px;
+  }
+}
+@media (max-width: 1024px){
+  .customers-account .account-sidebar .button,
+  .customers-addresses .account-sidebar .button {
+      padding-left: 13px;
+      padding-right: 13px;
+  }
+}
+@media (max-width: 991px){
+  .customers-addresses .account-main,
+  .customers-account .account-main{
+      width: calc(66% - 20px);
+  }
+  .customers-addresses .account-sidebar,
+  .customers-account .account-sidebar{
+      width: calc(33% - 20px);
+  }
+  .customers-addresses #address_tables .address_table{
+    width: 100%;
+    padding-right: 0;
+  }
+  .customers-account .account-sidebar .button,
+  .customers-addresses .account-sidebar .button {
+      padding-left: 10px;
+      padding-right: 10px;
+  }
+}
+
+@media (max-width: 767px){
+  .customers-account .account-sidebar .button,
+  .customers-addresses .account-sidebar .button {
+      padding-left: 30px;
+      padding-right: 30px;
+  }
+  .customers-addresses .account-sidebar,
+  .customers-addresses .account-main,
+  .customers-account .account-sidebar,
+  .customers-account .account-main,
+  .customers-order .account-sidebar,
+  .customers-order .account-main{
+      width: 100%;
+      margin-left: 0;
+      margin-right: 0;
+  }
+  .customers-order .account-main{
+    margin-top: 40px;
+    margin-left: 0;
+    margin-right: 0;
+    padding-right: 0;
+    padding-left: 0;
+  }
+  .section__wrapper .field input {
+      height: 50px;
+  }
+  .customers-addresses #address_tables .select, 
+  .customers-addresses #address_tables .select select, 
+  .customers-addresses .account-sidebar .select, 
+  .customers-addresses .account-sidebar .select select{
+      height: 50px;
+  }
+  .customers-addresses #address_tables label, 
+  .customers-addresses #address_tables select, 
+  .customers-addresses .account-sidebar label, 
+  .customers-addresses .account-sidebar select {
+      line-height: 25px;
+      margin-bottom: 5px;
+  }
+}
+@media (max-width: 575px){
+  
+  .customers-addresses .account-sidebar .button,
+  .customers-account .account-sidebar .button{
+	width: 100%;
+  }
+}

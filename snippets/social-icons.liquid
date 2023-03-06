@@ -1,0 +1,122 @@
+<ul class="social-icons is-flex is-flex-wrap {{flex_alignment}}">
+  {% if settings.medium_link != '' %}
+  <li>
+    <a href="{{ settings.medium_link }}" title="{{ shop.name }} on Medium" rel="me" target="_blank"  rel="noopener" class="icon-medium icon--wrapper">
+      {% render 'icon-medium' %}
+    </a>
+  </li>
+  {% endif %}
+  {% if settings.instagram_link != '' %}
+    <li>
+      <a href="{{ settings.instagram_link }}" title="{{ shop.name }} on Instagram" rel="me" target="_blank"  rel="noopener" class="icon-instagram icon--wrapper">
+        {% render 'icon', name: 'instagram' %}
+      </a>
+    </li>
+  {% endif %}
+  
+  {% if settings.facebook_link != '' %}
+    <li>
+      <a href="{{ settings.facebook_link }}" title="{{ shop.name }} on Facebook" rel="me" target="_blank"  rel="noopener" class="icon-facebook icon--wrapper">
+        {% render 'icon', name: 'facebook' %}
+      </a>
+    </li>
+  {% endif %}
+
+  {% if settings.pinterest_link != '' %}
+    <li>
+      <a href="{{ settings.pinterest_link }}" title="{{ shop.name }} on Pinterest" rel="me" target="_blank"  rel="noopener" class="icon-pinterest icon--wrapper">
+        {% render 'icon', name: 'pinterest-pet' %}
+      </a>
+    </li>
+  {% endif %}
+  
+  {% if settings.twitter_link != '' %}
+    <li>
+      <a href="{{ settings.twitter_link }}" title="{{ shop.name }} on Twitter" rel="me" target="_blank"  rel="noopener" class="icon-twitter icon--wrapper">
+        {% render 'icon', name: 'twitter' %}
+      </a>
+    </li>
+  {% endif %}
+
+  {% if settings.youtube_link != '' %}
+    <li>
+      <a href="{{ settings.youtube_link }}" title="{{ shop.name }} on YouTube" rel="me" target="_blank"  rel="noopener"class="icon-youtube icon--wrapper">
+        {% render 'icon-video' %}
+      </a>
+    </li>
+  {% endif %}
+	
+  {% if settings.linkedin_link != '' %}
+    <li>
+      <a href="{{ settings.linkedin_link }}" title="{{ shop.name }} on LinkedIn" rel="me" target="_blank"  rel="noopener" class="icon-linkedin icon--wrapper">
+        {% render 'icon', name: 'linkedin' %}
+      </a>
+    </li>
+  {% endif %}
+  
+  {% if settings.vimeo_link != '' %}
+    <li>
+      <a href="{{ settings.vimeo_link }}" title="{{ shop.name }} on Vimeo" rel="me" target="_blank"  rel="noopener" class="icon-vimeo icon--wrapper">
+        {% render 'icon', name: 'vimeo' %}
+      </a>
+    </li>
+  {% endif %}
+
+  {% if settings.tumblr_link != '' %}
+    <li>
+      <a href="{{ settings.tumblr_link }}" title="{{ shop.name }} on Tumblr" rel="me" target="_blank"  rel="noopener" class="icon-tumblr icon--wrapper">
+        {% render 'icon', name: 'tumblr' %}
+      </a>
+    </li>
+  {% endif %}
+
+  
+
+  {% if settings.snapchat_link != '' %}
+    <li>
+      <a href="{{ settings.snapchat_link }}" title="{{ shop.name }} on Snapchat" rel="me" target="_blank"  rel="noopener" class="icon-snapchat icon--wrapper">
+        {% render 'icon', name: 'snapchat' %}
+      </a>
+    </li>
+  {% endif %}
+
+  {% if settings.houzz_link != '' %}
+    <li>
+      <a href="{{ settings.houzz_link }}" title="{{ shop.name }} on Houzz" rel="me" target="_blank"  rel="noopener" class="icon-houzz icon--wrapper">
+        {% render 'icon', name: 'houzz' %}
+      </a>
+    </li>
+  {% endif %}
+
+  {% if settings.dribbble_link != '' %}
+    <li>
+      <a href="{{ settings.dribbble_link }}" title="{{ shop.name }} on Dribbble" rel="me" target="_blank"  rel="noopener" class="icon-dribbble icon--wrapper">
+        {% render 'icon', name: 'dribbble' %}
+      </a>
+    </li>
+  {% endif %}
+
+  {% if settings.behance_link != '' %}
+    <li>
+      <a href="{{ settings.behance_link }}" title="{{ shop.name }} on Behance" rel="me" target="_blank"  rel="noopener" class="icon-behance icon--wrapper">
+        {% render 'icon', name: 'behance' %}
+      </a>
+    </li>
+  {% endif %}
+
+  {% if settings.flickr_link != '' %}
+    <li>
+      <a href="{{ settings.flickr_link }}" title="{{ shop.name }} on Flickr" rel="me" target="_blank"  rel="noopener" class="icon-flickr icon--wrapper">
+        {% render 'icon', name: 'flickr' %}
+      </a>
+    </li>
+  {% endif %}
+
+  {% if settings.email_link != '' %}
+    <li>
+      <a href="mailto:{{ settings.email_link }}" title="Email {{ shop.name }}" target="_blank"  rel="noopener" class="icon-email icon--wrapper">
+        {% render 'icon', name: 'envelope-pet' %}
+      </a>
+    </li>
+  {% endif %}
+</ul>

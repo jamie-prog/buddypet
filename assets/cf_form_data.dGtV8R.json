@@ -1,0 +1,827 @@
+{
+  "form": {
+    "id": "dGtV8R",
+    "name": "Wholesale Registration",
+    "handle": "wholesale-registration-141",
+    "theme_id": "127966511281",
+    "settings": {
+      "locales": {
+        "back": "Back",
+        "next": "Next",
+        "cancel": "Cancel",
+        "edit_link": "Edit account",
+        "fix_errors": "Please fix errors before continuing",
+        "is_invalid": "{{label}} is invalid",
+        "email_taken": "Email has already been taken",
+        "phone_taken": "Phone number has already been taken",
+        "server_error": "Could not save form, please try again later",
+        "step_counter": "Step {{current}} of {{total}}",
+        "verify_email": "Check your email for a verification link to activate your account.",
+        "not_available": "An error occurred while saving your account, please try again in a few minutes.",
+        "create_account": "Submit",
+        "update_account": "Submit",
+        "recaptcha_error": "Challenge verification failed, please try again",
+        "creating_account": "Saving...",
+        "updating_account": "Saving...",
+        "reset_password_link": "Reset your password",
+        "invalid_email_domain": "Email contains an invalid domain name",
+        "reset_password_email_sent": "Check your inbox for a link to reset your password.",
+        "reset_password_too_many_attempts": "You tried to reset your password too many times. Please wait and try again later."
+      },
+      "whitelistedTags": "",
+      "markRequiredFields": false,
+      "displayCancelButton": true,
+      "redirectAfterSubmit": false,
+      "goBackAfterSubmission": false,
+      "accountApprovalRequired": true,
+      "cancelButtonRedirectUrl": "\/account\/login",
+      "emailVerificationRequired": false,
+      "postSubmissionRedirectUrl": "\/account",
+      "showSuccessStepAfterSubmit": true,
+      "goBackAfterCancelButtonClick": false
+    },
+    "install_locations": [
+      "page_template",
+      "manual"
+    ],
+    "created_at": "2021-11-22T00:04:16Z",
+    "updated_at": "2021-11-24T05:09:06Z",
+    "revision_ids": [
+      "ErTAqY8",
+      "wDTKDXG",
+      "3qTePgA",
+      "evT9pqN",
+      "nRT15EO",
+      "l5Tp2aq",
+      "NMTvMrA",
+      "1wTxmVe",
+      "B5TA6oG",
+      "boT5Xe0",
+      "OzTXy1g",
+      "mLT0db4",
+      "DRTrEPX",
+      "znTVaxL",
+      "akTz8rw",
+      "06TpPV0",
+      "8oTbPL1",
+      "NMTvMz0",
+      "1wTxm9a",
+      "mLT0dnD",
+      "evT9pNv",
+      "VNT3Roz",
+      "nRT153q",
+      "OzTXydX",
+      "PnTpV5K",
+      "3qTePr0",
+      "znTVavM"
+    ]
+  },
+  "revision": {
+    "id": "ErTAqY8",
+    "created_at": "2021-11-24T05:31:23Z",
+    "updated_at": "2021-11-24T05:31:23Z",
+    "embed_version": "4.8.1",
+    "published_at": null,
+    "fields": [
+      {
+        "id": 105435,
+        "dataColumn": {
+          "key": "default_address.company",
+          "label": "Company",
+          "dataType": "text"
+        },
+        "parentId": null,
+        "position": 0,
+        "type": "text",
+        "stepId": 228625,
+        "default": "",
+        "label": "Business Name",
+        "placeholder": "Business Name",
+        "description": "",
+        "enum": [
+
+        ],
+        "appearance": {
+          "width": 12
+        },
+        "settings": {
+          "hideLabel": true
+        },
+        "validations": [
+          {
+            "metadata": {
+              "hiddenInApp": true
+            },
+            "operator": "not_blank",
+            "comparand": "",
+            "errorMessage": "Must not be blank"
+          }
+        ],
+        "sensitive": null,
+        "preset": "company",
+        "autotag": null
+      },
+      {
+        "id": 549449,
+        "dataColumn": {
+          "key": "default_address.address1",
+          "label": "Address line 1",
+          "dataType": "text"
+        },
+        "parentId": null,
+        "position": 1,
+        "type": "text",
+        "stepId": 228625,
+        "default": "",
+        "label": "Business Address line 1",
+        "placeholder": "Business Address line 1",
+        "description": "",
+        "enum": [
+
+        ],
+        "appearance": {
+          "width": 12
+        },
+        "settings": {
+          "hideLabel": true
+        },
+        "validations": [
+          {
+            "metadata": {
+              "hiddenInApp": true
+            },
+            "operator": "not_blank",
+            "comparand": "",
+            "errorMessage": "Must not be blank"
+          }
+        ],
+        "sensitive": null,
+        "preset": "address1",
+        "autotag": null
+      },
+      {
+        "id": 105979,
+        "dataColumn": {
+          "key": "last_name",
+          "label": "Last name",
+          "dataType": "text"
+        },
+        "parentId": null,
+        "position": 10,
+        "type": "text",
+        "stepId": 228625,
+        "default": "",
+        "label": "Contact Last name",
+        "placeholder": "Contact Last name",
+        "description": null,
+        "enum": null,
+        "appearance": {
+          "width": 12
+        },
+        "settings": {
+          "hideLabel": true
+        },
+        "validations": [
+          {
+            "metadata": {
+              "hiddenInApp": true
+            },
+            "operator": "not_blank",
+            "comparand": "",
+            "errorMessage": "Must not be blank"
+          }
+        ],
+        "sensitive": null,
+        "preset": "last_name",
+        "autotag": null
+      },
+      {
+        "id": 156535,
+        "dataColumn": {
+          "key": "email",
+          "label": "Email address",
+          "dataType": "email"
+        },
+        "parentId": null,
+        "position": 11,
+        "type": "email",
+        "stepId": 228625,
+        "default": "",
+        "label": "Contact Email address",
+        "placeholder": "Contact Email address",
+        "description": "Used for account login and order notifications",
+        "enum": null,
+        "appearance": {
+          "width": 12
+        },
+        "settings": {
+          "hideLabel": true
+        },
+        "validations": [
+          {
+            "operator": "is_valid_email",
+            "comparand": null,
+            "errorMessage": "Please provide a valid email address"
+          },
+          {
+            "metadata": {
+              "hiddenInApp": true
+            },
+            "operator": "not_blank",
+            "comparand": "",
+            "errorMessage": "Must not be blank"
+          }
+        ],
+        "sensitive": null,
+        "preset": "email_address",
+        "autotag": null
+      },
+      {
+        "id": 171849,
+        "dataColumn": {
+          "key": "phone",
+          "label": "Phone number",
+          "dataType": "phone"
+        },
+        "parentId": null,
+        "position": 12,
+        "type": "phone",
+        "stepId": 228625,
+        "default": "",
+        "label": "Contact Phone number",
+        "placeholder": "Contact Phone number",
+        "description": "",
+        "enum": [
+
+        ],
+        "appearance": {
+          "width": 12
+        },
+        "settings": {
+          "hideLabel": true,
+          "defaultCountryCode": "AU"
+        },
+        "validations": [
+
+        ],
+        "sensitive": null,
+        "preset": "phone_number",
+        "autotag": null
+      },
+      {
+        "id": 166013,
+        "dataColumn": {
+          "key": "default_address.address2",
+          "label": "Address line 2",
+          "dataType": "text"
+        },
+        "parentId": null,
+        "position": 2,
+        "type": "text",
+        "stepId": 228625,
+        "default": "",
+        "label": "Business Address line 2",
+        "placeholder": "Business Address line 2",
+        "description": "",
+        "enum": [
+
+        ],
+        "appearance": {
+          "width": 12
+        },
+        "settings": {
+          "hideLabel": true
+        },
+        "validations": [
+
+        ],
+        "sensitive": null,
+        "preset": "address2",
+        "autotag": null
+      },
+      {
+        "id": 115461,
+        "dataColumn": {
+          "key": "default_address.city",
+          "label": "City",
+          "dataType": "text"
+        },
+        "parentId": null,
+        "position": 3,
+        "type": "text",
+        "stepId": 228625,
+        "default": "",
+        "label": "City",
+        "placeholder": "City",
+        "description": "",
+        "enum": [
+
+        ],
+        "appearance": {
+          "width": 12
+        },
+        "settings": {
+          "hideLabel": true
+        },
+        "validations": [
+          {
+            "metadata": {
+              "hiddenInApp": true
+            },
+            "operator": "not_blank",
+            "comparand": "",
+            "errorMessage": "Must not be blank"
+          }
+        ],
+        "sensitive": null,
+        "preset": "city",
+        "autotag": null
+      },
+      {
+        "id": 143607,
+        "dataColumn": {
+          "key": "default_address.country",
+          "label": "Country",
+          "dataType": "text"
+        },
+        "parentId": null,
+        "position": 4,
+        "type": "dropdown",
+        "stepId": 228625,
+        "default": "Australia",
+        "label": "Country",
+        "placeholder": "Country",
+        "description": "",
+        "enum": [
+          {
+            "label": "",
+            "value": ""
+          }
+        ],
+        "appearance": {
+          "width": 12
+        },
+        "settings": {
+          "hideLabel": true,
+          "isCountryField": true
+        },
+        "validations": [
+          {
+            "metadata": {
+              "hiddenInApp": true
+            },
+            "operator": "not_blank",
+            "comparand": "",
+            "errorMessage": "Must not be blank"
+          }
+        ],
+        "sensitive": null,
+        "preset": "country",
+        "autotag": null
+      },
+      {
+        "id": 361859,
+        "dataColumn": {
+          "key": "default_address.province",
+          "label": "State\/Province",
+          "dataType": "text"
+        },
+        "parentId": null,
+        "position": 5,
+        "type": "dropdown",
+        "stepId": 228625,
+        "default": "",
+        "label": "State\/Province",
+        "placeholder": "State\/Province",
+        "description": "",
+        "enum": [
+          {
+            "label": "",
+            "value": ""
+          }
+        ],
+        "appearance": {
+          "width": 12
+        },
+        "settings": {
+          "hideLabel": true,
+          "defaultCountry": "Canada",
+          "isProvinceField": true
+        },
+        "validations": [
+          {
+            "metadata": {
+              "hiddenInApp": true
+            },
+            "operator": "not_blank",
+            "comparand": "",
+            "errorMessage": "Must not be blank"
+          }
+        ],
+        "sensitive": null,
+        "preset": "province",
+        "autotag": null
+      },
+      {
+        "id": 649081,
+        "dataColumn": {
+          "key": "default_address.zip",
+          "label": "Zip\/Postal code",
+          "dataType": "text"
+        },
+        "parentId": null,
+        "position": 6,
+        "type": "text",
+        "stepId": 228625,
+        "default": "",
+        "label": "Zip\/Postal code",
+        "placeholder": "Zip\/Postal code",
+        "description": "",
+        "enum": [
+
+        ],
+        "appearance": {
+          "width": 12
+        },
+        "settings": {
+          "hideLabel": true
+        },
+        "validations": [
+          {
+            "metadata": {
+              "hiddenInApp": true
+            },
+            "operator": "not_blank",
+            "comparand": "",
+            "errorMessage": "Must not be blank"
+          }
+        ],
+        "sensitive": null,
+        "preset": "zip",
+        "autotag": null
+      },
+      {
+        "id": 473107,
+        "dataColumn": {
+          "key": "abn",
+          "label": "ABN",
+          "dataType": "text"
+        },
+        "parentId": null,
+        "position": 7,
+        "type": "text",
+        "stepId": 228625,
+        "default": "",
+        "label": "ABN",
+        "placeholder": "ABN",
+        "description": "",
+        "enum": [
+
+        ],
+        "appearance": {
+          "width": 12
+        },
+        "settings": {
+          "hideLabel": true
+        },
+        "validations": [
+
+        ],
+        "sensitive": null,
+        "preset": null,
+        "autotag": null
+      },
+      {
+        "id": 490725,
+        "dataColumn": null,
+        "parentId": null,
+        "position": 8,
+        "type": "group",
+        "stepId": 228625,
+        "default": "",
+        "label": "Invoice",
+        "placeholder": "",
+        "description": "",
+        "enum": [
+
+        ],
+        "appearance": {
+          "width": 12
+        },
+        "settings": {
+          "hideLabel": true
+        },
+        "validations": [
+
+        ],
+        "sensitive": null,
+        "preset": null,
+        "autotag": null
+      },
+      {
+        "id": 204738,
+        "dataColumn": {
+          "key": "invoice.address",
+          "label": "Invoice Address",
+          "dataType": "text"
+        },
+        "parentId": 490725,
+        "position": 0,
+        "type": "text",
+        "stepId": 228625,
+        "default": "",
+        "label": "Invoice Address",
+        "placeholder": "Invoice Address",
+        "description": "",
+        "enum": [
+
+        ],
+        "appearance": {
+          "width": 12
+        },
+        "settings": {
+          "hideLabel": true
+        },
+        "validations": [
+
+        ],
+        "sensitive": null,
+        "preset": null,
+        "autotag": null
+      },
+      {
+        "id": 809671,
+        "dataColumn": {
+          "key": "invoice.city",
+          "label": "Invoice City",
+          "dataType": "text"
+        },
+        "parentId": 490725,
+        "position": 1,
+        "type": "text",
+        "stepId": 228625,
+        "default": "",
+        "label": "Invoice City",
+        "placeholder": "Invoice City",
+        "description": "",
+        "enum": [
+
+        ],
+        "appearance": {
+          "width": 12
+        },
+        "settings": {
+          "hideLabel": true
+        },
+        "validations": [
+
+        ],
+        "sensitive": null,
+        "preset": null,
+        "autotag": null
+      },
+      {
+        "id": 178995,
+        "dataColumn": {
+          "key": "invoice.stateprovince",
+          "label": "Invoice State\/Province",
+          "dataType": "text"
+        },
+        "parentId": 490725,
+        "position": 2,
+        "type": "text",
+        "stepId": 228625,
+        "default": "",
+        "label": "Invoice State\/Province",
+        "placeholder": "Invoice State\/Province",
+        "description": "",
+        "enum": [
+
+        ],
+        "appearance": {
+          "width": 12
+        },
+        "settings": {
+          "hideLabel": true
+        },
+        "validations": [
+
+        ],
+        "sensitive": null,
+        "preset": null,
+        "autotag": null
+      },
+      {
+        "id": 185980,
+        "dataColumn": {
+          "key": "invoice.zippostal_code",
+          "label": "Invoice Zip\/Postal code",
+          "dataType": "text"
+        },
+        "parentId": 490725,
+        "position": 3,
+        "type": "text",
+        "stepId": 228625,
+        "default": "",
+        "label": "Invoice Zip\/Postal code",
+        "placeholder": "Invoice Zip\/Postal code",
+        "description": "",
+        "enum": [
+
+        ],
+        "appearance": {
+          "width": 12
+        },
+        "settings": {
+          "hideLabel": true
+        },
+        "validations": [
+
+        ],
+        "sensitive": null,
+        "preset": null,
+        "autotag": null
+      },
+      {
+        "id": 554233,
+        "dataColumn": {
+          "key": "first_name",
+          "label": "First name",
+          "dataType": "text"
+        },
+        "parentId": null,
+        "position": 9,
+        "type": "text",
+        "stepId": 228625,
+        "default": "",
+        "label": "Contact First name",
+        "placeholder": "Contact First name",
+        "description": null,
+        "enum": null,
+        "appearance": {
+          "width": 12
+        },
+        "settings": {
+          "hideLabel": true
+        },
+        "validations": [
+          {
+            "metadata": {
+              "hiddenInApp": true
+            },
+            "operator": "not_blank",
+            "comparand": "",
+            "errorMessage": "Must not be blank"
+          }
+        ],
+        "sensitive": null,
+        "preset": "first_name",
+        "autotag": null
+      },
+      {
+        "id": 626484,
+        "dataColumn": null,
+        "parentId": null,
+        "position": 0,
+        "type": "heading",
+        "stepId": 573871,
+        "default": "",
+        "label": "Account request sent heading",
+        "placeholder": null,
+        "description": "",
+        "enum": [
+
+        ],
+        "appearance": {
+          "width": 12,
+          "alignment": "center"
+        },
+        "settings": {
+          "size": 1,
+          "content": "Success!",
+          "hideLabel": true,
+          "fontWeight": "bold"
+        },
+        "validations": [
+
+        ],
+        "sensitive": null,
+        "preset": null,
+        "autotag": null
+      },
+      {
+        "id": 141270,
+        "dataColumn": null,
+        "parentId": null,
+        "position": 1,
+        "type": "paragraph",
+        "stepId": 573871,
+        "default": "",
+        "label": "Reviewing submission explanation",
+        "placeholder": null,
+        "description": "",
+        "enum": [
+
+        ],
+        "appearance": {
+          "width": 12
+        },
+        "settings": {
+          "content": "<p style=\"text-align: center;\">The form has been successfully submitted.<\/p>",
+          "fontSize": 14,
+          "hideLabel": true
+        },
+        "validations": [
+
+        ],
+        "sensitive": null,
+        "preset": null,
+        "autotag": null
+      },
+      {
+        "id": 100081,
+        "dataColumn": null,
+        "parentId": null,
+        "position": 2,
+        "type": "link",
+        "stepId": 573871,
+        "default": "",
+        "label": "Back to home link",
+        "placeholder": null,
+        "description": "",
+        "enum": [
+
+        ],
+        "appearance": {
+          "width": 12,
+          "alignment": "center"
+        },
+        "settings": {
+          "url": "\/",
+          "content": "Back to home",
+          "fontSize": 14,
+          "hideLabel": true,
+          "fontWeight": "normal",
+          "openInNewTab": false
+        },
+        "validations": [
+
+        ],
+        "sensitive": null,
+        "preset": null,
+        "autotag": null
+      }
+    ],
+    "steps": [
+      {
+        "id": 228625,
+        "title": "Wholesale Signup",
+        "description": ""
+      },
+      {
+        "id": 573871,
+        "title": "Submission success",
+        "metadata": {
+          "isSuccessStep": true
+        },
+        "description": ""
+      }
+    ],
+    "rules": [
+      {
+        "id": 271398,
+        "title": "Show \"Wholesale\" step and tag customer",
+        "actions": [
+          {
+            "effect": "tag_customer",
+            "metadata": {
+              "value": "Wholesale"
+            }
+          }
+        ],
+        "conditions": [
+          {
+            "operand": null,
+            "metadata": {
+              "column": {
+                "id": null,
+                "key": "default_address.company",
+                "label": "Company",
+                "dataType": "text",
+                "favorite": false,
+                "readOnly": false,
+                "createdAt": null,
+                "dedicated": true,
+                "archivedAt": null,
+                "expandedLabel": "Company"
+              },
+              "comparand": "Wholesale"
+            },
+            "operator": "not_blank"
+          }
+        ],
+        "conditionChaining": "all"
+      }
+    ]
+  }
+}

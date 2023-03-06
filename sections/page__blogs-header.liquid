@@ -1,0 +1,41 @@
+<div data-section-type="page-blogs-header" data-section-id="{{section.id}}">
+    <div class="container">
+        <div class="page__titles">
+            <h1 class="page__title">{{section.settings.title | default: page.title}}</h1>
+            <p class="page__subtitle">{{section.settings.subtitle}}</p>
+        </div>
+        <div class="blogs__search--wrapper">
+            <form action="{{routes.search_url}}" class="search__form">
+                <input type="hidden" name="type" value="article">
+                <div class="search-form__wrapper">
+                    <input type="text" name="q" value="" placeholder="Search Our Blog" class="search--input__field">
+                    <button type="submit" class="search-submit">{% render 'icon-search' %}</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+{% schema %}
+{
+    "name":"Page Blogs Header",
+    "templates":["page"],
+    "settings":[
+        {
+            "type":"text", 
+            "id":"title", 
+            "label":"Title"
+        },
+        {
+            "type":"text", 
+            "id":"subtitle",
+            "label":"Subtitle"
+        }
+    ],
+    "presets":[
+        {
+            "name":"Page Blogs Header"
+        }
+    ]
+}
+{% endschema %}

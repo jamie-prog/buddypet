@@ -1,0 +1,208 @@
+{% if section.blocks.size > 0 %}
+<div class="container {{ section.settings.css_class }}" data-section-type="featured-articles">
+  <div class="collection_blog">
+    {% for block in section.blocks %}
+      {% assign article = block.settings.article %}
+      {% if article != blank %}
+        <div class="article-item" data-block-id="{{block.id}}">
+          <div class="article-content {% if block.settings.image_position == 'left' %} pos-right{% else %} pos-left{% endif %}">
+            <h2>
+              	<a href="{{ article.url }}" {%- if block.settings.title_color -%}style="color: {{block.settings.title_color}}"{%- endif -%}>
+                  {% if block.settings.use_custom_content %}
+                    {{- block.settings.title -}}
+                  {% else %}
+                    {{- article.title -}}
+                  {% endif %}
+              </a>
+            </h2>
+            {%- if block.settings.use_custom_content and block.settings.subtitle != blank -%}
+              <p class="article-subtitle" {%- if block.settings.subtitle_color -%}style="color: {{block.settings.subtitle_color}}"{%- endif -%}>
+                {{block.settings.subtitle }}
+              </p>
+            {%- endif -%}
+            {%- if block.settings.use_custom_content -%}
+              <div class="article-excerpt" {%- if block.settings.content_color -%}style="color: {{block.settings.content_color}}"{%- endif -%}>{{block.settings.content}}</div>
+            {%- else -%}
+              {% if article.excerpt != blank %}
+              <div class="article-excerpt" {%- if block.settings.content_color -%}style="color: {{block.settings.content_color}}"{%- endif -%}>{{ article.excerpt }}</div>
+              {% endif %}
+            {%- endif -%}
+            <a class="read-more" href="{{ article.url }}" title="{{ article.title | escape }}" {%- if block.settings.btn_color -%}style="color: {{block.settings.btn_color}}"{%- endif -%}>
+              {% if forloop.index == 2 %}
+                Learn More
+              {% else %}
+                {{ 'blogs.general.continue_reading_html' | t }}
+              {% endif %}
+            </a>
+          </div>
+          <div class="article-image pos-{{block.settings.image_position}}">
+            {%- assign image_width = block.settings.image_width | times: 1 -%}
+            {%- if block.settings.use_custom_content and block.settings.image != blank -%}
+              <a href="{{ article.url }}" title="{{ article.title | escape }}" style="background-image: url({{ block.settings.image | image_url: width: image_width }})">
+                {% render 'image-element',
+                  image: block.settings.image,
+                  alt: block.settings.image.alt,
+                  stretch_width: image_width
+                %}
+              </a>
+            {%- else -%}
+              <a href="{{ article.url }}" title="{{ article.title | escape }}" style="background-image: url({{ article.image | img_url: '400x' }})">
+                {% render 'image-element',
+                  image: article.image,
+                  alt: article.image.alt,
+                  stretch_width: '400x'
+                %}
+              </a>                            
+            {%- endif -%}
+          </div>
+        </div>
+        {%- if block.settings.content_bg_image != blank -%}
+          <style>
+            [data-section-type="featured-articles"] .article-item[data-block-id="{{block.id}}"] .article-content:after{
+              content: '';
+              background-image: url("{{block.settings.content_bg_image | image_url }}");
+              background-repeat: no-repeat;
+              display: inline-block;
+              position: absolute; 
+              width: {{block.settings.content_bg_image.width | times: 1}}px; 
+              height: {{block.settings.content_bg_image.height | times: 1}}px;
+            }
+          </style>
+        {%- endif -%}
+      {% endif %}
+    {% endfor %}
+  </div>
+</div>
+{% endif %}
+
+{% schema %}
+  {
+    "name": "Featured Articles",
+    "max_blocks": 3,
+    "class": "featured-articles",
+    "settings": [
+      {
+        "type": "header",
+        "content": "Advanced"
+      },
+      {
+        "type": "text",
+        "id": "css_class",
+        "label": "CSS Class"
+      }
+    ],
+    "blocks": [
+      {
+        "type": "article",
+        "name": "Article",
+        "settings": [
+          {
+            "type": "checkbox",
+            "id": "use_custom_content",
+            "label": "Use Custom Content",
+            "default": true
+          },
+          {
+            "type": "image_picker",
+            "id": "image",
+            "label": "Image"
+          },
+          {
+            "type": "range",
+            "id": "image_width",
+            "label": "Image Width",
+            "unit": "px",
+            "min": 100,
+            "max": 1000,
+            "step": 10,
+            "default": 400
+          },
+          {
+            "type":"select",
+            "id":"image_position",
+            "label":"Image Position", 
+            "options":[
+              {
+                "value":"left", 
+                "label":"Left"
+              },
+              {
+                "value":"right", 
+                "label":"Right"
+              }
+            ]
+          },
+          {
+            "type": "header",
+            "content": "Block Background"
+          },
+          {
+            "type": "image_picker",
+            "id": "content_bg_image",
+            "label": "Content Background Image"
+          },
+          {
+            "type":"header", 
+            "content":"Block Content"
+          },
+          {
+            "type": "article",   
+            "id": "article",
+            "label": "Article"
+          },
+          {
+            "type": "text",   
+            "id": "title",
+            "label": "title"
+          },
+          {
+            "type":"text", 
+            "id":"subtitle", 
+            "label":"Subtitle"
+          },
+          {
+            "type":"textarea", 
+            "id":"content", 
+            "label":"Content"
+          },
+          {
+            "type": "header",
+            "content": "Block style"
+          },
+          {
+            "type": "color",
+            "id": "title_color",
+            "label": "Title Color"
+          },
+          {
+            "type": "color",
+            "id": "subtitle_color",
+            "label": "Subtitle Color"
+          },
+          {
+            "type": "color",
+            "id": "content_color",
+            "label": "Content Color"
+          },
+          {
+            "type": "color",
+            "id": "btn_color",
+            "label": "Button Color"
+          }
+        ]
+      }
+    ],
+    "presets": [
+      {
+        "name": "Featured Articles",
+        "category": "Home"
+      }
+    ]
+  }
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

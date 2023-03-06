@@ -1,0 +1,41 @@
+{% comment %}
+** Boxes Images **
+- Draggable section
+- Uses blocks
+{% endcomment %}
+
+<section class="section-boxes boxes-bottomleft">
+  {% if section.settings.boxes_top  != blank %}
+    <div class="boxes-item position-absolute boxes-chair" data-aos="zoom-in-right" data-aos-delay="300" data-aos-duration="1000">
+      <img src="{{ section.settings.boxes_top | img_url: 'master' }}" alt="" />
+    </div>
+  {% endif %}
+  {% if section.settings.boxes_center  != blank %}
+    <div class="boxes-item position-absolute boxes-center" data-aos="zoom-in-right" data-aos-delay="300" data-aos-duration="1000">
+      <img src="{{ section.settings.boxes_center | img_url: 'master' }}" alt="" />
+    </div>
+  {% endif %}
+</section>
+{% schema %}
+{
+  "name": "Boxes Images Bottom Left",
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "boxes_top",
+      "label": "Boxes Chair"
+    },
+    {
+      "type": "image_picker",
+      "id": "boxes_center",
+      "label": "Boxes Center"
+    }
+  ]
+}
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

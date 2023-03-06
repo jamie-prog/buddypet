@@ -1,0 +1,139 @@
+{% comment %}
+** Image with text - dynamic **
+- Draggable section
+- Uses blocks
+{% endcomment %}
+
+{% assign id = section.id %}
+{% comment %} Layout {% endcomment %}
+{% assign background_color = section.settings.background_color %}
+
+{% comment %} HTML markup {% endcomment %}
+<section class="section" 
+         {% if background_color != blank %}
+         	style="background-color: {{ background_color }};"
+         {% endif %}
+         >
+  <div class="container">
+    <div class="row">
+      <div class="col-12 col-md-6 section-content">
+      	<div class="section-inner">
+          {% if section.settings.title != blank %}
+          	<h2 style="color: {{ section.settings.heading_color }}">{{ section.settings.title }}</h2>
+          {% endif %}
+          {% if section.settings.subtitle != blank %}
+          	<h3>{{ section.settings.subtitle }}</h3>
+          {% endif %}
+          {% if section.settings.content != blank %}
+            <div class="image-with-text__text content">
+              {{ section.settings.content }}
+            </div>
+          {% endif %}
+        </div>
+      </div>
+      <div class="col-12 col-md-6 section-image">
+      	<div class="section-inner">
+          <div class="images-top">
+              {% if section.settings.icon_top != blank %}
+                {% render 'image-element',
+                              image: section.settings.icon_top,
+                              additional_classes: 'image-with-text__image image-top'
+                %}
+              {% endif %}
+            </div>
+          <div class="images-bottom">
+            <div class="images-main">
+              {% if section.settings.image_main != blank %}
+                {% render 'image-element',
+                              image: section.settings.image_main,
+                              additional_classes: 'image-with-text__image image-main desktop'
+                %}
+              {% endif %}
+              {% if section.settings.image_main != blank %}
+                {% render 'image-element',
+                              image: section.settings.image_main_mobile,
+                              additional_classes: 'image-with-text__image image-main mobile'
+                %}
+              {% endif %}
+             </div>
+            <div class="icon-bottom" data-aos="zoom-in-up" data-aos-delay="300" data-aos-duration="1000">
+              {% if section.settings.icon_bottom != blank %}
+                {% render 'image-element',
+                              image: section.settings.icon_bottom,
+                              additional_classes: 'image-with-text__image image-bottom'
+                %}
+              {% endif %}
+             </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Hemp for Pets",
+  "class": "image-with-text image-with-text-1 home-hemp-pets",
+  "settings": [
+    {
+      "type": "color",
+      "id": "background_color",
+      "label": "Background Color"
+    },
+    {
+      "type": "header",
+      "content": "Section Content"
+    },
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Heading"
+    },
+    {
+      "type": "color",
+      "id": "heading_color",
+      "label": "Heading Color"
+    },
+    {
+      "type": "text",
+      "id": "subtitle",
+      "label": "Subheading"
+    },
+    {
+      "type": "richtext",
+      "id": "content",
+      "label": "Text"
+    },
+    {
+      "type": "header",
+      "content": "Section Image"
+    },
+    {
+      "type": "image_picker",
+      "id": "icon_top",
+      "label": "Icon Top"
+    },
+    {
+      "type": "image_picker",
+      "id": "icon_bottom",
+      "label": "Icon Bottom"
+    },
+    {
+      "type": "image_picker",
+      "id": "image_main",
+      "label": "Image Main"
+    },
+	{
+      "type": "image_picker",
+      "id": "image_main_mobile",
+      "label": "Image Main Mobile"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Hemp for Pets"
+    }
+  ]
+}
+{% endschema %}

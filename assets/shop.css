@@ -1,0 +1,290 @@
+/*@font-face {
+  font-family: 'Stevie Sans Book';
+  src: url('Stevie_Sans_W00_Book.eot');
+  src: url('Stevie_Sans_W00_Book.eot?#iefix') format('embedded-opentype'),
+    url('Stevie_Sans_W00_Book.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Stevie Sans Bold';
+  src: url('Stevie_Sans_W00_ Bold.eot');
+  src: url('Stevie_Sans_W00_Bold.eot?#iefix') format('embedded-opentype'),
+    url('Stevie_Sans_W00_Bold.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Stevie Sans Light';
+  src: url('Stevie_Sans_W00_Light.eot');
+  src: url('Stevie_Sans_W00_Light.eot?#iefix') format('embedded-opentype'),
+    url('Stevie_Sans_W00_Light.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Stevie Sans Medium';
+  src: url('Stevie_Sans_W00_Medium.eot');
+  src: url('Stevie_Sans_W00_Medium.eot?#iefix') format('embedded-opentype'),
+    url('Stevie_Sans_W00_Medium.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Stevie Sans Thin';
+  src: url('Stevie_Sans_W00_Thin.eot');
+  src: url('Stevie_Sans_W00_Thin.eot?#iefix') format('embedded-opentype'),
+    url('Stevie_Sans_W00_Thin.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Stevie Sans';
+  src: url('Stevie_Sans_W00_Regular.eot');
+  src: url('Stevie_Sans_W00_Regular.eot?#iefix') format('embedded-opentype'),
+    url('Stevie_Sans_W00_Regular.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}*/
+/*Create Account, Forgot password, Active Account*/
+.login-page p.recover-note em{
+    font-style: normal;
+}
+.login-page h4{
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+.register-section .heading-wrapper .heading-divider--short{
+	display: none
+}
+.register-section div#create-customer .field > label,
+.reset-password form .field > label{
+	display:none
+}
+.register-section > .section__wrapper > .container{
+	display: block;
+     position: relative; 
+}
+.register-section > .section__wrapper .register,
+.register-section > .section__wrapper header,
+.section.reset-password .section__wrapper,
+.section.reset-password header{
+    width: 100%;
+    max-width: 536px;
+    margin: 0 auto;
+}
+.section.reset-password .section__wrapper,
+.section.reset-password header{
+	display:block;
+   max-width: 596px;
+}
+.register-section > .section__wrapper,
+.section.reset-password{
+	position: relative;
+}
+.register-section > .section__wrapper:before,
+.section.reset-password:before{
+    width: 100%;
+    height: 100%;
+    content: '';
+    display: inline-block;
+    position: absolute;
+    top: -5px;
+    left: -18px;
+    background-image: url(Oval-login.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+.register-section > .section__wrapper header{
+
+}
+.register-section > .section__wrapper header .heading-wrapper--register{
+	display:block;
+  	text-align:center;
+}
+.register-section > .section__wrapper{
+	padding: 90px 0 150px 0
+}
+.section.reset-password{
+	padding: 180px 0
+}
+.register-section .register form .button-center input,
+.reset-password form input[type=submit]{
+	width: 100%
+}
+.register-section .register form div.text-right{
+	margin-bottom: 24px;
+}
+.register-section .register form .has-padding-top{
+    font-size: 14px;
+    line-height: 19px;
+    letter-spacing: 0;
+    color: #676158;
+}
+.register-section .has-padding-top a {
+    padding-left: 5px;
+}
+.register-section .register form .errors{
+	margin-bottom: 20px
+}
+.login-page .field input, .section__wrapper .field input{
+    font-family: stevie-sans;
+    font-weight: 300;
+  font-size: 20px;
+  line-height: 30px
+}
+.customers-login div#recover-password .recover-options .has-margin-left{
+    margin-left: 0;
+    text-align: center;
+}
+.customers-reset_password form p.text{
+	margin-bottom: 20px
+}
+@media (max-width: 1024px){
+  .register-section>.section__wrapper:before,
+  .section.reset-password:before{
+  	top: 0;
+    left:0
+  }
+  .login-page .field input, .section__wrapper .field input{
+  	font-size: 18px;
+	}
+}
+@media (max-width: 991px){
+  .register-section>.section__wrapper .register, .register-section>.section__wrapper header{
+  	max-width: 460px
+  }
+}
+@media (max-width: 767px){
+  .register-section>.section__wrapper:before,
+  .section.reset-password:before{
+  	    background-size: cover;
+  }
+  .login-page .field input, .section__wrapper .field input{
+  		font-size: 16px;
+	}
+  .customers-register header .heading-wrapper--register .title{
+  	font-size: 40px;
+    line-height: 53px;
+  }
+  .section.reset-password{
+	padding: 100px 0
+	}
+}
+@media (max-width: 414px){
+  .register-section>.section__wrapper:before,
+  .section.reset-password:before{
+  	background-size: cover;
+    width: 584px;
+    left: -38%;
+  }
+  .register-section{
+  	    overflow: hidden!important;
+  }
+}
+@media (max-width: 370px){
+  .customers-register header .heading-wrapper--register .title{
+	font-size: 38px;
+  }
+}
+/*==========search==========*/
+.search header .title + .heading-divider{
+	display: none
+}
+.search header .heading-wrapper--search-page{
+	margin:0
+}
+.search .container.breadcrumb__container {
+    display: none;
+}
+.search main .container{
+	padding:0
+}
+.search main .container .column{
+
+
+}
+.search main .search__results .search__item,
+.search main .blog-main .featured-article.blog-card,
+.search main .product-items .item-product{
+	    min-height: auto;
+ 	margin-bottom: 30px
+}
+.search main .search__results,
+.search main .list-blog,
+.search main .product-items,
+.search main .form-search{
+	width: calc(100% + 20px);
+  margin-left:-10px
+}
+.search main .search__results .search-result__image-container{
+    margin: auto;
+    min-width: 50%;
+}
+.search main .search__results .search-result__image-container img{
+	max-height: 200px;
+  	width: auto;
+}
+.search__result.product-items .item-product .product-wrap{
+	padding-top: 30px;
+  padding-bottom: 30px;
+}
+.search-result__description .blog_meta {
+    font-size: 13px;
+    line-height: 26px;
+    text-transform: uppercase;
+    letter-spacing: .5px;
+    font-family: stevie-sans;
+    font-weight: 600;
+      margin-bottom: 14px;
+}
+.search-result__description .search-result__title{}
+.search .blog-main .featured-article.blog-card .image-element__wrap{
+	max-width: 100% !important
+}
+.list-item-results h4{
+	margin-top: 30px
+}
+.title-research h4{
+	margin-bottom:0;
+  padding-bottom: 0;
+}
+.search__no-results.container.form-search {
+    margin-top: 25px;
+    text-align: left;
+    margin-bottom: 20px;
+}
+.search__no-results.container.form-search .one-whole{
+	padding:0
+}
+.search-page .container{
+    max-width: 1846px;
+}
+.predictive-results li a:active, .predictive-results li a:hover{
+	text-decoration: none;
+  color:#676158
+}
+ .blog-main .featured-article.blog-card .card-content .meta-info .none{
+	display:none
+}
+.search .blog-main .featured-article.blog-card .card-content .meta-info .none{
+	display:block
+}
+.predictive-results li a:hover .result-info p,
+.predictive-results li a:active .result-info p,
+.predictive-results li a:visited .result-info p{
+	text-decoration: underline;
+    color: #f18079
+}
+.search main .search-form{
+	padding-top: 0;
+     
+}
+.search main .form-search .search__text-content.content{
+ 	margin-bottom: 15px;
+}
+.search main .search-form button svg{
+	opacity: 0;
+	filter: Alpha(opacity=0);
+}

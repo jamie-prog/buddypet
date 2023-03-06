@@ -1,0 +1,227 @@
+{% comment %}
+----------------
+Optional values
+product_recommendations: <boolean>
+{% endcomment %}
+
+{% comment %}Check for related products and increase limit by one (to offset the currently selected product that is removed from the product loop){% endcomment %}
+{% if related_products == true %}
+  {%- assign limit = limit | plus: 0 -%}
+  {%- assign loop_limit = limit | plus: 1 -%}
+  {%- assign hover_enabled = block.settings.show_related_products_title_on_hover -%}
+{% else %}
+  {%- assign limit = limit | plus: 0 -%}
+  {%- assign loop_limit = limit | plus: 0 -%}
+  {%- assign hover_enabled = settings.thumbnail_hover_enabled -%}
+{% endif %}
+
+{% if per_slide != blank %}
+  {%- assign visible_products = per_slide -%}
+{% else %}
+  {% if products_per != blank %}
+    {%- assign visible_products = products_per | plus: 0 -%}
+  {% else %}
+    {%- assign visible_products = products_per | plus: 0 -%}
+  {% endif %}
+{% endif %}
+
+{% if template contains 'product' %}
+  {% if limit <= visible_products %}
+    {%- assign products_length = limit -%}
+  {% else %}
+    {%- assign products_length = products.size | minus: 1 -%}
+  {% endif %}
+{% elsif featured_collection %}
+  {%- assign products_length = collections[featured_collection].products.size -%}
+{% elsif section.settings.show_product_recommendations %}
+  {%- assign products_length = limit -%}
+{% else %}
+  {%- assign products_length = products.size -%}
+{% endif %}
+
+{% if product_recommendations == true %}
+  {%- assign hover_enabled = settings.thumbnail_hover_enabled -%}
+{% endif %}
+ 
+{% if product.metafields.my_fields.featured_products != blank %}
+  {% assign productHandleSplits = product.metafields.my_fields.featured_products | split:';' %}
+  <div class=" slider-gallery product-items owl-carousel row 
+      {% if show_gutter == false %}has-no-side-gutter{% endif %}
+      products-slider products-length-{{ products_length }}
+      transparentBackground--{{ settings.slideshow_button_style }}"
+      data-products-per-slide="{{ visible_products }}"
+      data-products-limit="4"
+      data-products-available="{{ products_length }}">
+      {% for productHandleSplit in productHandleSplits limit: 4 %}
+    
+      {%- assign product = all_products[productHandleSplit] -%}
+        {%- assign collection_handles = product.collections | map: 'handle' -%}
+        {% if product.id != skip_product.id and product.title != blank %}
+          {%- assign feature_image = product.featured_image -%}
+            <div class="gallery-cell item-product thumbnail visible-{{ visible_products }} 
+                column has-thumbnail-sticker
+                {% if product.media[1] != blank and settings.show_secondary_image == true %}has-secondary-image-swap{% endif %}">
+              <div class="product-wrap">
+                <div class="product-image__wrapper">
+                  <div class="image__container product__imageContainer">
+                    <a href="{{ product.url | within: collection }}">
+                      {% if product.featured_media.preview_image != blank %}
+                        <div class="image-element__wrap">
+                          <img  alt="{{ alt | escape }}" src="{{ product.featured_media.preview_image | img_url: '2000x' }}" style="width: {{ widthImage }}px;"/>
+                        </div>
+                      {% else %}
+                        {% comment %}Build image element{% endcomment %}
+                        <div class="image-element__wrap"
+                          {% if calculate_aspect_ratio %}
+                            data-calculate-aspect-ratio
+                          {% endif %}
+                          style="{{ image_background_color }}{{ height_style }} {% unless stretch_width == true or object_fit %}max-width: {{ image.width }}px;{% endunless %}">
+                          <img  alt="{{ alt | escape }}"
+                              class="lazyload transition--{{ settings.image_loading_style }} {{ additional_classes }}"
+                              {% if low_quality_image %}
+                                  src="{{ low_quality_image }}"
+                              {% endif %}
+                              data-src="{{ image | img_url: '1600x' }}"
+                              data-sizes="auto"
+                              data-srcset="{{ srcset }}"
+                              data-aspectratio="{{ image.width }}/{{ image.height }}"
+                              height="{{ image.height }}"
+                              width="{{ image.width }}"
+                              srcset="data:image/svg+xml;utf8,<svg%20xmlns='http://www.w3.org/2000/svg'%20width='{{ image.width }}'%20height='{{ image.height }}'></svg>"
+                          />
+                        </div>
+                      {% endif %}
+                    </a>
+                  </div>
+                  {% if hover_enabled or settings.enable_quickshop %}
+                    <div class="thumbnail-info--links" style="display: block;">
+                      <div class="product-info  text-align-center">
+                        {% if hover_enabled %}
+                          <div class="animated fadeInDown">
+                            <div class="thumbnail-overlay">
+                              <div class="info text-align-{{ settings.thumbnail_text_alignment }}">
+                                {% render 'product-thumbnail-slider__product-info',
+                                          product: product,
+                                          collection_handles: collection_handles
+                                %}
+                              </div>
+                            </div>
+                          </div>
+                          {% endif %}
+
+                          {% if settings.enable_quickshop %}
+                          {% render 'product-thumbnail-slider__quick-shop-button', product: product %}
+                          {% endif %}
+
+                          {% if hover_enabled %}
+                          {% if settings.enable_shopify_collection_badges and settings.enable_shopify_review_comments %}
+                              <span class="shopify-product-reviews-badge" data-id="{{ product.id }}"></span>
+                          {% endif %}
+                          {% endif %}
+                      </div>
+                    </div>
+                  {% endif %}
+                  </div>
+                  {% if hover_enabled == false %}
+                  <div class="thumbnail__caption text-align-{{ settings.thumbnail_text_alignment }}">
+                      {% render 'product-thumbnail__product-info',
+                              product: product,
+                              collection_handles: collection_handles
+                      %}
+                  </div>
+                {% endif %}
+              </div>
+              {% render 'product-thumbnail__swatch', product: product %}
+          </div>
+        {% endif %}
+      {% endfor %}
+  </div>
+{% else %}
+  <div class=" slider-gallery product-items owl-carousel row 
+    {% if show_gutter == false %}has-no-side-gutter{% endif %}
+      products-slider products-length-{{ products_length }}
+      transparentBackground--{{ settings.slideshow_button_style }}"
+      data-products-per-slide="{{ visible_products }}"
+      data-products-limit="{{ limit }}"
+      data-products-available="{{ products_length }}">
+    {% for product in products limit: for_limit %}
+      {%- assign collection_handles = product.collections | map: 'handle' -%}
+
+      {% if product.id != skip_product.id %}
+        {%- assign feature_image = product.featured_image -%}
+        <div class="gallery-cell item-product thumbnail visible-{{ visible_products }} 
+             column has-thumbnail-sticker">
+          <div class="product-wrap">
+            <div class="product-image__wrapper">
+              <div class="image__container product__imageContainer">
+                <a href="{{ product.url | within: collection }}">
+                  {% if product.featured_media.preview_image != blank %}
+                    <div class="image-element__wrap">
+                        <img  alt="{{ alt | escape }}" src="{{ product.featured_media.preview_image | img_url: '2000x' }}" style="width: {{ widthImage }}px;"/>
+                    </div>
+                  {% else %}
+                    {% comment %}Build image element{% endcomment %}
+                    <div class="image-element__wrap"
+                      {% if calculate_aspect_ratio %}
+                        data-calculate-aspect-ratio
+                      {% endif %}
+                      style="{{ image_background_color }}{{ height_style }} {% unless stretch_width == true or object_fit %}max-width: {{ image.width }}px;{% endunless %}">
+                      <img  alt="{{ alt | escape }}"
+                          class="lazyload transition--{{ settings.image_loading_style }} {{ additional_classes }}"
+                          {% if low_quality_image %}
+                              src="{{ low_quality_image }}"
+                          {% endif %}
+                          data-src="{{ image | img_url: '1600x' }}"
+                          data-sizes="auto"
+                          data-srcset="{{ srcset }}"
+                          data-aspectratio="{{ image.width }}/{{ image.height }}"
+                          height="{{ image.height }}"
+                          width="{{ image.width }}"
+                          srcset="data:image/svg+xml;utf8,<svg%20xmlns='http://www.w3.org/2000/svg'%20width='{{ image.width }}'%20height='{{ image.height }}'></svg>"
+                      />
+                    </div>
+                  {% endif %}
+                </a>
+              </div>
+              {% if hover_enabled or settings.enable_quickshop %}
+                <div href="{{ product.url | within: collection }}" class="thumbnail-info--links">
+                  <div class="product-info  text-align-center">
+                    {% if hover_enabled %}
+                      <div class="animated fadeInDown">
+                        <div class="thumbnail-overlay">
+                          <div class="info text-align-{{ settings.thumbnail_text_alignment }}">
+                            {% render 'product-thumbnail-slider__product-info',
+                                    product: product,
+                                    collection_handles: collection_handles
+                            %}
+                          </div>
+                        </div>
+                      </div>
+                    {% endif %}
+                    {% if settings.enable_quickshop %}
+                      {% render 'product-thumbnail-slider__quick-shop-button', product: product %}
+                    {% endif %}
+                    {% if hover_enabled %}
+                      {% if settings.enable_shopify_collection_badges and settings.enable_shopify_review_comments %}
+                        <span class="shopify-product-reviews-badge" data-id="{{ product.id }}"></span>
+                      {% endif %}
+                    {% endif %}
+                  </div>
+                </div>
+              {% endif %}
+            </div>
+            {% if hover_enabled == false %}
+              <div class="thumbnail__caption text-align-{{ settings.thumbnail_text_alignment }}">
+                {% render 'product-thumbnail__product-info',
+                        product: product,
+                        collection_handles: collection_handles
+                %}
+              </div>
+            {% endif %}
+          </div>
+          {% render 'product-thumbnail__swatch', product: product %}
+        </div>
+      {% endif %}
+    {% endfor %}
+  </div>
+{% endif %}

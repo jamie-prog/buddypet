@@ -1,0 +1,48 @@
+{% comment %}
+** Image with text - dynamic **
+- Draggable section
+- Uses blocks
+{% endcomment %}
+
+{% assign id = section.id %}
+{% comment %} Layout {% endcomment %}
+{% assign background_color = section.settings.background_color %}
+
+{% comment %} HTML markup {% endcomment %}
+<div class="help-chat">
+    <div class="section-inner">
+      
+      	{% if section.settings.content_top != blank %}
+      <div class="content-top">{{ section.settings.content_top }}</div>
+          {% endif %}
+      {% if section.settings.title != blank %}
+          	<h3>{{ section.settings.title }}</h3>
+          {% endif %}
+      	{% if section.settings.content_bottom != blank %}
+      <div class="content-bottom">{{ section.settings.content_bottom}}</div>
+          {% endif %}
+        
+    </div>
+  </div>
+{% schema %}
+{
+  "name": "Chat Section",
+  "settings": [
+    {
+      "type": "textarea",
+      "id": "content_top",
+      "label": "Section Content Top"
+    },
+    {
+          "type": "text",
+          "id": "title",
+          "label": "Section Title"
+        },
+    {
+          "type": "textarea",
+          "id": "content_bottom",
+          "label": "Section Content Bottom"
+        }
+  ]
+}
+{% endschema %}

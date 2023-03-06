@@ -1,0 +1,209 @@
+{% for tag in product.tags %}
+  {% if tag contains 'title_color' %}
+      {% assign colour = tag | split: ':' %}
+      {% assign bkgColour = tag | split: ':' %}
+  {% endif %}
+{% endfor %}
+{% for tag in product.tags %}
+  {% if tag contains 'color_product' %}
+      {% assign colour = tag | split: ':' %}
+  {% endif %}
+{% endfor %}
+<div data-section-type="product__additional-content" data-section-id="{{section.id}}">
+  <div class="container">
+    <div class="ad-infos__wrapper">
+      {%- if product.metafields.accentuate.title != blank or product.metafields.accentuate.how_to_use != blank or product.metafields.accentuate.dosage_used != blank -%}
+        <div class="ad-info__item">
+          {%- if product.metafields.accentuate.title != blank -%}
+            <h3 class="ad-info--title" {%- if product.metafields.accentuage.color_title != blank -%}style="color: {{ product.metafields.accentuate.color_title }}"{%- endif -%}>{{product.metafields.accentuate.title}}</h3>
+          {%- endif -%}
+          {% if product.metafields.accentuate.how_to_use != blank or product.metafields.accentuate.dosage_used != blank %}
+            <div class="description ad-info--content">
+                {% if product.metafields.accentuate.how_to_use != blank %}
+                <div class="how_to_use">
+                  <div class="content-details"
+                    {% if product.metafields.accentuate.color_how_to_use != blank %}
+                        style="color: {{ product.metafields.accentuate.color_how_to_use }}"
+                    {% endif %}
+                      >
+                    {{ product.metafields.accentuate.how_to_use }}
+                  </div>
+                </div>
+                {% endif %}
+                {% if product.metafields.accentuate.dosage_used != blank or  product.metafields.accentuate.dosage_used_more != blank %}
+                <div class="dosage_used"
+                    >
+                  {% if product.metafields.accentuate.dosage_used != blank %}
+                    <div class="content-details"
+                        >
+                      {{ product.metafields.accentuate.dosage_used }}
+                    </div>
+                  {% endif %}
+                  {% if product.metafields.accentuate.dosage_used_more != blank %}
+                    <div class="content-details"
+                      {% if product.metafields.accentuate.color_dosage_used_more != blank %}
+                          style="color: {{ product.metafields.accentuate.color_dosage_used_more }}"
+                      {% endif %}
+                        >
+                      {{ product.metafields.accentuate.dosage_used_more }}
+                    </div>
+                  {% endif %}
+                </div>
+                {% endif %}
+            </div>
+          {% endif %}
+        </div>
+      {%- endif -%}
+      
+      {% if product.metafields.accentuate.ingredients_title != blank or product.metafields.accentuate.ingredients != blank %}
+        <div class="ad-info__item">
+          {% if product.metafields.accentuate.ingredients_title != blank %}
+              <h3 style="color:  {{ product.metafields.accentuate.color_title }}" class="ad-info--title">{{ product.metafields.accentuate.ingredients_title }}</h3>
+          {% endif %}
+          {% if product.metafields.accentuate.ingredients != blank %}
+              <div class="description ad-info--content">
+                {{ product.metafields.accentuate.ingredients }}
+              </div>
+          {% endif %}
+        </div>
+      {% endif %}  
+      
+      {%- if product.metafields.accentuate.disclaimer != blank -%}
+        <div class="ad-info__item disclaimer">{{product.metafields.accentuate.disclaimer}}</div>
+      {%- endif -%}
+
+      {%- if product.metafields.accentuate.information_title != blank or product.metafields.accentuate.description != blank -%}
+        <div class="ad-info__item">
+          {% if product.metafields.accentuate.information_title != blank %}
+            <h3 style="color: #{{colour[1]}}" class="ad-info--title">{{ product.metafields.accentuate.information_title }}</h3>
+          {% endif %}
+          {% if product.metafields.accentuate.description != blank %}
+              <div class="description ad-info--content">
+                {{ product.metafields.accentuate.description }}
+              </div>
+          {% endif %}
+        </div>
+      {%- endif -%}           
+      {%- comment -%}
+      <div class="ad-info__item">
+        {% if product.metafields.accentuate.nutrient_name != blank %}
+            <h3 class="nutrition-title-custom ad-info--title"
+                {% if product.metafields.accentuate.color_title != blank %}
+                    style="color: {{ product.metafields.accentuate.color_title }}"
+                {% endif %}>
+              {{ product.metafields.accentuate.nutrition_title }}</h3>
+        {% endif %}
+        <div class="description ad-info--content nutrition--table">
+          <div class="table-title">
+            {% if product.metafields.accentuate.serving_per_pack_title != blank or product.metafields.accentuate.serving_size != blank %}
+              <p class="serving-content">
+                {% if product.metafields.accentuate.serving_per_pack_title != blank %}
+                <span class="serving-first">{{ product.metafields.accentuate.serving_per_pack_title }} : {{ product.metafields.accentuate.servings_per_pack }}</span>
+                {% endif %}
+                {% if product.metafields.accentuate.serving_size_title != blank %}
+                  <span class="serving-last">{{ product.metafields.accentuate.serving_size_title }} : {{ product.metafields.accentuate.serving_size }}</span>
+                {% endif %}
+              </p>
+            {% endif %}
+          </div>
+          {% if product.metafields.accentuate.qty_per_serving_title != blank or product.metafields.accentuate.qty_per_100qty_title != blank or product.metafields.accentuate.qty_per_serving[forloop.index0] or product.metafields.accentuate.qty_per_100qty[forloop.index0] %}
+            <div class="table-content">
+              <div class="table">
+                <div class="thead">
+                  <div class="tr">
+                    <div class="th"></div>
+                    <div class="th">{{ product.metafields.accentuate.qty_per_serving_title }}</div>
+                    <div class="th">{{ product.metafields.accentuate.qty_per_100qty_title }}</div>
+                  </div>
+                </div>
+                <div class="tbody">
+                  {% for value in product.metafields.accentuate.nutrient_name %} 
+                  <div class="tr">
+                    <div class="td">{{ value }}</div>
+                    <div class="td">{{ product.metafields.accentuate.qty_per_serving[forloop.index0] }}</div>
+                    <div class="td td-last">{{ product.metafields.accentuate.qty_per_100qty[forloop.index0] }}</div>
+                  </div>
+                  {% endfor %} 
+                </div>
+              </div>
+            </div>
+          {% endif %}
+        </div>
+      </div>
+      {%- endcomment -%}
+      {%- if section.settings.show_contact_info -%}
+        <div class="ad-info__item chat-with-us">
+          <h3 class="ad-info--title">{{section.settings.contact_title}}</h3>
+          <div class="ad-info--content">
+            <p>{{section.settings.contact_content}}</p>
+            <div class="contact-addresses--wrapper">
+              {%- if section.settings.phone -%}
+                <a href="tel:{{section.settings.phone}}" class="contact-item">{% render 'icon-phone' %}Call Us</a>
+              {%- endif -%}
+              {%- if section.settings.email -%}
+                <a href="mailto:{{section.settings.email}}" class="contact-item">{% render 'icon-email' %}Email Us</a>
+              {%- endif -%}
+              <a href="{{ section.settings.contact_link }}" class="contact-item">{% render 'icon-chat' %}{{ section.settings.chat_label}}</a>
+            </div>
+          </div>
+        </div>
+      {%- endif -%}
+    </div>
+  </div>
+</div>
+{% schema %}
+{
+  "name":"Additional Informations", 
+  "templates":["product"],
+  "settings":[
+    {
+      "type": "header",
+      "content": "Contact Info"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_contact_info",
+      "label": "Show Contact",
+      "default": true
+    },
+    {
+      "type": "text",
+      "id": "contact_title",
+      "label": "Contact Title",
+      "default": "reach out"
+    },
+    {
+      "type": "textarea",
+      "id": "contact_content",
+      "label": "Contact Content",
+      "default": "If you have any questions, we'd love to help!"
+    },
+    {
+      "type": "text",
+      "id": "phone",
+      "label": "Phone"
+    },
+    {
+      "type": "text",
+      "id": "email",
+      "label": "Email"
+    },
+    {
+      "type": "text",
+      "id": "chat_label",
+      "label": "Chat Label",
+      "default": "Chat With Us"
+    },
+    {
+      "type": "url",
+      "id": "contact_link",
+      "label": "Contact Link"
+    }
+  ], 
+  "presets":[
+    {
+        "name":"Additional Informations"
+    }
+  ]
+}
+{% endschema %}

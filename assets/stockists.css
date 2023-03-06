@@ -1,0 +1,501 @@
+main#template-page-stockists {
+    padding-bottom: 152px;
+}
+.page-stockists main #shopify-section-stockists_banner .container{
+	padding:0;
+  max-width:100%
+}
+.page-stockists main #shopify-section-stockists_banner{
+    margin-top: 24px;
+}
+.page-stockists main #shopify-section-stockists_banner img{
+	padding-top:0 !important
+}
+.page-stockists main .banner__wrapper.one-whole.column.dark-overlay-false.is-medium {
+    overflow: inherit;
+      max-height: 100%;
+}
+.page-stockists .page__container .heading-wrapper--page.heading-wrapper{
+	margin-bottom:12px
+}
+#template-page-stockists>section.section{
+    margin-top: -12.6px;
+}
+#template-page-stockists>section.section h1.page__title.title{
+    margin-top: 11px;
+    margin-left: 0;
+}
+h1.page__title.title{
+    font-size: 59px;
+    line-height: 59px;
+    font-family: 'Cocogoose';
+    color: #0f3833;
+    font-weight: 400;
+    margin-bottom: 0;
+    margin-top: 41px;
+    margin-left: 3px;
+}
+.page-stockists .page__container .heading-wrapper--page.heading-wrapper .heading-divider:not(.heading-divider--vertical){
+	display:none
+}
+.page-stockists main #stockist-widget .stockist-horizontal .stockist-side-panel{
+	width:39%
+}
+.page-stockists main #stockist-widget .stockist-map{
+	left: 39%;
+    margin-left: 38px;
+  margin-top:10px;
+}
+.page-stockists main #stockist-widget .stockist-query-entry .stockist-search-field{
+        color: #0f3833;
+    font-size: 16px;
+    line-height: 19px;
+    border: 0;
+    background: transparent;
+    border-bottom: 1px solid #0e3733;
+    padding: 5px;
+    font-family: 'TTNorms-Bold';
+    height: auto;
+  	border-radius: 0;
+}
+.page-stockists main .stockist-search-field::-webkit-input-placeholder { 
+  color: #0f3833;
+}
+.page-stockists main .stockist-search-field::-moz-placeholder { 
+  color: #0f3833;
+}
+.page-stockists main .stockist-search-field:-ms-input-placeholder { 
+  color: #0f3833;
+}
+.page-stockists main .stockist-search-field:-moz-placeholder { 
+  color: #0f3833;
+}
+.page-stockists main #stockist-widget .stockist-query-entry .stockist-search-button button{
+      background: transparent;
+    position: absolute;
+    right: 0;
+    left: auto;
+    bottom: 0;
+    color: #0e3733;
+    padding: 0;
+    width: 25px;
+    height: 25px;
+      outline: none;
+}
+.page-stockists main #stockist-widget .stockist-icon-search{
+	width: 25px;
+    height: 25px;
+  background:url('search.svg')
+}
+.page-stockists main #stockist-widget .stockist-icon-search:before{
+	display:none
+}
+.page-stockists main #stockist-widget .stockist-result-list ul{
+	margin-top: 0px;
+    margin-right: 0;
+}
+.page-stockists main #stockist-widget .stockist-result-list ul>li {
+	border-top: 0px dotted #ccc;
+    border-left: 0px solid transparent;
+    padding-top: 0;
+    margin-bottom: 30px;
+    padding-bottom: 0;
+}
+.page-stockists main #stockist-widget .stockist-result-list ul>li:last-child{
+	margin-bottom:0
+}
+.page-stockists main #stockist-widget .stockist-result-list ul>li.stockist-selected>div.stockist-result-name,
+.page-stockists main #stockist-widget .stockist-result-list ul>li.stockist-selected>div:hover,
+.page-stockists main #stockist-widget .stockist-list-result>div.stockist-result-name:hover{
+    text-decoration: underline;
+}
+.page-stockists main #stockist-widget .stockist-list-result .stockist-result-distance {
+    width: auto;
+  top:22px;
+  left:10px;
+}
+.page-stockists main #stockist-widget .stockist-result-message .stockist-result-message-text{
+    margin-top: 5px;
+    padding-left: 5px;
+}
+.page-stockists main #stockist-widget .stockist-list-result>.stockist-result-distance>.stockist-icon,
+.page-stockists main #stockist-widget .stockist-result-message .stockist-icon{
+ 	background:url('icon-address.png');
+      display: block;
+        width: 30px;
+    height: 40px;
+    background-size: contain;
+      background-repeat: no-repeat;
+}
+.page-stockists main #stockist-widget .stockist-list-result>.stockist-result-distance>.stockist-icon:befofe,
+.page-stockists main #stockist-widget .stockist-result-message .stockist-icon:before{
+	display:none !important;
+  font-size:0
+}
+.page-stockists main #stockist-widget .stockist-list-result>div:not(.stockist-result-distance) {
+    padding-left: 92px;
+    font-size: 24px;
+    line-height: 34px;
+    color: #0f3833;
+    font-family: 'TTNorms-Regular';
+}
+.page-stockists main #stockist-widget .stockist-list-result>div.stockist-result-name{
+    font-size: 22px;
+    line-height: 26px;
+    color: #0f3833;
+    font-family: 'Cocogoose';
+    font-weight: 400;
+    text-transform: uppercase;
+    margin-bottom:4px;
+    display: inline-block;
+}
+.page-stockists main #stockist-widget .stockist-list-result>div {
+    clear: both;
+}
+.page-stockists main #stockist-widget .stockist-result-addr-locality{
+	display:inline-block
+}
+.page-stockists main #stockist-widget .stockist-result-addr-locality:after{
+	content:',';
+  display: inline-block;
+    margin-right: 3px;
+}
+.page-stockists main #stockist-widget .stockist-result-addr-country{
+	display:inline-block
+}
+.page-stockists main #stockist-widget .stockist-result>div.stockist-result-details{
+	margin-top:0
+}
+.page-stockists main #stockist-widget .stockist-list-result>div a{
+	color: #0f3833;
+}
+.page-stockists main #stockist-widget .stockist-horizontal .stockist-result-list {
+   /* height: 100% !important;*/
+}
+.page-stockists main #stockist-widget .stockist-query-entry {
+    display: block;
+    padding-right: 35px;
+    position: relative;
+}
+.page-stockists main #stockist-widget .stockist-search-form{
+    width: 39%;
+    margin-left: 8px;
+    position: relative;
+  	margin-bottom: 93px;
+}
+.page-stockists main #stockist-widget .stockist-result .stockist-result-website{
+	overflow: inherit;
+    text-overflow: inherit;
+}
+.page-stockists main #stockist-widget .stockist-map.stockist-map-leaflet .stockist-map-inner .leaflet-bottom.leaflet-left{
+	display:none
+}
+.page-stockists main #stockist-widget .stockist-result-message {
+    border-top: 0px dotted #ccc;
+}
+@media (max-width: 1700px){
+  h1.page__title.title {
+      font-size: 55px;
+      line-height: 60px;
+  }
+}
+@media (max-width: 1600px){
+  h1.page__title.title {
+      font-size: 50px;
+      line-height: 55px;
+  }
+  #template-page-stockists>section.section h1.page__title.title{
+  	margin-left:5px;
+  }
+}
+@media (max-width: 1400px){
+  h1.page__title.title {
+      font-size: 45px;
+      line-height: 55px;
+  }
+  .page-stockists main #stockist-widget .stockist-list-result>div.stockist-result-name {
+      font-size: 20px;
+      line-height: 1.4;
+  }
+  .page-stockists main #stockist-widget .stockist-list-result>div:not(.stockist-result-distance){
+      font-size: 21px;
+      line-height: 1.5;
+    padding-left: 70px;
+  }
+  .page-stockists main #stockist-widget .stockist-list-result>.stockist-result-distance>.stockist-icon,
+  .page-stockists main #stockist-widget .stockist-result-message .stockist-icon{
+    width: 25px;
+    height: 33px
+  }
+}
+@media (max-width: 1365px){
+  h1.page__title.title {
+      font-size: 50px;
+      line-height: 60px;
+	}
+}
+@media (max-width: 1200px){
+  h1.page__title.title {
+      font-size: 40px;
+      line-height: 50px;
+  }
+}
+@media (max-width: 1023px){
+  h1.page__title.title {
+      font-size: 34px;
+      line-height: 34px;
+  }
+  .page-stockists main #stockist-widget .stockist-list-result>div:not(.stockist-result-distance){
+  	padding-left:66px;
+    font-size:20px;
+  }
+  .page-stockists main #stockist-widget .stockist-list-result>div.stockist-result-name{
+  	font-size:18px;
+  }
+}
+@media (max-width: 992px){
+  .page-stockists main #stockist-widget .stockist-list-result>.stockist-result-distance>.stockist-icon,
+  .page-stockists main #stockist-widget .stockist-result-message .stockist-icon{
+      width: 18px;
+      height: 24px;
+  }
+  .page-stockists main #stockist-widget .stockist-list-result>div:not(.stockist-result-distance) {
+    padding-left: 55px;
+    font-size: 17px;
+  }
+  .page-stockists main #stockist-widget .stockist-list-result>div.stockist-result-name {
+      font-size: 16px;
+  }
+  .stockist-result-message .stockist-result-message-text {
+      margin-top: 0;
+      padding-left: 5px;
+      font-size: 20px;
+      line-height: 28px;
+  }
+}
+.show-desktop{}
+.show-mobile{
+	display:none !important;
+}
+@media (max-width: 992px) and (min-width:768px){
+  #template-page-stockists>section.section {
+      margin-top: -15px;
+  }
+  .page-stockists main #stockist-widget .stockist-search-form{
+  	margin-bottom: 60px;
+  }
+  main#template-page-stockists {
+      padding-bottom: 70px;
+  }
+}
+@media (max-width:780px) and (min-width:768px){
+  .page-stockists main #stockist-widget .stockist-map{
+  	position: absolute;
+  }
+}
+@media (max-width:768px){
+  
+}
+@media (max-width:767px){
+  .show-desktop{
+  	display:none !important;
+  }
+  .show-mobile{
+      display:block !important;
+  }
+  .page-stockists main #shopify-section-stockists_banner {
+      margin-top: 0;
+      padding-left: 22px;
+      padding-right: 22px;
+  }
+  #template-page-stockists>section.section {
+      margin-top: 0;
+      clear: both;
+    position: relative;
+    padding-top: 4px;
+    padding-bottom: 0;
+  }
+  .page-stockists main #stockist-widget .stockist-query-entry .stockist-search-field{
+      border-bottom: 2px solid #0e3733;
+  }
+  .page-stockists main #stockist-widget .stockist-query-entry{
+  	padding-right:30px;
+    margin-right:20px;
+  }
+  .page-stockists main #stockist-widget .stockist-search-form{
+ 	 width: 100%;
+    margin-top: 34px;
+    margin-bottom: 48px;
+    margin-left: 10px;
+  }
+  #template-page-stockists>section.section .is-width-standard>.container.page__container{
+        position: absolute;
+    top: 671px;
+    max-width: 74%;
+    left: 13%;
+    margin-left: 54px;
+  }
+  .page-stockists main #stockist-widget .stockist-list-result .stockist-result-distance{
+      top: 4px;
+    left: 11px;
+  }
+  .page-stockists main #stockist-widget .stockist-list-result>.stockist-result-distance>.stockist-icon,
+  .page-stockists main #stockist-widget .stockist-result-message .stockist-icon{
+      width: 20px;
+      height: 26px;
+  }
+  .page-stockists main #stockist-widget .stockist-query-entry .stockist-search-field{
+  	font-size:14px;
+    line-height:17px;
+    letter-spacing: 0.5px;
+  }
+  .page-stockists main #stockist-widget .stockist-icon-search{
+  	width: 20px;
+    height: 20px;
+  }
+  .page-stockists main #stockist-widget .stockist-query-entry .stockist-search-button button{
+  	width: 20px;
+    height: 20px;
+    bottom:2px;
+  }
+  .page-stockists main #stockist-widget .stockist-map {
+          left: 0;
+      margin-left: 0;
+      width: 100%;
+      order: -1;
+      -webkit-order: -1;
+      height: 514px;
+      margin-bottom: 0;
+      max-width: 72%;
+      margin-left: auto;
+      margin-right: auto;
+        position: relative;
+  }
+  .page-stockists main #stockist-widget .stockist-map:before{
+  	    content: '';
+    display: block;
+    width: 130px;
+    height: 46px;
+    background: url(sen-mobile.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    position: absolute;
+    left: -28%;
+    bottom: 0;
+  }
+  .page-stockists main #stockist-widget .stockist-map:after{
+  	    content: '';
+    display: block;
+    width: 100px;
+    height: 136px;
+    background: url(dow-mobile.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    position: absolute;
+    right: -30%;
+    bottom: 0;
+  }
+  .page-stockists main #stockist-widget .stockist-horizontal .stockist-side-panel {
+      width: 100%;
+  }
+  .page-stockists main #stockist-widget .stockist-horizontal{
+      display: flex;
+      display: -webkit-flex;
+      flex-wrap: wrap;
+      -webkit-flex-wrap: wrap;
+      max-width: 74%;
+      margin-left: auto;
+      margin-right: auto;
+      margin-top: 120px;
+  }
+  h1.page__title.title {
+      font-size: 34px;
+      line-height: 40px;
+  }
+  .page-stockists main #stockist-widget .stockist-list-result>div:not(.stockist-result-distance) {
+    font-size: 18px;
+    line-height:28px;
+  }
+  .page-stockists main #stockist-widget .stockist-list-result>div.stockist-result-name {
+      font-size: 18px;
+      line-height: 22px;
+        margin-bottom: 2px;
+  }
+  .page-stockists main #stockist-widget .stockist-result-list ul>li{
+  	margin-bottom:37px;
+  }
+  main#template-page-stockists {
+      padding-bottom: 152px;
+  }
+  .page-stockists main #stockist-widget .stockist-result-message .stockist-result-message-text{
+  	margin-top: 0;
+    padding-left: 5px;
+    font-size: 18px;
+    line-height: 28px;
+  }
+}
+@media (max-width:700px){
+  .page-stockists main #stockist-widget .stockist-map{
+  	max-width:100%
+  }
+  .page-stockists main #stockist-widget .stockist-map:before{
+      background-position: bottom;
+    width: 22%;
+        margin-left: -20px;
+        left: -19%;
+  }
+  .page-stockists main #stockist-widget .stockist-map:after{
+  	    position: absolute;
+    right: -22%;
+    bottom: 0;
+    background-position: bottom;
+    width: 18%;
+    margin-right: -20px;
+  }
+  .page-stockists main #stockist-widget .stockist-horizontal{
+  	max-width: 100%
+  }
+  #template-page-stockists>section.section .is-width-standard>.container.page__container{
+      max-width: 100%;
+    left: 10%;
+  }
+}
+@media (max-width:575px){
+	.page-stockists main #stockist-widget .stockist-map{
+      height:400px
+    }
+  #template-page-stockists>section.section .is-width-standard>.container.page__container{
+  	top:558px;
+  }
+}
+@media (max-width:480px){
+	.page-stockists main #stockist-widget .stockist-map{
+     	 height:350px
+    }
+    #template-page-stockists>section.section .is-width-standard>.container.page__container{
+      	top:507px;
+    }
+}
+@media (max-width:370px){
+  .page-stockists main #stockist-widget .stockist-map{
+  	height:300px;
+    max-width: 90%;
+  }
+  #template-page-stockists>section.section .is-width-standard>.container.page__container{
+  	top:458px;
+    left:3%
+  }
+  .page-stockists main #stockist-widget .stockist-map:before{
+  	width: 28%;
+  }
+  .page-stockists main #stockist-widget .stockist-map:after{
+  	width:23%
+  }
+  .page-stockists main #stockist-widget .stockist-horizontal {
+      max-width: 100%;
+  }
+  main#template-page-stockists {
+      padding-bottom: 100px;
+  }
+}
+

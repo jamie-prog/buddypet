@@ -1,0 +1,208 @@
+.login-page .field > .label, 
+.login-page .heading-divider:not(.heading-divider--vertical) {
+    display: none;
+}
+body .login-page {
+	max-width: 1160px;
+  	padding: 0 30px;
+    margin: 0 auto;
+}
+.login-page section.section.is-width-standard {
+  	padding-top: 96px;
+  	padding-bottom: 245px;
+  	margin-bottom: 110px;
+    position: relative;
+}
+.login-page section.section.is-width-standard:before {
+    width: 100%;
+    height: 100%;
+  	content: '';
+  	display: inline-block;
+    position: absolute;
+    top: -5px;
+    left: -18px;
+  	background-image: url(Oval-login.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+.login-page .heading-wrapper {
+    display: block;
+    text-align: center;
+    margin-bottom: 0;
+}
+.login-page .container {
+    max-width: none;
+    display: block;
+}
+.login-page h3 {
+    font-size: 60px;
+    line-height: 80px;
+    font-family:'stevie-sans';
+    font-weight: 200;
+    letter-spacing: -0.2px;
+    color: #294D45;
+    text-transform: lowercase;
+}
+.login-page .field input,
+.section__wrapper .field input{
+    height: 60px;
+    color: #676158;
+    padding: 5px 25px;
+    border: 1px solid #D9D8D7;
+  	border-radius: 8px;
+  font-family:'stevie-sans';
+    font-weight: 300;
+}
+.login-page .field input::placeholder,
+.section__wrapper .field input::placeholder{
+    color: #6761588c;
+}
+.login-page .one-half {
+    width: 100%;
+  	max-width: 536px;
+  	margin: 0 auto;
+}
+.login-page .login__form p, 
+.login-page .one-half .errors {
+    margin-bottom: 10px;
+}
+.login-page .is-justify-space-between {
+    display: block;
+}
+.login-page .action.primary, 
+.login-page input.button.button--secondary {
+    width: 100%;
+  	height: 55px;
+}
+.login-page input.button.button--secondary {
+	margin-bottom: 15px;
+}
+.login-page .has-margin-left {
+    text-align: right;
+    display: block;
+    padding-bottom: 24px;
+    margin-top: -6px;
+}
+.login-page .has-padding-top {
+    text-align: center;
+    padding-top: 50px;
+}
+.login-page .has-padding-top a {
+    padding-left: 5px;
+}
+.login-page .has-padding-top, 
+.login-page .has-margin-left a {
+    font-size: 14px;
+    line-height: 19px;
+    font-weight: 400;
+    font-family: 'stevie-sans';
+    letter-spacing: 0px;
+    color: #676158;
+}
+.login-page h3.title:not(:last-child) {
+    margin-bottom: 24px;
+}
+.login-page .animated.fadeInUp {
+    text-align: center;
+}
+.login-page h4.has-padding-bottom {
+    padding-bottom: 0;
+}
+.login-page p.recover-note {
+    padding-top: 0;
+}
+@media (max-width: 1400px) {
+	.login-page h3 {
+        font-size: 50px;
+        line-height: 65px;
+    }
+}
+@media (max-width: 1024px) {
+	.login-page h3 {
+        font-size: 45px;
+        line-height: 55px;
+    }
+  	.login-page section.section.is-width-standard {
+        padding-top: 90px;
+        padding-bottom: 150px;
+        margin-bottom: 70px;
+    }
+  	.login-page .heading-wrapper {
+		padding-top: 20px;
+  	}
+  	.login-page section.section.is-width-standard:before {
+        top: 0;
+        left: 0;
+    }
+  	.login-page .has-padding-top {
+        padding-top: 30px;
+    }
+}
+@media (max-width: 991px) {
+	.login-page .one-half {
+        max-width: 460px;
+    }
+    .login-page .heading-wrapper {
+		padding-top: 50px;
+  	}
+  	.login-page section.section.is-width-standard {
+        margin-bottom: 20px;
+    }
+}
+@media (max-width: 767px) {
+	.login-page h3 {
+        font-size: 40px;
+        line-height: 53px;
+    }
+  	.login-page .has-padding-top, 
+    .login-page .has-margin-left a {
+        font-size: 12px;
+        line-height: 16px;
+    }
+  	.login-page .action.primary, 
+    .login-page input.button.button--secondary {
+        height: 48px;
+    }
+    body .login-page {
+		padding: 0;
+    }
+  	.login-page section.section.is-width-standard {
+        margin-bottom: 50px;
+      	padding-top: 50px;
+    }
+  	.login-page .heading-wrapper {
+        padding-top: 46px;
+    }
+  	.login-page h3.title:not(:last-child) {
+        margin-bottom: 17px;
+    }
+    .login-page .field:not(:last-child) {
+        margin-bottom: 10px;
+    }
+  	.login-page .has-margin-left {
+        padding-bottom: 18px;
+        margin-top: 0;
+    }
+  	.login-page input.button.button--secondary {
+        margin-bottom: 10px;
+    }
+  	.login-page .has-padding-top {
+        padding-top: 21px;
+    }
+}
+@media (max-width: 639px) {
+	.login-page section.section.is-width-standard:before {
+      	background-size: cover;
+    }
+}
+@media (max-width: 375px) {
+	.login-page section.section.is-width-standard:before {
+        top: -5px;
+      	background-position: left -142px center;
+    }
+  	.login-page section.section.is-width-standard {
+      	padding-top: 0;
+      	padding-bottom: 130px;
+    }
+}

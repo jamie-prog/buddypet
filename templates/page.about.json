@@ -1,0 +1,48 @@
+{
+  "sections": {
+    "main": {
+      "type": "page-about--main",
+      "blocks": {
+        "68759b3f-759d-40d9-9361-cc71a317e856": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/our-vision-featured-image.jpg",
+            "block_width": 35,
+            "custom_bg_css": ""
+          }
+        },
+        "c5eefa4e-6119-4435-9267-57f4721ea536": {
+          "type": "main-content",
+          "settings": {
+            "title": "Our Vision",
+            "title_color": "#294d45",
+            "title_class": "page-main--title",
+            "content": "<p><strong>Your pet’s healthiest, happiest life – naturally.<\/strong><\/p><p>Our pets mean the world to us. They are family. They give us unconditional love, companionship and loyalty that’s simply priceless. And in return, we take responsibility for their lives, health and wellness, safety and lifelong happiness.<\/p><p>Our furry friends trust us to empower their healthiest, most natural selves in every moment of our precious time together. They brighten our lives, and at BUDDYPET we want to do the same for them. <\/p><p>We believe in natural pet care, and that your pet should expect nothing less. Our products are designed by veterinarians and made with nature’s finest gifts: Australian grown, organic and ethically sourced. <\/p><p>Our vision is to bring nature’s healing powers to every four-legged, <br\/>winged or scaled best friend. From the organic seeds sewn in Tasmanian soil to the meticulous formulation of each product in our range, every step of the process is designed to help you protect and nurture your pet with absolute confidence. <\/p><p>Our Head of Animal Health, Dr Ailsa Rutherford, is a senior practising veterinarian and a member of the Australia and New Zealand College of Veterinary Surgeons in Emergency and Critical Care Chapter and Veterinary Practitioners Board of NSW. Ailsa personally oversees the development of all BUDDYPET products to ensure the optimal efficacy and safety of each one. <\/p><p>At BUDDYPET, we offer the care you can trust, from natural remedies as powerful and enriching as the bond you share with your fur baby.It’s our mission and our pleasure to support your buddy speak health and vitality – as nature intended.<\/p>",
+            "block_width": 65
+          }
+        },
+        "cf0f104b-428c-495c-8ff0-8a4293c3437c": {
+          "type": "main-content",
+          "disabled": true,
+          "settings": {
+            "title": "",
+            "title_color": "#294d45",
+            "title_class": "",
+            "content": "<p><strong>Your pet’s healthiest, happiest life – naturally.<\/strong><\/p><p>Our pets mean the world to us. They are family. They give us unconditional love, companionship and loyalty that’s simply priceless. And in return, we take responsibility for their lives, health and wellness, safety and lifelong happiness.<\/p><p>Our furry friends trust us to empower their healthiest, most natural selves in every moment of our precious time together. They brighten our lives, and at BUDDYPET we want to do the same for them. <\/p><p>We believe in natural pet care, and that your pet should expect nothing less. Our products are designed by veterinarians and made with nature’s finest gifts: Australian grown, organic and ethically sourced. <\/p><p>Our vision is to bring nature’s healing powers to every four-legged, <br\/>winged or scaled best friend. From the organic seeds sewn in Tasmanian soil to the meticulous formulation of each product in our range, every step of the process is designed to help you protect and nurture your pet with absolute confidence. <\/p><p>Our Head of Animal Health, Dr Ailsa Rutherford, is a senior practising veterinarian and a member of the Australia and New Zealand College of Veterinary Surgeons in Emergency and Critical Care Chapter and Veterinary Practitioners Board of NSW. Ailsa personally oversees the development of all BUDDYPET products to ensure the optimal efficacy and safety of each one. <\/p><p>At BUDDYPET, we offer the care you can trust, from natural remedies as powerful and enriching as the bond you share with your fur baby.It’s our mission and our pleasure to support your buddy speak health and vitality – as nature intended.<\/p>",
+            "block_width": 100
+          }
+        }
+      },
+      "block_order": [
+        "68759b3f-759d-40d9-9361-cc71a317e856",
+        "c5eefa4e-6119-4435-9267-57f4721ea536",
+        "cf0f104b-428c-495c-8ff0-8a4293c3437c"
+      ],
+      "settings": {
+      }
+    }
+  },
+  "order": [
+    "main"
+  ]
+}

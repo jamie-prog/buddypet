@@ -1,0 +1,43 @@
+{% comment %}Assign object as block or section{% endcomment %}
+{% if type == 'block' %}
+  {% assign object = block %}
+{% else %}
+  {% assign object = section %}
+{% endif %}
+
+{%- assign locale_selector = false -%}
+{%- assign currency_selector = false -%}
+
+{%- if object.settings.show_currency_selector == true and shop.enabled_currencies.size > 1 -%}
+  {%- assign currency_selector = true -%}
+{%- endif -%}
+
+{%- if object.settings.show_locale_selector == true and shop.published_locales.size > 1 -%}
+  {%- assign locale_selector = true -%}
+{%- endif -%}
+
+<div class="header__icons header__icon-style-{{ icon_style | replace: '_', '-' }} {{ header_icon_class }}">
+  {% comment %} Cart icon {% endcomment %}
+  <div class="header-cart action-area__link {% if cart.item_count != 0 %}has-cart-count{% endif %}" data-ajax-cart-trigger>
+    <a class="header__link" href="{{ routes.cart_url }}" >
+      <span class="header-cart__icon">
+        {% render 'icon',
+                name: settings.cart_icon,
+                icon_class: 'header__icon'
+        %}
+        <span class="header-cart__count header-cart__count--badge badge" data-bind="itemCount">
+          {{ cart.item_count }}
+        </span>
+      </span>
+      <span class="header-cart__caption icon-caption">
+        {{ 'layout.general.cart' | t | escape }}
+        {%- if icon_style == 'text' -%}
+          <span class="header-cart__count cart__count--text" data-bind="itemCount">{{ cart.item_count }}</span>
+        {%- endif -%}
+      </span>
+    </a>
+    {% if settings.cart_action == 'mini_cart' %}
+      {% render 'ajax-cart' %}
+    {% endif %}
+  </div>
+</div>
