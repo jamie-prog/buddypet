@@ -41,11 +41,7 @@
 {% endstyle %}
 
 <section class="section {{ css_class }}
-                no-static-container
-                {% if background_alpha != 0 or gradient_alpha != 0  %}
-                  has-background
-                {% endif %}
-                "
+                no-static-container"
           data-section-id="{{ section.id }}"
           {% if animation != "none" and animation != blank %}
             data-scroll-class="{{ animation }}"
