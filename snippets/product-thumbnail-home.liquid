@@ -98,6 +98,7 @@
       <div class="product-info">
         <div class="info text-left">
           <p class="product-title"><a href="{{ product.url | within: collection }}">{{ product.title }}</a></p>
+          {% render 'judgeme_widgets', widget_type: 'judgeme_preview_badge', jm_style: '', concierge_install: false, product: product %}
           <p class="product-useful">{{ product.metafields.accentuate.useful | strip_html}}</p>
         </div>
         <div class="button-cart">

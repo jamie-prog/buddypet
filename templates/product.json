@@ -45,20 +45,6 @@
         "custom_css": ""
       }
     },
-    "16566386114cc53c2b": {
-      "type": "index__liquid",
-      "settings": {
-        "liquid_content": "<!-- TrustBox widget - Product Reviews Carousel -->\n<div class=\"trustpilot-widget\" data-locale=\"en-GB\" data-template-id=\"60f537b5b0f1639de1fe048c\" data-businessunit-id=\"6233cb04c1f6d2e6e47b6cc9\" data-style-width=\"100%\" data-theme=\"light\" data-sku=\"{{product.selected_or_first_available_variant.sku}}\" data-review-languages=\"en\" data-third-party-reviews=\"true\" data-no-reviews=\"hide\">\n  <a href=\"https:\/\/uk.trustpilot.com\/review\/buddypet.co\" target=\"_blank\" rel=\"noopener\">Trustpilot<\/a>\n<\/div>\n<!-- End TrustBox widget -->",
-        "width": "wide",
-        "padding_top": 0,
-        "padding_bottom": 50,
-        "padding_left": 0,
-        "padding_right": 0,
-        "animation": "none",
-        "css_class": "no-flex-container",
-        "custom_css": ""
-      }
-    },
     "1656437585bc35be8d": {
       "type": "product__additional-content",
       "settings": {
@@ -151,15 +137,15 @@
     "1656638603b9ce4ed9": {
       "type": "index__liquid",
       "settings": {
-        "liquid_content": "<!-- TrustBox widget - Product Reviews MultiSource SEO -->\n<div class=\"trustpilot-widget\" data-locale=\"en-GB\" data-template-id=\"5763bccae0a06d08e809ecbb\" data-businessunit-id=\"6233cb04c1f6d2e6e47b6cc9\" data-style-height=\"700px\" data-style-width=\"100%\" data-theme=\"light\" data-sku=\"{{product.selected_or_first_available_variant.sku}}\" data-name=\"{{product.handle}}\" data-review-languages=\"en\" data-no-reviews = \"hide\" data-third-party-reviews=\"true\">\n  <a href=\"https:\/\/uk.trustpilot.com\/review\/buddypet.co\" target=\"_blank\" rel=\"noopener\">Trustpilot<\/a>\n<\/div>\n<!-- End TrustBox widget -->",
+        "liquid_content": "{% render 'judgeme_widgets', widget_type: 'judgeme_review_widget', concierge_install: false, product: product %}",
         "width": "standard",
         "padding_top": 80,
         "padding_bottom": 80,
         "padding_left": 0,
         "padding_right": 0,
         "animation": "none",
-        "css_class": "",
-        "custom_css": ""
+        "css_class": "buddypet-judgeme-product-widget-container",
+        "custom_css": "{max-width: 1400px;\nmax-width: auto;}"
       }
     },
     "16564285677961799f": {
@@ -178,7 +164,6 @@
   "order": [
     "product-banner",
     "main",
-    "16566386114cc53c2b",
     "1656437585bc35be8d",
     "165644569026aa223d",
     "1656428708a67bb26e",

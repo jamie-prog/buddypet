@@ -173,7 +173,7 @@
           <div class="content-title">
             <h1 class="product_name title" style="color: #{{colour[1]}}">{{ product.title }}</h1>
             <!-- Product Reviews -->
-            
+            {% render 'judgeme_widgets', widget_type: 'judgeme_preview_badge', jm_style: '', concierge_install: false, product: product %}
             {%- comment -%}
             <div class="number-rating rating-desktop-show"><span class="shopify-product-reviews-badge" data-id="{{ product.id }}"></span></div>
             {%- endcomment -%}
