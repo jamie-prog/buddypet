@@ -1946,6 +1946,7 @@
       },
       "165593504277f9a8ef": {
         "type": "home__reviews-testimonial",
+        "disabled": true,
         "blocks": {
           "1b6150dc-b1fe-400c-9f93-4722663a70df": {
             "type": "review",
@@ -2031,12 +2032,35 @@
           "css_class": ".image_podcast",
           "custom_css": "img{\nobject-fit: contain;\nheight: fit-content;\nborder-radius:0px;\n}"
         }
+      },
+      "25a39854-4a67-4ddc-a874-5d6093468e59": {
+        "type": "judgeme_carousel_section",
+        "disabled": true,
+        "settings": {
+          "maxwidth": 1920
+        }
+      },
+      "8212b6e8-e1b7-45dd-8489-1cfda8b20a68": {
+        "type": "index__liquid",
+        "settings": {
+          "liquid_content": "{% render 'judgeme_widgets', widget_type: 'judgeme_featured_carousel', concierge_install: false %}",
+          "width": "wide",
+          "padding_top": 20,
+          "padding_bottom": 20,
+          "padding_left": 0,
+          "padding_right": 0,
+          "animation": "none",
+          "css_class": "",
+          "custom_css": ""
+        }
       }
     },
     "content_for_index": [
       "1635839683609748f8",
       "1635839677eb43d264",
       "165593504277f9a8ef",
+      "25a39854-4a67-4ddc-a874-5d6093468e59",
+      "8212b6e8-e1b7-45dd-8489-1cfda8b20a68",
       "165575743449b541b8",
       "16358396870ce89f97",
       "1655323397c9b39455",
@@ -2065,6 +2089,12 @@
       "10436698916776057164": {
         "type": "shopify:\/\/apps\/appstle-subscriptions-loyalty\/blocks\/appstle-subscription-helper\/fe257d39-6f88-4f35-ab08-bd437e3aa94e",
         "disabled": true,
+        "settings": {
+        }
+      },
+      "14060646107696862457": {
+        "type": "shopify:\/\/apps\/judge-me-product-reviews\/blocks\/judgeme_core\/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
+        "disabled": false,
         "settings": {
         }
       }
